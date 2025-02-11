@@ -739,7 +739,7 @@ export default function WebBuilder() {
   return (
     <>
       <Meta
-        title="Cibli Job  - AI Resume Builder"
+        title="CV2GO  - AI Resume Builder"
         description="ATSResume is a cutting-edge resume builder that helps job seekers create a professional, ATS-friendly resume in minutes..."
         keywords="ATS-friendly, Resume optimization..."
       />

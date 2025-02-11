@@ -188,7 +188,7 @@
 //               onClick={handleOpenPopup}
 //               className="text-black hover:text-cyan-600 px-3 py-2 rounded-md text-lg font-semibold"
 //             >
-//               CibliJob ID
+//               CV2GO ID
 //             </Link>
 //             <CibliJobId isOpen={isPopupOpen} onClose={handleClosePopup} />
 //             {/* <Link
@@ -346,7 +346,7 @@
 //                 href=""
 //                 className="text-black hover:text-cyan-600 block  px-3 py-2 rounded-md text-base font-semibold"
 //               >
-//                 CibliJob ID
+//                 CV2GO ID
 //               </Link>
 //               {isLoggedIn ? (
 //                 <Link
@@ -406,7 +406,7 @@
 //                 onClick={handleOpenPopup}
 //                 className="text-black hover:text-cyan-600 block px-3 py-2 rounded-md text-base font-semibold"
 //               >
-//                 CibliJob ID
+//                 CV2GO ID
 //               </Link>
 //               <CibliJobId isOpen={isPopupOpen} onClose={handleClosePopup} />
 //               {isLoggedIn ? (
@@ -701,7 +701,7 @@ const Navbar = () => {
               className="text-black hover:text-cyan-600 px-3 py-2 rounded-md text-lg font-semibold"
             >
               {t("cibli_job_id")}
-              {/* CibliJob ID */}
+              {/* CV2GO ID */}
             </Link>
             <CibliJobId isOpen={isPopupOpen} onClose={handleClosePopup} />
           </div>

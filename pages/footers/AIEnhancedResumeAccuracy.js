@@ -5,13 +5,13 @@ import Navbar from "../Navbar/Navbar";
 function AIEnhancedResumeAccuracy() {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className="max-w-4xl mx-auto my-5 p-6 sm:p-10 shadow-lg bg-white rounded-lg">
         <h1 className="text-3xl font-bold my-4 ">
           AI-Enhanced Resume Accuracy
         </h1>
         <h2> Ensuring Precision and Reliability in Resume Creation</h2>
-        At Cibli Job , we understand that the accuracy of your resume can
+        At CV2GO , we understand that the accuracy of your resume can
         significantly impact your chances of landing your dream job. Our
         AI-enhanced resume accuracy tools ensure that your resume is not only
         compelling but also precise and error-free. Leveraging advanced AI
@@ -61,8 +61,8 @@ function AIEnhancedResumeAccuracy() {
         <h1 className="text-sm font-semibold my-2">
           Step 1: Upload Your Resume{" "}
         </h1>
-        Upload your resume to the Cibli Job platform. Our AI will start
-        analyzing your document immediately.
+        Upload your resume to the CV2GO platform. Our AI will start analyzing
+        your document immediately.
         <h1 className="text-sm font-semibold my-2">Step 2: AI Analysis</h1>
         The AI scans your resume for errors, inconsistencies, and missing
         information. It evaluates grammar, formatting, data accuracy, and
@@ -98,8 +98,8 @@ function AIEnhancedResumeAccuracy() {
         <h1 className="text-lg font-bold my-4">
           Start Enhancing Your Resume Accuracy Today{" "}
         </h1>
-        Transform your resume with Cibli Job ’s AI-enhanced accuracy tools. Sign
-        up now to create a resume that is polished, precise, and professional.
+        Transform your resume with CV2GO ’s AI-enhanced accuracy tools. Sign up
+        now to create a resume that is polished, precise, and professional.
       </div>
       <Footer />
     </div>

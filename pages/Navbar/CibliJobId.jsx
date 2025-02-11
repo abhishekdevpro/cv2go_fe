@@ -37,7 +37,7 @@ const CibliJobId = ({ isOpen, onClose }) => {
               <Image src={logo} alt="logo" className="h-10  w-[140px]" />
             </Link>
           </div>
-          <h1>CibliJob ID</h1>
+          <h1>CV2GO ID</h1>
           <p>Your One-Stop Access to Career Solutions</p>
           <p>
             <em>Coming Soon!</em>
@@ -51,11 +51,11 @@ const CibliJobId = ({ isOpen, onClose }) => {
           <p>90% Complete</p>
         </div>
         <p>
-          CibliJob ID will allow you to seamlessly connect to all our services
-          with a single account. Stay tuned for the launch!
+          CV2GO ID will allow you to seamlessly connect to all our services with
+          a single account. Stay tuned for the launch!
         </p>
         <div className="">
-          <p>Want to know when CibliJob ID is live? Sign up for updates!</p>
+          <p>Want to know when CV2GO ID is live? Sign up for updates!</p>
           <form>
             <input
               type="email"

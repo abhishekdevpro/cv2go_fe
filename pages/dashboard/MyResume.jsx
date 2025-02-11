@@ -176,7 +176,7 @@ const MyResume = () => {
                   Strength
                 </th>
                 {/* <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
-                  CibliJob ID
+                  CV2GO ID
                 </th> */}
                 <th className="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
                   Actions
@@ -231,7 +231,7 @@ const MyResume = () => {
                     {/* <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center space-x-2">
                         <span className="text-sm text-gray-700">
-                          Include your CibliJob Id
+                          Include your CV2GO Id
                         </span>
                         <button
                           role="switch"

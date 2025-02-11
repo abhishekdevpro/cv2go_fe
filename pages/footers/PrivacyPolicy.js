@@ -5,7 +5,7 @@ import Navbar from "../Navbar/Navbar";
 function PrivacyPolicy() {
   return (
     <div className="bg-gray-50 min-h-screen">
-      <Navbar/>
+      <Navbar />
       <div className="max-w-4xl mx-auto my-5 p-6 sm:p-10 shadow-lg bg-white rounded-lg">
         <h1 className="text-3xl sm:text-4xl font-semibold text-center underline mb-6">
           Privacy Policy
@@ -14,10 +14,9 @@ function PrivacyPolicy() {
         <div className="mb-6">
           <h2 className="text-xl font-semibold">Introduction</h2>
           <p className="text-gray-700 mt-2">
-            At Cibli Job, we value your privacy and are committed to protecting
-            your personal information. This Privacy Policy outlines how we
-            collect, use, and safeguard your data when you use our website and
-            services.
+            At CV2GO, we value your privacy and are committed to protecting your
+            personal information. This Privacy Policy outlines how we collect,
+            use, and safeguard your data when you use our website and services.
           </p>
         </div>
 
@@ -141,10 +140,10 @@ function PrivacyPolicy() {
           <p className="text-gray-700">
             If you have any questions, contact us at:{" "}
             <a
-              href="mailto:career@ciblJob.fr"
+              href="mailto:career@cv2go.com"
               className="text-blue-600 underline"
             >
-              career@ciblJob.fr
+              career@cv2go.com
             </a>
           </p>
         </div>

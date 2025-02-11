@@ -5,11 +5,11 @@ import Navbar from "../Navbar/Navbar";
 function AiCVParsing() {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className="max-w-4xl mx-auto my-5 p-6 sm:p-10 shadow-lg bg-white rounded-lg">
         <h1 className="text-3xl font-bold my-4 ">Ai CV Parsing</h1>
         <h2> Transforming Recruitment with Advanced AI CV Parsing</h2>
-        At Cibli Job , we leverage cutting-edge AI CV parsing technology to
+        At CV2GO , we leverage cutting-edge AI CV parsing technology to
         streamline the recruitment process, making it faster and more efficient
         for both employers and job seekers. Our AI CV parsing tool accurately
         extracts and analyzes key information from CVs, helping you identify the
@@ -116,8 +116,8 @@ function AiCVParsing() {
         <h1 className="text-sm font-semibold my-2">
           Start Using AI CV Parsing Today
         </h1>
-        Revolutionize your recruitment process with Cibli Job ’s AI CV parsing
-        tool. Sign up now to experience the benefits of efficient, accurate, and
+        Revolutionize your recruitment process with CV2GO ’s AI CV parsing tool.
+        Sign up now to experience the benefits of efficient, accurate, and
         automated CV processing.
         <h1 className="text-sm font-semibold my-2">Get Started</h1>
         Ready to transform your recruitment process? Visit our AI CV Parsing

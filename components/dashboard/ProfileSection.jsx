@@ -9,7 +9,7 @@ const ProfileSection = ({ visits }) => {
             <User />
           </div>
           <div>
-            <h3 className="text-lg font-semibold">Your CibliJob ID</h3>
+            <h3 className="text-lg font-semibold">Your CV2GO ID</h3>
             {/* <p className="text-gray-600">Your total visits: {visits} visitors</p> */}
           </div>
         </div>
