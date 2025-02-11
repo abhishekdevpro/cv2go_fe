@@ -5,7 +5,7 @@ import Navbar from "../Navbar/Navbar";
 function AiJobMatchApply() {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className="max-w-4xl mx-auto my-5 p-6 sm:p-10 shadow-lg bg-white rounded-lg">
         <h1 className="text-4xl font-semibold my-4 underline ">
           AI-Job Match & Apply
@@ -13,11 +13,11 @@ function AiJobMatchApply() {
         <h2 className="text-xl font-bold my-5">
           Simplifying Your Job Search with AI Technology
         </h2>
-        At Cibli Job , we aim to make your job search efficient and effective
-        with our AI Job Match & Apply tool. This innovative technology uses
-        advanced algorithms to match your skills and experiences with relevant
-        job opportunities, streamlining the application process and increasing
-        your chances of landing the perfect job.
+        At CV2GO , we aim to make your job search efficient and effective with
+        our AI Job Match & Apply tool. This innovative technology uses advanced
+        algorithms to match your skills and experiences with relevant job
+        opportunities, streamlining the application process and increasing your
+        chances of landing the perfect job.
         <h1 className="text-xl font-bold my-5">
           Key Features of Our AI Job Match & Apply Tool
         </h1>
@@ -62,7 +62,7 @@ function AiJobMatchApply() {
         <h1 className="text-sm font-semibold my-2">
           Step 1: Create Your Profile
         </h1>
-        Sign up on the Cibli Job platform and create your profile. Upload your
+        Sign up on the CV2GO platform and create your profile. Upload your
         resume and provide details about your skills, experiences, and career
         aspirations.
         <h1 className="text-sm font-semibold my-2">Step 2: AI Analysis</h1>
@@ -114,9 +114,9 @@ function AiJobMatchApply() {
         <h1 className="text-sm font-semibold my-2">
           Start Using AI Job Match & Apply Today
         </h1>
-        Transform your job search with Cibli Job ’s AI Job Match & Apply tool.
-        Sign up now to discover job opportunities that perfectly match your
-        profile and streamline your path to career success.
+        Transform your job search with CV2GO ’s AI Job Match & Apply tool. Sign
+        up now to discover job opportunities that perfectly match your profile
+        and streamline your path to career success.
         <h1 className="text-lg font-bold my-2">Get Started</h1>
         Ready to find your dream job? Visit our AI Job Match & Apply page and
         start matching with top job opportunities today!

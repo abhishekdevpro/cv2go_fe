@@ -48,7 +48,7 @@
 //             <div className="px-3 py-3 w-full md:w-[500px]">
 //               <div className=" flex flex-col gap-4 ">
 //                 <div className="font-extrabold text-5xl font-sans">
-//                   &quot;Cibli Job&quot; AI Powered Resume Tool, Is Live NOW
+//                   &quot;CV2GO&quot; AI Powered Resume Tool, Is Live NOW
 //                 </div>
 
 //                 <div className=" text-lg font-medium text-slate-700">
@@ -142,6 +142,9 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next"; // Import useTranslation
 
 import ImageSlider from "./Slider_details";
+import Home_step from "./Home-steps";
+import ATSResumeSection from "./ATS-section";
+import Home_third from "./Home_third";
 
 function Home_first() {
   const { t } = useTranslation(); // Initialize useTranslation hook
@@ -252,8 +255,11 @@ function Home_first() {
         </div>
       </div>
 
-      <ImageSlider />
-      <Home_second />
+      {/* <ImageSlider /> */}
+      <Home_step />
+      <ATSResumeSection />
+      <Home_third />
+      {/* <Home_second /> */}
     </>
   );
 }

@@ -5,7 +5,7 @@ import Navbar from "../Navbar/Navbar";
 function AiResumeBuilder() {
   return (
     <div className="bg-gray-50 min-h-screen">
-      <Navbar/>
+      <Navbar />
       <div className="max-w-4xl mx-auto my-5 p-6 sm:p-10 shadow-lg bg-white rounded-lg">
         <h1 className="text-3xl sm:text-4xl font-semibold text-center underline mb-6">
           AI Resume Builder
@@ -15,11 +15,11 @@ function AiResumeBuilder() {
           Revolutionizing the Job Application Process
         </h2>
         <p className="text-gray-700">
-          Welcome to Cibli Job’s AI Resume Builder – an innovative solution
-          designed to streamline the resume creation process and help you land
-          your dream job. Our cutting-edge AI technology simplifies resume
-          writing, ensuring that your skills and achievements are presented in
-          the best possible light.
+          Welcome to CV2GO’s AI Resume Builder – an innovative solution designed
+          to streamline the resume creation process and help you land your dream
+          job. Our cutting-edge AI technology simplifies resume writing,
+          ensuring that your skills and achievements are presented in the best
+          possible light.
         </p>
 
         <h2 className="text-xl font-bold my-5">Key Features</h2>
@@ -73,7 +73,7 @@ function AiResumeBuilder() {
           {
             title: "Step 1: Sign Up & Input Your Information",
             description:
-              "Create an account on Cibli Job and provide your career details, including work experience, education, skills, and achievements.",
+              "Create an account on CV2GO and provide your career details, including work experience, education, skills, and achievements.",
           },
           {
             title: "Step 2: Choose a Template",
@@ -133,15 +133,15 @@ function AiResumeBuilder() {
           Start Building Your Resume Today
         </h2>
         <p className="text-gray-700">
-          Transform your job application process with Cibli Job’s AI Resume
-          Builder. Sign up now and take the first step toward landing your dream
-          job with a professionally crafted resume that showcases your unique
-          strengths and qualifications.
+          Transform your job application process with CV2GO’s AI Resume Builder.
+          Sign up now and take the first step toward landing your dream job with
+          a professionally crafted resume that showcases your unique strengths
+          and qualifications.
         </p>
 
         <h2 className="text-lg font-bold my-4 text-center">Get Started</h2>
         <p className="text-center text-gray-700 ">
-          Ready to create your Cibli Job ? Visit our AI Resume Builder page and
+          Ready to create your CV2GO ? Visit our AI Resume Builder page and
           start building your resume today!
         </p>
       </div>

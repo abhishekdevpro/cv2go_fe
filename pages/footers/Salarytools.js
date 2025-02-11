@@ -5,7 +5,7 @@ import Navbar from "../Navbar/Navbar";
 function Salarytools() {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className="m-4 sm:mx-10 lg:mx-40 p-4 sm:p-6 shadow-2xl">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold my-4 underline">
           Salary Tools
@@ -20,10 +20,10 @@ function Salarytools() {
 
         <p className="text-base sm:text-lg">
           Understanding your market value and negotiating your salary are
-          crucial steps in your job search and career advancement. At Cibli Job,
-          we provide access to a variety of salary tools and resources that
-          empower you to make informed decisions about your compensation. These
-          tools help you research industry standards, evaluate job offers, and
+          crucial steps in your job search and career advancement. At CV2GO, we
+          provide access to a variety of salary tools and resources that empower
+          you to make informed decisions about your compensation. These tools
+          help you research industry standards, evaluate job offers, and
           negotiate the best possible salary.
         </p>
 
@@ -79,7 +79,7 @@ function Salarytools() {
         </p>
 
         <h2 className="text-xl sm:text-2xl font-semibold my-2 mt-5">
-          How Cibli Job Can Help
+          How CV2GO Can Help
         </h2>
 
         <h3 className="text-xl sm:text-2xl font-semibold my-2 mt-5">
@@ -98,7 +98,7 @@ function Salarytools() {
           Exclusive Resources
         </h3>
         <p className="text-base sm:text-lg">
-          As a Cibli Job client, you’ll gain access to exclusive resources,
+          As a CV2GO client, you’ll gain access to exclusive resources,
           including industry reports, salary surveys, and negotiation workshops.
           Our comprehensive toolkit ensures that you have all the information
           and skills needed to advocate for yourself effectively.
@@ -109,9 +109,9 @@ function Salarytools() {
         </h3>
         <p className="text-base sm:text-lg">
           Don’t leave your salary to chance. Take control of your career and
-          maximize your earning potential with the help of Cibli Job’s salary
-          tools and resources. Contact us today to learn more about how we can
-          support you in your job search and salary negotiations.
+          maximize your earning potential with the help of CV2GO’s salary tools
+          and resources. Contact us today to learn more about how we can support
+          you in your job search and salary negotiations.
         </p>
       </div>
 

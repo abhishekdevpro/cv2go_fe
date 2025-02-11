@@ -81,27 +81,27 @@ import axios from "axios";
 function App({ Component, pageProps }) {
   const router = useRouter();
 
-  const googleTranslateElementInit = () => {
-    new window.google.translate.TranslateElement(
-      {
-        pageLanguage: "en",
-        autoDisplay: false,
-        includedLanguages: "en,fr", // Only English and French
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE, // Optional: Simplifies UI
-      },
-      "google_translate_element"
-    );
-  };
+  // const googleTranslateElementInit = () => {
+  //   new window.google.translate.TranslateElement(
+  //     {
+  //       pageLanguage: "en",
+  //       autoDisplay: false,
+  //       includedLanguages: "en,fr", // Only English and French
+  //       layout: google.translate.TranslateElement.InlineLayout.SIMPLE, // Optional: Simplifies UI
+  //     },
+  //     "google_translate_element"
+  //   );
+  // };
 
-  useEffect(() => {
-    var addScript = document.createElement("script");
-    addScript.setAttribute(
-      "src",
-      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    );
-    document.body.appendChild(addScript);
-    window.googleTranslateElementInit = googleTranslateElementInit;
-  }, []);
+  // useEffect(() => {
+  //   var addScript = document.createElement("script");
+  //   addScript.setAttribute(
+  //     "src",
+  //     "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+  //   );
+  //   document.body.appendChild(addScript);
+  //   window.googleTranslateElementInit = googleTranslateElementInit;
+  // }, []);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -154,7 +154,7 @@ function App({ Component, pageProps }) {
 
   return (
     <>
-      <div id="google_translate_element"></div>
+      {/* <div id="google_translate_element"></div> */}
       <ResumeProvider>
         <CoverLetterProvider>
           <Component {...pageProps} />

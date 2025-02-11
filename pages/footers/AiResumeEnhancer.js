@@ -5,7 +5,7 @@ import Navbar from "../Navbar/Navbar";
 function AiResumeEnhancer() {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className="m-10  shadow-2xl max-w-4xl mx-auto my-5 p-6 sm:p-10 bg-white rounded-lg">
         <h1 className="my-4 text-3xl sm:text-4xl font-semibold text-center underline ">
           AI Resume Enhancer
@@ -13,12 +13,12 @@ function AiResumeEnhancer() {
         <h2 className="text-xl font-bold my-5">
           Elevate Your Job Applications with AI-Driven Enhancements
         </h2>
-        At Cibli Job , we believe that every job seeker deserves a standout
-        resume that effectively showcases their skills and experiences. Our AI
-        Resume Enhancer is designed to elevate your resume, ensuring it meets
-        industry standards and captures the attention of recruiters. Using
-        advanced AI technology, we transform your resume into a powerful tool
-        for career success
+        At CV2GO , we believe that every job seeker deserves a standout resume
+        that effectively showcases their skills and experiences. Our AI Resume
+        Enhancer is designed to elevate your resume, ensuring it meets industry
+        standards and captures the attention of recruiters. Using advanced AI
+        technology, we transform your resume into a powerful tool for career
+        success
         <h1 className="text-xl font-bold my-5">
           Key Features of Our AI Resume Enhancer
         </h1>
@@ -66,7 +66,7 @@ function AiResumeEnhancer() {
         <h1 className="text-sm font-semibold my-2">
           Step 1: Upload Your Resume
         </h1>
-        Upload your existing resume to the Cibli Job platform. Our AI will start
+        Upload your existing resume to the CV2GO platform. Our AI will start
         analyzing your document immediately.
         <h1 className="text-sm font-semibold my-2">Step 2: AI Analysis</h1>
         The AI evaluates your resume, examining content, structure, keywords,
@@ -103,8 +103,8 @@ function AiResumeEnhancer() {
         <h1 className="text-sm font-semibold my-2">
           Start Enhancing Your Resume Today
         </h1>
-        Transform your resume with Cibli Job ’s AI Resume Enhancer. Sign up now
-        to create a resume that stands out and opens doors to new career
+        Transform your resume with CV2GO ’s AI Resume Enhancer. Sign up now to
+        create a resume that stands out and opens doors to new career
         opportunities.
         <h1 className="text-lg font-bold my-2">Get Started</h1>
         Ready to elevate your resume? Visit our AI Resume Enhancer page and

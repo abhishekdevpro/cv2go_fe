@@ -9,7 +9,7 @@ function Navbarcontent() {
           AI Resume Builder
         </h1>
         <p className="text-base sm:text-lg">
-          AI Resume Builder on CibliJob.com offers a seamless way to craft
+          AI Resume Builder on CV2GO.com offers a seamless way to craft
           professional resumes tailored to specific job roles. Leveraging
           advanced AI algorithms, it guides users through every step, ensuring
           optimal formatting, keyword optimization, and personalized content.

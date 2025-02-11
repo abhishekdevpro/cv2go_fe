@@ -5,7 +5,7 @@ import Navbar from "../Navbar/Navbar";
 function AiSkillTests() {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className=" max-w-4xl mx-auto my-5 p-6 sm:p-10 shadow-lg bg-white rounded-lg">
         <h1 className="text-4xl font-semibold my-4 underline ">
           Ai Skill Tests
@@ -13,8 +13,8 @@ function AiSkillTests() {
         <h1 className="text-2xl font-semibold my-2 mt-5 ">
           Elevate Your Hiring Process with AI Skill Tests
         </h1>
-        At Cibli Job , we understand the importance of finding the right talent
-        for your organization. Our AI Skill Tests are designed to streamline the
+        At CV2GO , we understand the importance of finding the right talent for
+        your organization. Our AI Skill Tests are designed to streamline the
         hiring process by accurately assessing candidates abilities and matching
         them with the job requirements. Leveraging advanced AI technology, our
         skill tests provide a reliable, efficient, and unbiased way to evaluate
@@ -110,8 +110,8 @@ function AiSkillTests() {
         <h1 className="text-sm font-semibold my-2">
           Start Using AI Skill Tests Today
         </h1>
-        Transform your hiring process with Cibli Job ’s AI Skill Tests. Sign up
-        now to experience the benefits of accurate, efficient, and unbiased
+        Transform your hiring process with CV2GO ’s AI Skill Tests. Sign up now
+        to experience the benefits of accurate, efficient, and unbiased
         candidate assessments.
         <h1 className="text-lg font-bold my-4">Get Started</h1>
         Ready to elevate your hiring process? Visit our AI Skill Tests page and

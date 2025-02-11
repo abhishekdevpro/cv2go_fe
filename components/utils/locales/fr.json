@@ -5,7 +5,7 @@
   "ai_resume_builder": "Constructeur de CV IA",
   "jobs": "Emplois",
   "resources": "Ressources",
-  "cibli_job_id": "ID CibliJob",
+  "cibli_job_id": "ID CV2GO",
   "home": "Accueil",
   "profile": "Profil",
   "logout": "Se déconnecter",
@@ -20,7 +20,7 @@
     "reviews_certified": "Avis certifiés par les recruteurs et appréciés par les chercheurs d'emploi",
     "featured_on": "Comme présenté sur",
     
-      "cibli_job": "Cibli Job",
+      "cibli_job": "CV2GO",
       "ai_powered_resume_tool": "Outil de CV alimenté par l'IA",
       "much_more": "& bien plus encore.",
       

@@ -5,14 +5,14 @@ import Navbar from "../Navbar/Navbar";
 function Aboutus() {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div className="m-4 sm:mx-10 lg:mx-40 p-4 sm:p-6 shadow-2xl">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold my-4 underline">
           About Us
         </h1>
         <p className="text-base sm:text-lg">
-          Welcome to Cibli Job, your trusted partner in crafting the ideal
-          resume that opens doors to new career opportunities. We specialize in
+          Welcome to CV2GO, your trusted partner in crafting the ideal resume
+          that opens doors to new career opportunities. We specialize in
           creating personalized, professional resumes that showcase your unique
           skills, experiences, and achievements.
         </p>
@@ -21,12 +21,11 @@ function Aboutus() {
           Our Mission
         </h2>
         <p className="text-base sm:text-lg">
-          At Cibli Job, our mission is to empower job seekers by providing
-          expertly designed resumes that make a lasting impression. We
-          understand that your resume is more than just a document; it’s a
-          reflection of your professional journey and aspirations. Our goal is
-          to help you stand out in a competitive job market and secure the
-          position you deserve.
+          At CV2GO, our mission is to empower job seekers by providing expertly
+          designed resumes that make a lasting impression. We understand that
+          your resume is more than just a document; it’s a reflection of your
+          professional journey and aspirations. Our goal is to help you stand
+          out in a competitive job market and secure the position you deserve.
         </p>
 
         <h2 className="text-xl sm:text-2xl font-semibold my-2 mt-5">
@@ -104,7 +103,7 @@ function Aboutus() {
           Join Our Community
         </h2>
         <p className="text-base sm:text-lg">
-          At Cibli Job, we’re more than just a resume writing service. We’re a
+          At CV2GO, we’re more than just a resume writing service. We’re a
           community of career-driven individuals dedicated to supporting each
           other’s professional growth. Join us today and take the first step
           towards achieving your career aspirations.
@@ -115,7 +114,7 @@ function Aboutus() {
         </h2>
         <p className="text-base sm:text-lg">
           Ready to transform your resume and unlock new opportunities? Contact
-          us today and let Cibli Job help you craft the perfect resume for your
+          us today and let CV2GO help you craft the perfect resume for your
           career journey.
         </p>
       </div>
