@@ -13,10 +13,10 @@ function TermsandConditions() {
 
         <p className="text-base sm:text-lg">
           Welcome to CV2GO. These terms and conditions outline the rules and
-          regulations for the use of Cibli Jobs website and services. By
-          accessing this website and using our services, you accept these terms
-          and conditions in full. If you disagree with any part of these terms
-          and conditions, please do not use our website or services.
+          regulations for the use of CV2GO website and services. By accessing
+          this website and using our services, you accept these terms and
+          conditions in full. If you disagree with any part of these terms and
+          conditions, please do not use our website or services.
         </p>
 
         <h2 className="text-xl sm:text-2xl font-semibold my-2 mt-5">
@@ -27,8 +27,7 @@ function TermsandConditions() {
           <li>Company: CV2GO.</li>
           <li>
             Services: Resume writing, career coaching, LinkedIn profile
-            optimization, and other career-related services provided by Cibli
-            Job.
+            optimization, and other career-related services provided by CV2GO.
           </li>
         </ul>
 
@@ -125,9 +124,9 @@ function TermsandConditions() {
         </h2>
         <ul className="list-inside list-disc pl-4 text-base sm:text-lg">
           <li>
-            Our services are provided on an as-is and as-available basis. Cibli
-            Jobs makes no warranties, express or implied, regarding the
-            accuracy, reliability, or completeness of our services.
+            Our services are provided on an as-is and as-available basis. CV2GO
+            makes no warranties, express or implied, regarding the accuracy,
+            reliability, or completeness of our services.
           </li>
           <li>
             We do not warrant that our services will meet clients expectations
@@ -180,8 +179,8 @@ function TermsandConditions() {
 
         <p className="text-base sm:text-lg mt-5">
           These terms and conditions are designed to ensure a clear
-          understanding of our services and the responsibilities of both Cibli
-          Job and our clients. If you need any additional details or specific
+          understanding of our services and the responsibilities of both CV2GO
+          and our clients. If you need any additional details or specific
           clauses included, please let us know!
         </p>
       </div>

@@ -700,7 +700,7 @@ const Navbar = () => {
               onClick={handleOpenPopup}
               className="text-black hover:text-cyan-600 px-3 py-2 rounded-md text-lg font-semibold"
             >
-              {t("cibli_job_id")}
+              {t("CV2GO")}
               {/* CV2GO ID */}
             </Link>
             <CibliJobId isOpen={isPopupOpen} onClose={handleClosePopup} />

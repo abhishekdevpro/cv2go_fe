@@ -186,7 +186,7 @@ function Home_first() {
             <div className="px-3 py-3 w-full md:w-[500px]">
               <div className="flex flex-col gap-4">
                 <div className="font-extrabold text-5xl font-sans">
-                  &quot; {t("cibli_job")}&quot;{t("ai_powered_resume_tool")},{" "}
+                  &quot; {t("CV2GO")}&quot;{t("ai_powered_resume_tool")},{" "}
                   {t("is_live_now")}
                 </div>
 
