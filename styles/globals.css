@@ -1,0 +1,315 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-[sans-serif];
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2.5 h-2.5;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-200;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-black;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-purple-700;
+  }
+
+  textarea,
+  input:focus {
+    @apply focus:outline-none;
+  }
+
+  .ul-padding {
+    padding-inline-start: 0.9rem;
+  }
+
+  .ul-padding-none {
+    padding-inline-start: 0;
+  }
+}
+
+@layer components {
+  .pi {
+    @apply p-2 mb-2 text-black bg-white rounded text-[0.9rem];
+  }
+
+  .profileInput {
+    @apply pi file:border-0 file:bg-black file:text-white file:rounded-sm;
+  }
+
+  .flex-col-gap-2 {
+    @apply flex flex-col gap-2;
+  }
+
+  .flex-wrap-gap-2 {
+    @apply flex flex-wrap gap-2;
+  }
+
+  .other-input {
+    @apply p-2 mb-2 text-black bg-white rounded focus:placeholder-transparent;
+  }
+
+  .input-title {
+    @apply text-[1rem] text-white font-semibold;
+  }
+
+  .f-col {
+    @apply flex flex-col;
+  }
+
+  .grid-4 {
+    @apply grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4;
+  }
+
+  .editable {
+    @apply hover:bg-gray-100 hover:cursor-text outline-none;
+  }
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.profession {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contact {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.social-media {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.content {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.sub-content {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.i-bold {
+  font-weight: 700 !important;
+}
+
+/* @media print {
+  .exclude-print {
+    display: none;
+  }
+
+  .rm-padding-print {
+    padding: 0;
+  }
+
+  @page {
+    size: A4;
+    margin: 10mm;
+  } */
+
+/* .preview {
+    overflow-y: visible !important;
+  } */
+
+/* .preview::after {
+    content: "Created using https://Resume.vercel.app/";
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    opacity: 0.2;
+    font-size: small;
+    text-align: center;
+    z-index: -1;
+  }
+} */
+
+/* styles/globals.css or a dedicated CSS file */
+.slider-container {
+  position: relative;
+  width: 70%;
+  height: 90%;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide.right {
+  transform: translateX(100%);
+}
+
+.slide.left {
+  transform: translateX(-100%);
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(2.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(2.95);
+  }
+}
+
+.transition-fade-in {
+  animation: fadeIn 2.3s ease-in-out;
+}
+
+.transition-fade-out {
+  animation: fadeOut 3.3s ease-in-out;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  /* overflow-y: hidden; */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+/* } */
+
+/*  */
+
+.preview {
+  width: 794px; /* Adjust for A4 */
+  /* height: 1123px; */
+  overflow: auto;
+  transform: scale(1);
+  overflow-y: hidden;
+}
+.a4-wrapper {
+  width: 794px; /* Adjust for A4 */
+  /* height: 1123px; */
+  margin: auto;
+  transform: scale(1); /* Slightly scale down */
+  /* transform-origin: top left; */
+}
+
+@media (max-width: 768px) {
+  .preview {
+    width: 100%;
+    overflow-x: hidden !important; /* Enable scrolling for overflow */
+    overflow-y: hidden !important;
+    transform: scale(0.5);
+    transform-origin: top left;
+    height: auto;
+  }
+  /* .a4-wrapper {
+    transform: scale(0.6); 
+    transform-origin: top center;
+    width: 100%; 
+ height: 100%;
+  } */
+}
+
+@media (max-width: 480px) {
+  .preview {
+    width: 199%;
+  }
+  .a4-wrapper {
+    transform: scale(0.6);
+    transform-origin: top center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 200px;
+  }
+}
+
+.preview-dashboard {
+  width: 200%;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+  transform: scale(0.5);
+  transform-origin: top left;
+  height: auto;
+}
+.a4-wrapper-dashboard {
+  transform: scale(0.5);
+  transform-origin: top center;
+  width: 100%;
+  height: 100vh;
+  max-height: 200vh;
+}
+
+.ql-container {
+  height: 162px !important;
+}
+
+/* .VIpgJd-ZVi9od-l4eHX-hSRGPd {
+  display: none !important;
+} */
+#google_translate_element span,
+#google_translate_element a,
+#google_translate_element::after {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
