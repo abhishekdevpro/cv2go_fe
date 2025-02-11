@@ -189,7 +189,7 @@ const Footer = () => {
         </div>
         <div className="container text-base md:mx-auto text-center border-t border-white pt-6 mt-6">
           <p className="text-cyan-600 text-right">
-            &copy; Copyright By CV2GO.com All Rights Reserved
+            &copy; Copyright By cv2go.com All Rights Reserved
           </p>
         </div>
       </footer>

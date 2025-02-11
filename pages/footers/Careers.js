@@ -116,7 +116,7 @@ function Careers() {
           of a dynamic, growth-oriented team, we’d love to hear from you. To
           apply for a position at CV2GO, please send your resume and a cover
           letter to{" "}
-          <a href="mailto:career@CV2GO.com" className="text-blue-500">
+          <a href="mailto:career@cv2go.com" className="text-blue-500">
             career@CV2GO.ca
           </a>
           .
