@@ -292,10 +292,10 @@ const FAQ = () => {
               />
             </div>
             {error && <p className="text-red-500 mb-2">{error}</p>}
-            {successMessage && <p className="text-orange-500 mb-2">{successMessage}</p>}
+            {successMessage && <p className="text-cyan-500 mb-2">{successMessage}</p>}
             <button
               type="submit"
-              className="bg-orange-400 text-white px-4 py-2 rounded-lg"
+              className="bg-cyan-500 text-white px-4 py-2 rounded-lg"
             >
               Send
             </button>

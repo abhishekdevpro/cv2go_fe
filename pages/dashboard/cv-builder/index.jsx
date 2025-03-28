@@ -91,15 +91,19 @@
 
 "use client";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import { BASE_URL } from "../../../components/Constant/constant";
+import { ResumeContext } from "../../../components/context/ResumeContext";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const { t } = useTranslation();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const { selectedLang } = useContext(ResumeContext);
 
   const handleCreateCvLetter = async () => {
     setLoading(true);
@@ -110,7 +114,7 @@ export default function Home() {
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        `${BASE_URL}/api/user/coverletter`,
+        `${BASE_URL}/api/user/coverletter?lang=${selectedLang}`,
         {},
         {
           headers: {
@@ -136,12 +140,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 flex items-center justify-center">
       <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-        <h1 className="text-2xl font-bold mb-4">
-          Welcome to Cover Letter Builder
-        </h1>
-        <p className="mb-6 text-gray-600">
-          Click the button below to create your cover letter.
-        </p>
+        <h1 className="text-2xl font-bold mb-4">{t("coverLetter.title")}</h1>
+        <p className="mb-6 text-gray-600">{t("coverLetter.description")}</p>
 
         {error && <p className="text-red-500 mb-4">{error}</p>}
 
@@ -152,7 +152,7 @@ export default function Home() {
           }`}
           disabled={loading}
         >
-          {loading ? "Creating..." : "Create Your Cover Letter"}
+          {loading ? t("coverLetter.loadingText") : t("coverLetter.buttonText")}
         </button>
       </div>
     </main>

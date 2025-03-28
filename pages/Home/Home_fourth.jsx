@@ -5,28 +5,28 @@ import Home_five from "./Home_five";
 const Home_fourth = () => {
   const course = [
     {
-      img: "https://blog.Create My Resume.fr/wp-content/uploads/2025/01/Ciblijob-blog-How-AI-is-Revolutionizing-Resume-Building-A-Beginners-Guide-1.png",
+      img: "https://blog.CV2GO.fr/wp-content/uploads/2025/01/Ciblijob-blog-How-AI-is-Revolutionizing-Resume-Building-A-Beginners-Guide-1.png",
       title: "How AI is Revolutionizing Resume Building: A Beginner’s Guide",
-      link: "https://blog.Create My Resume.fr/?p=1",
+      link: "https://blog.CV2GO.fr/?p=1",
     },
     {
-      img: "https://blog.Create My Resume.fr/wp-content/uploads/2025/01/Blog-2-CibliJob-AI-Powered-Resume-Builders-vs-Traditional-Methods-Whats-Better.png",
+      img: "https://blog.CV2GO.fr/wp-content/uploads/2025/01/Blog-2-CibliJob-AI-Powered-Resume-Builders-vs-Traditional-Methods-Whats-Better.png",
       title:
         "AI-Powered Resume Builders vs. Traditional Methods: What’s Better?",
-      link: "https://blog.Create My Resume.fr/?p=23",
+      link: "https://blog.CV2GO.fr/?p=23",
     },
 
     {
-      img: "https://blog.Create My Resume.fr/wp-content/uploads/2025/01/Blog-3-CibliJob-Top-5-Benefits-of-Using-an-AI-Resume-Builder.png",
+      img: "https://blog.CV2GO.fr/wp-content/uploads/2025/01/Blog-3-CibliJob-Top-5-Benefits-of-Using-an-AI-Resume-Builder.png",
       title: "Top 5 Benefits of Using an AI Resume Builder for Job Seekers",
-      link: "https://blog.Create My Resume.fr/?p=27",
+      link: "https://blog.CV2GO.fr/?p=27",
     },
 
     {
-      img: "https://blog.Create My Resume.fr/wp-content/uploads/2025/01/Blog-4-Step-by-Step-Guide-to-Creating-a-Job-Winning-Resume-with-AI-Tools.png",
+      img: "https://blog.CV2GO.fr/wp-content/uploads/2025/01/Blog-4-Step-by-Step-Guide-to-Creating-a-Job-Winning-Resume-with-AI-Tools.png",
       title:
         "Step-by-Step Guide to Creating a Job-Winning Resume with AI Tools",
-      link: "https://blog.Create My Resume.fr/?p=30",
+      link: "https://blog.CV2GO.fr/?p=30",
     },
   ];
   return (
@@ -68,8 +68,8 @@ const Home_fourth = () => {
           </div>
 
           <div className="flex justify-center mt-10">
-            <Link href={"https://blog.Create My Resume.fr/"}>
-              <button className="px-6 py-3 text-lg font-semibold text-white bg-cyan-600 hover:bg-cyan-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-700">
+            <Link href={"https://blog.CV2GO.fr/"}>
+              <button className="px-6 py-3 text-lg font-semibold text-white bg-cyan-600 hover:bg-cyan-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-600">
                 Get More Career Advice
               </button>
             </Link>

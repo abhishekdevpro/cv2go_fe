@@ -1,122 +1,81 @@
 import React from "react";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
-
+import { useTranslation } from "react-i18next";
 function Aboutus() {
+  const { t } = useTranslation();
   return (
     <div>
       <Navbar />
       <div className="m-4 sm:mx-10 lg:mx-40 p-4 sm:p-6 shadow-2xl">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold my-4 underline">
-          About Us
+          {t("about_us")}
         </h1>
+        <p className="text-base sm:text-lg">{t("welcome_message")}</p>
+
+        <h2 className="text-xl sm:text-2xl font-semibold my-2 mt-5">
+          {t("our_mission")}
+        </h2>
+        <p className="text-base sm:text-lg">{t("mission_description")}</p>
+
+        <h2 className="text-xl sm:text-2xl font-semibold my-2 mt-5">
+          {t("why_choose_us")}
+        </h2>
         <p className="text-base sm:text-lg">
-          Welcome to CV2GO, your trusted partner in crafting the ideal resume
-          that opens doors to new career opportunities. We specialize in
-          creating personalized, professional resumes that showcase your unique
-          skills, experiences, and achievements.
+          <strong>{t("expertise_experience")}</strong>{" "}
+          {t("expertise_description")}
         </p>
 
         <h2 className="text-xl sm:text-2xl font-semibold my-2 mt-5">
-          Our Mission
+          {t("personalized_approach")}
+        </h2>
+        <p className="text-base sm:text-lg">{t("personalized_description")}</p>
+
+        <h2 className="text-xl sm:text-2xl font-semibold my-2 mt-5">
+          {t("proven_results")}
         </h2>
         <p className="text-base sm:text-lg">
-          At CV2GO, our mission is to empower job seekers by providing expertly
-          designed resumes that make a lasting impression. We understand that
-          your resume is more than just a document; it’s a reflection of your
-          professional journey and aspirations. Our goal is to help you stand
-          out in a competitive job market and secure the position you deserve.
+          {t("proven_results_description")}
         </p>
 
         <h2 className="text-xl sm:text-2xl font-semibold my-2 mt-5">
-          Why Choose Us?
+          {t("our_services")}
         </h2>
         <p className="text-base sm:text-lg">
-          <strong>Expertise and Experience:</strong> Our team of seasoned resume
-          writers and career coaches brings years of industry experience to the
-          table. We stay updated with the latest trends in resume formatting and
-          content, ensuring your resume meets current standards and
-          expectations.
+          <strong>{t("resume_writing")}:</strong>{" "}
+          {t("resume_writing_description")}
         </p>
 
         <h2 className="text-xl sm:text-2xl font-semibold my-2 mt-5">
-          Personalized Approach
+          {t("cover_letter_writing")}
+        </h2>
+        <p className="text-base sm:text-lg">{t("cover_letter_description")}</p>
+
+        <h2 className="text-xl sm:text-2xl font-semibold my-2 mt-5">
+          {t("linkedin_optimization")}
         </h2>
         <p className="text-base sm:text-lg">
-          We believe that every individual is unique, and so is their career
-          path. Our personalized approach means that we take the time to
-          understand your background, career goals, and strengths. We tailor
-          your resume to highlight your most relevant skills and achievements,
-          making it a powerful tool in your job search.
+          {t("linkedin_optimization_description")}
         </p>
 
         <h2 className="text-xl sm:text-2xl font-semibold my-2 mt-5">
-          Proven Results
+          {t("career_coaching")}
         </h2>
         <p className="text-base sm:text-lg">
-          Our clients success is our top priority. We have a track record of
-          helping job seekers across various industries secure interviews and
-          job offers. Our professional resumes have proven to increase
-          visibility and impact, giving you the confidence to pursue your career
-          goals.
+          {t("career_coaching_description")}
         </p>
 
         <h2 className="text-xl sm:text-2xl font-semibold my-2 mt-5">
-          Our Services
+          {t("join_community")}
         </h2>
         <p className="text-base sm:text-lg">
-          <strong>Resume Writing:</strong> Whether you’re a recent graduate,
-          mid-career professional, or seasoned executive, our custom resume
-          writing service is designed to meet your needs. We create compelling,
-          ATS-friendly resumes that highlight your qualifications and make you
-          stand out to employers.
+          {t("join_community_description")}
         </p>
 
         <h2 className="text-xl sm:text-2xl font-semibold my-2 mt-5">
-          Cover Letter Writing
+          {t("contact_us")}
         </h2>
-        <p className="text-base sm:text-lg">
-          Complement your resume with a well-crafted cover letter. We write
-          persuasive cover letters that tell your story and explain why you’re
-          the perfect fit for the role.
-        </p>
-
-        <h2 className="text-xl sm:text-2xl font-semibold my-2 mt-5">
-          LinkedIn Profile Optimization
-        </h2>
-        <p className="text-base sm:text-lg">
-          In today’s digital age, a strong LinkedIn profile is essential. We
-          optimize your LinkedIn profile to increase your visibility, connect
-          with potential employers, and showcase your professional brand.
-        </p>
-
-        <h2 className="text-xl sm:text-2xl font-semibold my-2 mt-5">
-          Career Coaching
-        </h2>
-        <p className="text-base sm:text-lg">
-          Our career coaching services provide you with the guidance and support
-          needed to navigate your job search, prepare for interviews, and make
-          informed career decisions.
-        </p>
-
-        <h2 className="text-xl sm:text-2xl font-semibold my-2 mt-5">
-          Join Our Community
-        </h2>
-        <p className="text-base sm:text-lg">
-          At CV2GO, we’re more than just a resume writing service. We’re a
-          community of career-driven individuals dedicated to supporting each
-          other’s professional growth. Join us today and take the first step
-          towards achieving your career aspirations.
-        </p>
-
-        <h2 className="text-xl sm:text-2xl font-semibold my-2 mt-5">
-          Contact Us
-        </h2>
-        <p className="text-base sm:text-lg">
-          Ready to transform your resume and unlock new opportunities? Contact
-          us today and let CV2GO help you craft the perfect resume for your
-          career journey.
-        </p>
+        <p className="text-base sm:text-lg">{t("contact_us_description")}</p>
       </div>
 
       <Footer />

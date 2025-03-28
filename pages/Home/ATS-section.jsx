@@ -3,7 +3,7 @@ import React from "react";
 
 const ATSResumeSection = () => {
   return (
-    <div className="relative w-full min-h-[400px] bg-gradient-to-br from-cyan-600 to-cyan-900 p-8">
+    <div className="relative w-full min-h-[400px] bg-gradient-to-br from-cyan-600 to-black p-8">
       <div className="max-w-6xl mx-auto">
         {/* Main Content */}
         <div className="space-y-6 mb-12">
@@ -16,7 +16,7 @@ const ATSResumeSection = () => {
             major ATS systems to ensure complete parsability
           </p>
 
-          <button className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+          <button className="bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-3 px-6 rounded-lg transition-colors">
             Build an ATS-Friendly Resume
           </button>
         </div>
@@ -52,7 +52,7 @@ const ATSResumeSection = () => {
           {[...Array(5)].map((_, i) => (
             <div
               key={i}
-              className="absolute right-0 h-px bg-gradient-to-r from-transparent to-teal-500"
+              className="absolute right-0 h-px bg-gradient-to-r from-transparent to-cyan-500"
               style={{
                 top: `${20 + i * 15}%`,
                 width: `${60 + i * 10}%`,

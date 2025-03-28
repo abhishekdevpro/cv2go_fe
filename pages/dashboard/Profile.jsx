@@ -241,12 +241,13 @@
 // };
 
 // export default ProfilePage;
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import Link from "next/link";
 import Navbar from "../Navbar/Navbar";
 import { BASE_URL } from "../../components/Constant/constant";
+import { ResumeContext } from "../../components/context/ResumeContext";
 
 const ProfilePage = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -258,7 +259,7 @@ const ProfilePage = () => {
   const [modalResumeName, setModalResumeName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
-
+  const { selectedLang } = useContext(ResumeContext);
   const [formData, setFormData] = useState({
     photo: "",
     first_name: "",
@@ -280,7 +281,7 @@ const ProfilePage = () => {
       try {
         const token = localStorage.getItem("token");
         const userProfileResponse = await axios.get(
-          `${BASE_URL}/api/user/user-profile`,
+          `${BASE_URL}/api/user/user-profile?lang=${selectedLang}`,
           {
             headers: { Authorization: token },
           }
@@ -347,9 +348,12 @@ const ProfilePage = () => {
     const token = localStorage.getItem("token");
     if (token) {
       try {
-        const response = await axios.get(`${BASE_URL}/api/user/resume-list`, {
-          headers: { Authorization: token },
-        });
+        const response = await axios.get(
+          `${BASE_URL}/api/user/resume-list?lang=${selectedLang}`,
+          {
+            headers: { Authorization: token },
+          }
+        );
 
         const resumes = response.data.resumelist || [];
 
@@ -386,7 +390,7 @@ const ProfilePage = () => {
 
     try {
       const response = await axios.post(
-        `${BASE_URL}/api/user/file-based-ai`,
+        `${BASE_URL}/api/user/file-based-ai?lang=${selectedLang}`,
         {
           keyword:
             "Rate this resume content in percentage ? and checklist of scope improvements in manner of content and informations",
@@ -453,7 +457,7 @@ const ProfilePage = () => {
       setUploadStatus("Uploading...");
 
       const response = await axios.post(
-        `${BASE_URL}/api/user/resume-upload`,
+        `${BASE_URL}/api/user/resume-upload?lang=${selectedLang}`,
         formData,
         {
           headers: {
@@ -505,7 +509,7 @@ const ProfilePage = () => {
       <Navbar />
       {/* <div className="bg-cyan-600 p-4">
         <div className="max-w-4xl mx-auto">
-          <div className="rounded-lg shadow-lg p-6 bg-orange-500 flex flex-col md:flex-row justify-between items-center md:h-44">
+          <div className="rounded-lg shadow-lg p-6 bg-black flex flex-col md:flex-row justify-between items-center md:h-44">
             <div className="space-y-4 mb-6 md:mb-0 md:mr-6 md:pr-6 w-full">
               <div className="flex flex-col md:flex-row md:items-center md:space-x-4">
                 <img

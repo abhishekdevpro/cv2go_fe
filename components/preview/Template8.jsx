@@ -69,7 +69,10 @@ const Template8 = () => {
   ];
 
   return (
-    <div ref={templateRef} className="max-w-4xl mx-auto bg-white border">
+    <div
+      ref={templateRef}
+      // className="max-w-4xl mx-auto bg-white border"
+    >
       <section className="flex justify-between">
         <aside
           className="w-4/12 bg-[#d4d4d8] p-4"

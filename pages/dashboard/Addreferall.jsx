@@ -3,6 +3,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { BASE_URL } from "../../components/Constant/constant";
+import { useTranslation } from "react-i18next";
 
 function Addreferall() {
     const [name, setName] = useState("");
@@ -10,6 +11,8 @@ function Addreferall() {
     const [email, setEmail] = useState("");
     const [remark, setRemark] = useState("");
     const [loading, setLoading] = useState(false);
+    const { i18n, t } = useTranslation();
+    const language = i18n.language;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -19,7 +22,7 @@ function Addreferall() {
         const referralData = { name, phone, email, remark };
 
         try {
-            const response = await axios.post(`${BASE_URL}/api/user/add-referral`, referralData, {
+            const response = await axios.post(`${BASE_URL}/api/user/add-referral?lang=${language}`, referralData, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': token,

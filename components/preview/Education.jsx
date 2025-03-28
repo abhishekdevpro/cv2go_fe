@@ -72,6 +72,8 @@ const EducationSection = ({
           borderBottom: `2px solid ${headerColor == "black" ? `${backgroundColorss}` : headerColor}`,
         }}
         className="text-xl font-bold mb-1"
+        contentEditable
+  suppressContentEditableWarning
       >
         Education
       </h2>
@@ -86,12 +88,16 @@ const EducationSection = ({
         >
           <div>
             <p
+             contentEditable
+             suppressContentEditableWarning
               className="font-semibold"
               style={{ color: layout === "row" || headerColor == "black" ? "black" : "white" }}
             >
               {item.degree}
             </p>
             <p
+             contentEditable
+             suppressContentEditableWarning
               style={{ color: layout === "row" || headerColor == "black" ? "black" : "white" }}
             >
               {item.school}
@@ -100,6 +106,8 @@ const EducationSection = ({
           <div>
             <DateRange layout={layout} startYear={item.startYear} endYear={item.endYear} />
             <p
+             contentEditable
+             suppressContentEditableWarning
               style={{ color: layout === "row" || headerColor == "black" ? "black" : "white" }}
             >
               {item.location}

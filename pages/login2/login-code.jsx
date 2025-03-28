@@ -1,17 +1,20 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "./logo.png";
 import { useRouter } from "next/router";
+import { toast } from "react-toastify";
 // import ReCAPTCHA from 'react-google-recaptcha';
+import axios from "axios";
 import { BASE_URL } from "../../components/Constant/constant";
+import { ResumeContext } from "../../components/context/ResumeContext";
 const LoginCode = () => {
   const [otp, setOtp] = useState("");
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const router = useRouter();
-
+  const { selectedLang } = useContext(ResumeContext);
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(true);
   const handleOtpChange = (e) => {
@@ -38,7 +41,7 @@ const LoginCode = () => {
 
     try {
       const response = await axios.post(
-        `${BASE_URL}/api/user/auth/login-verify-otp`,
+        `${BASE_URL}/api/user/auth/login-verify-otp?lang=${selectedLang}`,
 
         { email, otp }
       );
@@ -46,7 +49,7 @@ const LoginCode = () => {
       const token = response.data?.data?.token;
 
       localStorage.setItem("token", token);
-
+      toast.success("Login Successfully");
       router.push(`/dashboard`);
     } catch (error) {
       console.error(
@@ -65,7 +68,7 @@ const LoginCode = () => {
         {/* Back Button */}
         <Link
           href="/login2"
-          className="text-blue-600 flex items-center mb-6 hover:text-blue-700"
+          className="text-cyan-600 flex items-center mb-6 hover:text-cyan-600"
         >
           <span className="mr-2">←</span> Back
         </Link>
@@ -87,7 +90,7 @@ const LoginCode = () => {
         </h2>
         <p className="text-gray-600 text-center mb-6">
           We have sent your one-time passcode to <br />
-          <strong>{email}</strong>. This passcode will expire after 10 minutes.
+          <strong>{email}</strong>. This passcode will expire after 5 minutes.
         </p>
 
         {/* OTP Input */}
@@ -114,7 +117,7 @@ const LoginCode = () => {
         </div> */}
 
         {/* Success Message */}
-        {/* <div className="flex items-center bg-orange-100 border border-orange-500 text-orange-700 p-3 rounded-md mb-6">
+        {/* <div className="flex items-center bg-green-100 border border-green-500 text-green-700 p-3 rounded-md mb-6">
           <span className="mr-2">✅</span> Success!
         </div> */}
 

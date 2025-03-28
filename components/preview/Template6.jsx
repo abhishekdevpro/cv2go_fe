@@ -72,7 +72,7 @@ const Template6 = () => {
   return (
     <div
       ref={templateRef}
-      className="max-w-4xl mx-auto bg-white border border-gray-200 "
+      // className="max-w-4xl mx-auto bg-white border border-gray-200 "
     >
       <div className="container mx-auto flex bg-white shadow-lg">
         {/* Left Column */}

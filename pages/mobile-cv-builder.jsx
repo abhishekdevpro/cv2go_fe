@@ -5,6 +5,7 @@ import CoverLetterEditor from "../components/cv/coverletterform/CoverLetterEdito
 import Navbar from "./Navbar/Navbar";
 import ColorPickers from "./ColorPickers";
 import CoverLetterPreview from "../components/cv/coverletter/CoverLetterPreview";
+import { useTranslation } from "react-i18next";
 
 const MobileCoverLetterBuilder = ({
   selectedFont,
@@ -18,7 +19,7 @@ const MobileCoverLetterBuilder = ({
   templateRef,
 }) => {
   const [isPreviewMode, setIsPreviewMode] = useState(false);
-
+  const { t } = useTranslation();
   const togglePreviewMode = () => {
     setIsPreviewMode(!isPreviewMode);
   };
@@ -42,9 +43,9 @@ const MobileCoverLetterBuilder = ({
           <div className="sticky bottom-0 w-full p-4 bg-white shadow-t">
             <button
               onClick={togglePreviewMode}
-              className="w-full bg-orange-500 text-white px-6 py-3 rounded-lg text-lg font-medium"
+              className="w-full bg-pink-500 text-white px-6 py-3 rounded-lg text-lg font-medium"
             >
-              Next
+              {t("navigation.next")}
             </button>
           </div>
         </div>
@@ -58,7 +59,7 @@ const MobileCoverLetterBuilder = ({
               <select
                 value={selectedFont}
                 onChange={handleFontChange}
-                className=" h-10 rounded-lg border border-orange-500 px-4 font-bold text-black bg-white"
+                className=" h-10 rounded-lg border border-green-500 px-4 font-bold text-black bg-white"
               >
                 <option value="Ubuntu">Ubuntu</option>
                 <option value="Calibri">Calibri</option>
@@ -101,14 +102,14 @@ const MobileCoverLetterBuilder = ({
             </button>
             <button
               onClick={handleFinish}
-              className="w-full flex items-center justify-center gap-2 bg-[#369984] text-white px-6 py-3 rounded-lg"
+              className="w-full flex items-center justify-center gap-2 bg-cyan-800 text-white px-6 py-3 rounded-lg"
             >
               <Save size={20} />
               {/* Save Cover Letter */}
             </button>
             <button
               onClick={downloadAsPDF}
-              className="w-full flex items-center justify-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-lg"
+              className="w-full flex items-center justify-center gap-2 bg-black text-white px-6 py-3 rounded-lg"
             >
               <Download size={20} />
               {/* Download */}

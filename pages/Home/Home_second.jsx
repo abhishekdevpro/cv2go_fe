@@ -98,7 +98,7 @@
 //   return (
 //     <>
 //       <div className="  ">
-//         <section className="bg-orange-100 dark:bg-orange-200">
+//         <section className="bg-green-100 dark:bg-green-200">
 //           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
 //             <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
 //               <h2 className="mb-4 text-4xl tracking-tight font-extrabold bg-gray-800 rounded-2xl text-white border p-3">
@@ -123,7 +123,7 @@
 //                   <li className="flex items-center space-x-3">
 //                     {/* Icon */}
 //                     <svg
-//                       className="flex-shrink-0 w-5 h-5 text-orange-500 dark:text-orange-400"
+//                       className="flex-shrink-0 w-5 h-5 text-cyan-500 dark:text-cyan-500"
 //                       fill="currentColor"
 //                       viewBox="0 0 20 20"
 //                       xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +139,7 @@
 //                   <li className="flex items-center space-x-3">
 //                     {/* Icon */}
 //                     <svg
-//                       className="flex-shrink-0 w-5 h-5 text-orange-500 dark:text-orange-400"
+//                       className="flex-shrink-0 w-5 h-5 text-cyan-500 dark:text-cyan-500"
 //                       fill="currentColor"
 //                       viewBox="0 0 20 20"
 //                       xmlns="http://www.w3.org/2000/svg"
@@ -155,7 +155,7 @@
 //                   <li className="flex items-center space-x-3">
 //                     {/* Icon */}
 //                     <svg
-//                       className="flex-shrink-0 w-5 h-5 text-orange-500 dark:text-orange-400"
+//                       className="flex-shrink-0 w-5 h-5 text-cyan-500 dark:text-cyan-500"
 //                       fill="currentColor"
 //                       viewBox="0 0 20 20"
 //                       xmlns="http://www.w3.org/2000/svg"
@@ -171,7 +171,7 @@
 //                   <li className="flex items-center space-x-3">
 //                     {/* Icon */}
 //                     <svg
-//                       className="flex-shrink-0 w-5 h-5 text-orange-500 dark:text-orange-400"
+//                       className="flex-shrink-0 w-5 h-5 text-cyan-500 dark:text-cyan-500"
 //                       fill="currentColor"
 //                       viewBox="0 0 20 20"
 //                       xmlns="http://www.w3.org/2000/svg"
@@ -187,7 +187,7 @@
 //                   <li className="flex items-center space-x-3">
 //                     {/* Icon */}
 //                     <svg
-//                       className="flex-shrink-0 w-5 h-5 text-orange-500 dark:text-orange-400"
+//                       className="flex-shrink-0 w-5 h-5 text-cyan-500 dark:text-cyan-500"
 //                       fill="currentColor"
 //                       viewBox="0 0 20 20"
 //                       xmlns="http://www.w3.org/2000/svg"
@@ -225,7 +225,7 @@
 //                   <li className="flex items-center space-x-3">
 //                     {/* Icon */}
 //                     <svg
-//                       className="flex-shrink-0 w-5 h-5 text-orange-500 dark:text-orange-400"
+//                       className="flex-shrink-0 w-5 h-5 text-cyan-500 dark:text-cyan-500"
 //                       fill="currentColor"
 //                       viewBox="0 0 20 20"
 //                       xmlns="http://www.w3.org/2000/svg"
@@ -242,7 +242,7 @@
 //                   <li className="flex items-center space-x-3">
 //                     {/* Icon */}
 //                     <svg
-//                       className="flex-shrink-0 w-5 h-5 text-orange-500 dark:text-orange-400"
+//                       className="flex-shrink-0 w-5 h-5 text-cyan-500 dark:text-cyan-500"
 //                       fill="currentColor"
 //                       viewBox="0 0 20 20"
 //                       xmlns="http://www.w3.org/2000/svg"
@@ -259,7 +259,7 @@
 //                   <li className="flex items-center space-x-3">
 //                     {/* Icon */}
 //                     <svg
-//                       className="flex-shrink-0 w-5 h-5 text-orange-500 dark:text-orange-400"
+//                       className="flex-shrink-0 w-5 h-5 text-cyan-500 dark:text-cyan-500"
 //                       fill="currentColor"
 //                       viewBox="0 0 20 20"
 //                       xmlns="http://www.w3.org/2000/svg"
@@ -276,7 +276,7 @@
 //                   <li className="flex items-center space-x-3">
 //                     {/* Icon */}
 //                     <svg
-//                       className="flex-shrink-0 w-5 h-5 text-orange-500 dark:text-orange-400"
+//                       className="flex-shrink-0 w-5 h-5 text-cyan-500 dark:text-cyan-500"
 //                       fill="currentColor"
 //                       viewBox="0 0 20 20"
 //                       xmlns="http://www.w3.org/2000/svg"
@@ -292,7 +292,7 @@
 //                   <li className="flex items-center space-x-3">
 //                     {/* Icon */}
 //                     <svg
-//                       className="flex-shrink-0 w-5 h-5 text-orange-500 dark:text-orange-400"
+//                       className="flex-shrink-0 w-5 h-5 text-cyan-500 dark:text-cyan-500"
 //                       fill="currentColor"
 //                       viewBox="0 0 20 20"
 //                       xmlns="http://www.w3.org/2000/svg"
@@ -308,7 +308,7 @@
 //                   <li className="flex items-center space-x-3">
 //                     {/* Icon */}
 //                     <svg
-//                       className="flex-shrink-0 w-5 h-5 text-orange-500 dark:text-orange-400"
+//                       className="flex-shrink-0 w-5 h-5 text-cyan-500 dark:text-cyan-500"
 //                       fill="currentColor"
 //                       viewBox="0 0 20 20"
 //                       xmlns="http://www.w3.org/2000/svg"
@@ -389,7 +389,7 @@
 //                             </label>
 //                             <input
 //                               type="text"
-//                               className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
+//                               className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500"
 //                               value={name}
 //                               onChange={(e) => setName(e.target.value)}
 //                               required
@@ -401,7 +401,7 @@
 //                             </label>
 //                             <input
 //                               type="email"
-//                               className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
+//                               className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500"
 //                               value={email}
 //                               onChange={(e) => setEmail(e.target.value)}
 //                               required
@@ -413,7 +413,7 @@
 //                             </label>
 //                             <input
 //                               type="tel"
-//                               className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
+//                               className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500"
 //                               value={phone}
 //                               onChange={(e) => setPhone(e.target.value)}
 //                               required
@@ -516,7 +516,7 @@
 //                             </label>
 //                             <input
 //                               type="text"
-//                               className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
+//                               className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500"
 //                               value={name1}
 //                               onChange={(e) => setName1(e.target.value)}
 //                               required
@@ -528,7 +528,7 @@
 //                             </label>
 //                             <input
 //                               type="email"
-//                               className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
+//                               className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500"
 //                               value={email1}
 //                               onChange={(e) => setEmail1(e.target.value)}
 //                               required
@@ -540,7 +540,7 @@
 //                             </label>
 //                             <input
 //                               type="tel"
-//                               className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
+//                               className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500"
 //                               value={phone1}
 //                               onChange={(e) => setPhone1(e.target.value)}
 //                               required
@@ -605,7 +605,7 @@
 //                   <li className="flex items-center space-x-3">
 //                     {/* Icon */}
 //                     <svg
-//                       className="flex-shrink-0 w-5 h-5 text-orange-500 dark:text-orange-400"
+//                       className="flex-shrink-0 w-5 h-5 text-cyan-500 dark:text-cyan-500"
 //                       fill="currentColor"
 //                       viewBox="0 0 20 20"
 //                       xmlns="http://www.w3.org/2000/svg"
@@ -622,7 +622,7 @@
 //                   <li className="flex items-center space-x-3">
 //                     {/* Icon */}
 //                     <svg
-//                       className="flex-shrink-0 w-5 h-5 text-orange-500 dark:text-orange-400"
+//                       className="flex-shrink-0 w-5 h-5 text-cyan-500 dark:text-cyan-500"
 //                       fill="currentColor"
 //                       viewBox="0 0 20 20"
 //                       xmlns="http://www.w3.org/2000/svg"
@@ -639,7 +639,7 @@
 //                   <li className="flex items-center space-x-3">
 //                     {/* Icon */}
 //                     <svg
-//                       className="flex-shrink-0 w-5 h-5 text-orange-500 dark:text-orange-400"
+//                       className="flex-shrink-0 w-5 h-5 text-cyan-500 dark:text-cyan-500"
 //                       fill="currentColor"
 //                       viewBox="0 0 20 20"
 //                       xmlns="http://www.w3.org/2000/svg"
@@ -656,7 +656,7 @@
 //                   <li className="flex items-center space-x-3">
 //                     {/* Icon */}
 //                     <svg
-//                       className="flex-shrink-0 w-5 h-5 text-orange-500 dark:text-orange-400"
+//                       className="flex-shrink-0 w-5 h-5 text-cyan-500 dark:text-cyan-500"
 //                       fill="currentColor"
 //                       viewBox="0 0 20 20"
 //                       xmlns="http://www.w3.org/2000/svg"
@@ -672,7 +672,7 @@
 //                   <li className="flex items-center space-x-3">
 //                     {/* Icon */}
 //                     <svg
-//                       className="flex-shrink-0 w-5 h-5 text-orange-500 dark:text-orange-400"
+//                       className="flex-shrink-0 w-5 h-5 text-cyan-500 dark:text-cyan-500"
 //                       fill="currentColor"
 //                       viewBox="0 0 20 20"
 //                       xmlns="http://www.w3.org/2000/svg"
@@ -688,7 +688,7 @@
 //                   <li className="flex items-center space-x-3">
 //                     {/* Icon */}
 //                     <svg
-//                       className="flex-shrink-0 w-5 h-5 text-orange-500 dark:text-orange-400"
+//                       className="flex-shrink-0 w-5 h-5 text-cyan-500 dark:text-cyan-500"
 //                       fill="currentColor"
 //                       viewBox="0 0 20 20"
 //                       xmlns="http://www.w3.org/2000/svg"
@@ -768,8 +768,6 @@ function Home_Second() {
           </button>
         </div>
       </div>
-
-      <Home_third />
     </>
   );
 }

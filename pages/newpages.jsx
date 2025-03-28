@@ -48,7 +48,7 @@ const NewPages = () => {
               <button
                 onClick={() => toggleSection(index)}
                 className={`w-full flex items-center justify-between p-3 text-lg font-semibold rounded-md transition-all duration-300 ${
-                  openSection === index ? "bg-orange-200" : "bg-gray-100"
+                  openSection === index ? "bg-green-200" : "bg-gray-100"
                 }`}
               >
                 {item}

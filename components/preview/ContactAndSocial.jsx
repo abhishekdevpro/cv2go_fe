@@ -1,282 +1,268 @@
-// import React from "react";
-// import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md";
 
+// import React, { useContext } from "react";
+// import {
+//   Phone,
+//   Mail,
+//   MapPin,
+//   Github,
+//   Linkedin,
+//   Twitter,
+//   Globe,
+//   Instagram,
+//   Facebook,
+// } from "lucide-react";
+// import { ResumeContext } from "../context/ResumeContext";
 
-// const ContactAndSocialMedia = ({
-//   contactData,
-//   socialMediaData,
-//   icons,
-//   layout = "column", // "column" or "row"
-//   contactClass = "",
-//   socialMediaClass = "",
-//   addressCharacterLimit = 30, // Default character limit for address
-// }) => {
-//   return (
-//     <div
-//       className={`flex ${
-//         layout === "row" ? "flex-row items-center justify-center flex-wrap gap-2" : "flex-col gap-2"
-//       }`}
-//     >
-//       {/* Contact Information */}
-//       {contactData && (
-//         <>
-//           {contactData.teldata && (
-//             <div className={`flex items-center gap-2 ${contactClass}`}>
-//               <span>{<MdPhone />}</span>
-//               <span>{contactData.teldata}</span>
-//             </div>
-//           )}
-//           {contactData.emaildata && (
-//             <div className={`flex items-center gap-2 ${contactClass}`}>
-//               <span>{<MdEmail />}</span>
-//               <span>{contactData.emaildata}</span>
-//             </div>
-//           )}
-//           {contactData.addressdata && (
-//             <div className={`flex items-center gap-2 ${contactClass}`}>
-//               <span>{<MdLocationOn />}</span>
-//               <span>
-//                 {contactData.addressdata.length > addressCharacterLimit
-//                   ? `${contactData.addressdata.slice(0, addressCharacterLimit)}...`
-//                   : contactData.addressdata}
-//               </span>
-//             </div>
-//           )}
-//         </>
-//       )}
-
-//       {/* Social Media Links */}
-//       {Array.isArray(socialMediaData) && socialMediaData.length > 0 ? (
-//         socialMediaData.map((socialMedia, index) => (
-//           <a
-//             href={`http://${socialMedia.link}`}
-//             aria-label={socialMedia.socialMedia}
-//             key={index}
-//             title={socialMedia.socialMedia}
-//             target="_blank"
-//             rel="noreferrer"
-//             className={`flex items-center gap-2 transition-transform transform hover:scale-105 ${socialMediaClass}`}
-//           >
-//             {icons.map((icon, iconIndex) => {
-//               if (icon.name === socialMedia.socialMedia.toLowerCase()) {
-//                 return <span key={iconIndex}>{icon.icon}</span>;
-//               }
-//               return null;
-//             })}
-//             <span className="truncate">{socialMedia.socialMedia}</span>
-//           </a>
-//         ))
-//       ) : (
-//         <p className="text-gray-600 dark:text-gray-300">
-//           No social media links available
-//         </p>
-//       )}
-//     </div>
-//   );
+// const ICON_COMPONENTS = {
+//   phone: Phone,
+//   email: Mail,
+//   location: MapPin,
+//   github: Github,
+//   linkedin: Linkedin,
+//   twitter: Twitter,
+//   website: Globe,
+//   instagram: Instagram,
+//   facebook: Facebook,
 // };
 
-// export default ContactAndSocialMedia;
-
-// import React from "react";
-// import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md";
-
 // const ContactAndSocialMedia = ({
+//   title,
 //   contactData,
 //   socialMediaData,
-//   icons,
-//   layout = "column", // "column" or "row"
+//   layout = "column",
 //   contactClass = "",
 //   socialMediaClass = "",
-//   addressCharacterLimit = 30, // Default character limit for address
-//   textColor = "text-black", // Default text color
+//   addressCharacterLimit = 30,
+//   textColor = "text-black",
+//   className = "",
 // }) => {
+//   const { backgroundColorss } = useContext(ResumeContext);
+//   const finalTextColor = backgroundColorss ? textColor : "text-black";
+
+//   const getIcon = (iconName) => {
+//     const IconComponent = ICON_COMPONENTS[iconName.toLowerCase()];
+//     if (!IconComponent) return null;
+
+//     return (
+//       <div className={`${layout === "row" ? "px-2" : "pr-2"}`}>
+//         <IconComponent className="w-5 h-5" />
+//       </div>
+//     );
+//   };
+
+//   const renderContactItem = (icon, data, truncate = false) => {
+//     if (!data) return null;
+
+//     const displayData =
+//       truncate && data.length > addressCharacterLimit
+//         ? `${data.slice(0, addressCharacterLimit)}...`
+//         : data;
+
+//     return (
+//       <div className={`flex items-center gap-2 ${contactClass}`}>
+//         <span className={finalTextColor}>{getIcon(icon)}</span>
+//         &nbsp;
+//         <span className={finalTextColor}>{displayData}</span>
+//       </div>
+//     );
+//   };
+
+//   const renderSocialMediaLinks = () => {
+//     if (!Array.isArray(socialMediaData) || socialMediaData.length === 0) {
+//       return (
+//         <p className={`text-gray-600 dark:text-gray-300 ${finalTextColor}`}>
+//           &nbsp;
+//         </p>
+//       );
+//     }
+
+//     return socialMediaData.map((socialMedia, index) => (
+//       <a
+//         href={`http://${socialMedia.link}`}
+//         aria-label={socialMedia.socialMedia}
+//         key={index}
+//         title={socialMedia.socialMedia}
+//         target="_blank"
+//         rel="noreferrer"
+//         className={`flex items-center gap-2 ${socialMediaClass}`}
+//       >
+//         <span className={finalTextColor}>
+//           {getIcon(socialMedia.socialMedia.toLowerCase())}
+//         </span>
+//         &nbsp;
+//         <span className={`truncate ${finalTextColor}`}>
+//           {socialMedia.socialMedia}
+//         </span>
+//       </a>
+//     ));
+//   };
+
 //   return (
 //     <div
 //       className={`flex ${
 //         layout === "row"
-//           ? "flex-row items-center justify-center flex-wrap gap-2"
+//           ? "flex-row items-center flex-wrap gap-2"
 //           : "flex-col gap-2"
-//       }`}
+//       } ${className}`}
 //     >
-//       {/* Contact Information */}
+//       {title && (
+//         <h3
+//           className={`text-xl font-bold mb-2 border-b-2 ${
+//             finalTextColor === "text-black" ? "border-black" : "border-white"
+//           } ${finalTextColor}`}
+//         >
+//           {title}&nbsp;
+//         </h3>
+//       )}
+
 //       {contactData && (
 //         <>
-//           {contactData.teldata && (
-//             <div className={`flex items-center gap-2 ${contactClass}`}>
-//               <span className={`${textColor}`}>{<MdPhone />}</span>
-//               <span className={`${textColor}`}>{contactData.teldata}</span>
-//             </div>
-//           )}
-//           {contactData.emaildata && (
-//             <div className={`flex items-center gap-2 ${contactClass}`}>
-//               <span className={`${textColor}`}>{<MdEmail />}</span>
-//               <span className={`${textColor}`}>{contactData.emaildata}</span>
-//             </div>
-//           )}
-//           {contactData.addressdata && (
-//             <div className={`flex items-center gap-2 ${contactClass}`}>
-//               <span className={`${textColor}`}>{<MdLocationOn />}</span>
-//               <span className={`${textColor}`}>
-//                 {contactData.addressdata.length > addressCharacterLimit
-//                   ? `${contactData.addressdata.slice(0, addressCharacterLimit)}...`
-//                   : contactData.addressdata}
-//               </span>
-//             </div>
-//           )}
+//           {renderContactItem("phone", contactData.teldata)}
+//           {renderContactItem("email", contactData.emaildata)}
+//           {renderContactItem("location", contactData.addressdata, true)}
 //         </>
 //       )}
 
-      // {/* Social Media Links */}
-      // {Array.isArray(socialMediaData) && socialMediaData.length > 0 ? (
-      //   socialMediaData.map((socialMedia, index) => (
-      //     <a
-      //       href={`http://${socialMedia.link}`}
-      //       aria-label={socialMedia.socialMedia}
-      //       key={index}
-      //       title={socialMedia.socialMedia}
-      //       target="_blank"
-      //       rel="noreferrer"
-      //       className={`flex items-center gap-2 transition-transform transform hover:scale-105 ${socialMediaClass}`}
-      //     >
-      //       {icons.map((icon, iconIndex) => {
-      //         if (icon.name === socialMedia.socialMedia.toLowerCase()) {
-      //           return <span key={iconIndex} className={`${textColor}`}>{icon.icon}</span>;
-      //         }
-      //         return null;
-      //       })}
-      //       <span className={`truncate ${textColor}`}>{socialMedia.socialMedia}</span>
-      //     </a>
-      //   ))
-      // ) : (
-      //   <p className={`text-gray-600 dark:text-gray-300 ${textColor}`}>
-      //     No social media links available
-      //   </p>
-      // )}
+//       {renderSocialMediaLinks()}
 //     </div>
 //   );
 // };
 
 // export default ContactAndSocialMedia;
 import React, { useContext } from "react";
-import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Github,
+  Linkedin,
+  Twitter,
+  Globe,
+  Instagram,
+  Facebook,
+} from "lucide-react";
 import { ResumeContext } from "../context/ResumeContext";
 
+const ICON_COMPONENTS = {
+  phone: Phone,
+  email: Mail,
+  location: MapPin,
+  github: Github,
+  linkedin: Linkedin,
+  twitter: Twitter,
+  website: Globe,
+  instagram: Instagram,
+  facebook: Facebook,
+};
+
 const ContactAndSocialMedia = ({
-  title, // Title prop
+  title,
   contactData,
   socialMediaData,
-  icons,
-  layout = "column", // "column" or "row"
+  layout = "column",
   contactClass = "",
   socialMediaClass = "",
-  addressCharacterLimit = 30, // Default character limit for address
-  textColor = "text-black", // Default text color
-  className=""
+  addressCharacterLimit = 30,
+  textColor = "text-black",
+  className = "",
 }) => {
-  
-  const {backgroundColorss} =  useContext(ResumeContext)
-  console.log(backgroundColorss,"backgroundColorss");
-  {backgroundColorss?textColor:textColor="text-black"}
+  const { backgroundColorss } = useContext(ResumeContext);
+  const finalTextColor = backgroundColorss ? textColor : "text-black";
 
-
-  console.log(textColor,"textColor");
+  const getIcon = (iconName) => {
+    const IconComponent = ICON_COMPONENTS[iconName.toLowerCase()];
+    if (!IconComponent) return null;
 
     return (
+      <div className={`${layout === "row" ? "px-2" : "pr-2"}`}>
+        <IconComponent className="w-5 h-5" />
+      </div>
+    );
+  };
+
+  const renderContactItem = (icon, data, truncate = false) => {
+    if (!data) return null;
+
+    const displayData = data
+
+    return (
+      <div className={`flex items-center gap-2 ${contactClass} hover:outline-dashed hover:outline-2 hover:outline-gray-400 hover:scale-105 transition-transform duration-300`}>
+        <span className={finalTextColor}>{getIcon(icon)}</span>
+       
+        <span 
+          className={finalTextColor}
+          contentEditable
+          suppressContentEditableWarning
+        >
+          {displayData}
+        </span>
+      </div>
+    );
+  };
+
+  const renderSocialMediaLinks = () => {
+    if (!Array.isArray(socialMediaData) || socialMediaData.length === 0) {
+      return (
+        <p className={`text-gray-600 dark:text-gray-300 ${finalTextColor}`}>
+          &nbsp;
+        </p>
+      );
+    }
+
+    return socialMediaData.map((socialMedia, index) => (
+      <a
+        href={`http://${socialMedia.link}`}
+        aria-label={socialMedia.socialMedia}
+        key={index}
+        title={socialMedia.socialMedia}
+        target="_blank"
+        rel="noreferrer"
+        className={`flex items-center gap-2 ${socialMediaClass} hover:outline-dashed hover:outline-2 hover:outline-gray-400 hover:scale-105 transition-transform duration-300`}
+      >
+        <span className={finalTextColor}>
+          {getIcon(socialMedia.socialMedia.toLowerCase())}
+        </span>
+        &nbsp;
+        <span 
+          className={`truncate ${finalTextColor}`}
+          contentEditable
+          suppressContentEditableWarning
+        >
+          {socialMedia.socialMedia}
+        </span>
+      </a>
+    ));
+  };
+
+  return (
     <div
-    className={`flex ${
-              layout === "row"
-                ? "flex-row items-center flex-wrap gap-2"
-                : "flex-col gap-2"
-            } ${" "} ${className}`}
+      className={`flex ${
+        layout === "row"
+          ? "flex-row items-center flex-wrap gap-2"
+          : "flex-col gap-2"
+      } ${className}`}
     >
-      {/* Title */}
       {title && (
-        <h3 
-        className={`text-xl font-bold mb-2 border-b-2 ${textColor=="text-black"?"border-black":"border-white"} ${textColor}`}>
-          {title}
+        <h3
+          className={`text-xl font-bold mb-2 border-b-2 ${
+            finalTextColor === "text-black" ? "border-black" : "border-white"
+          } ${finalTextColor}`}
+          contentEditable
+          suppressContentEditableWarning
+        >
+          {title}&nbsp;
         </h3>
       )}
 
-      {/* Contact Information */}
       {contactData && (
         <>
-          {contactData.teldata && (
-            <div className={`flex items-center gap-2 ${contactClass}`}>
-              <span className={`${textColor}`}>{<MdPhone />}</span>
-              <span className={`${textColor}`}>{contactData.teldata}</span>
-            </div>
-          )}
-          {contactData.emaildata && (
-            <div className={`flex items-center gap-2 ${contactClass}`}>
-              <span className={`${textColor}`}>{<MdEmail />}</span>
-              <span className={`${textColor}`}>{contactData.emaildata}</span>
-            </div>
-          )}
-          {contactData.addressdata && (
-            <div className={`flex items-center gap-2 ${contactClass}`}>
-              <span className={`${textColor}`}>{<MdLocationOn />}</span>
-              <span className={`${textColor}`}>
-                {contactData.addressdata.length > addressCharacterLimit
-                  ? `${contactData.addressdata.slice(0, addressCharacterLimit)}...`
-                  : contactData.addressdata}
-              </span>
-            </div>
-          )}
+          {renderContactItem("phone", contactData.teldata)}
+          {renderContactItem("email", contactData.emaildata)}
+          {renderContactItem("location", contactData.addressdata, true)}
         </>
       )}
 
-      {/* Social Media Links */}
-      {/* {Array.isArray(socialMediaData) && socialMediaData.length > 0 ? (
-        socialMediaData.map((socialMedia, index) => (
-          <a
-            href={`http://${socialMedia.link}`}
-            aria-label={socialMedia.socialMedia}
-            key={index}
-            title={socialMedia.socialMedia}
-            target="_blank"
-            rel="noreferrer"
-            className={`flex items-center gap-2 transition-transform transform hover:scale-105 ${socialMediaClass}`}
-          >
-            {icons.map((icon, iconIndex) => {
-              if (icon.name === socialMedia.socialMedia.toLowerCase()) {
-                return <span key={iconIndex} className={`${textColor}`}>{icon.icon}</span>;
-              }
-              return null;
-            })}
-            <span className={`truncate ${textColor}`}>{socialMedia.socialMedia}</span>
-          </a>
-        ))
-      ) : (
-        <p className={`text-gray-600 dark:text-gray-300 ${textColor}`}>
-          No social media links available
-        </p>
-      )} */}
-       {/* Social Media Links */}
-       {Array.isArray(socialMediaData) && socialMediaData.length > 0 ? (
-        socialMediaData.map((socialMedia, index) => (
-          <a
-            href={`http://${socialMedia.link}`}
-            aria-label={socialMedia.socialMedia}
-            key={index}
-            title={socialMedia.socialMedia}
-            target="_blank"
-            rel="noreferrer"
-            className={`flex items-center gap-2 transition-transform transform hover:scale-105 ${socialMediaClass}`}
-          >
-            {icons.map((icon, iconIndex) => {
-              if (icon.name === socialMedia.socialMedia.toLowerCase()) {
-                return <span key={iconIndex} className={`${textColor}`}>{icon.icon}</span>;
-              }
-              return null;
-            })}
-            <span className={`truncate ${textColor}`}>{socialMedia.socialMedia}</span>
-          </a>
-        ))
-      ) : (
-        <p className={`text-gray-600 dark:text-gray-300 ${textColor}`}>
-        
-        </p>
-      )}
+      {renderSocialMediaLinks()}
     </div>
   );
 };

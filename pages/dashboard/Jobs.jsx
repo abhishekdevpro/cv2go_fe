@@ -1,15 +1,16 @@
-import React, { useState } from 'react'
-import SavedJobsPage from './SavedJobs';
-import JobsPage from './MyJobs';
-import Navbar from '../Navbar/Navbar';
+import React, { useState } from "react";
+import SavedJobsPage from "./SavedJobs";
+
+import Navbar from "../Navbar/Navbar";
+import JobSearch from "../JobSearch";
 
 const JobsToggle = () => {
-    const [activeTab, setActiveTab] = useState("myJobs");
-  
-    return (
-      <>
-       <Navbar/>
-       <div className=" mx-auto mt-10 p-6 rounded-lg shadow-lg">
+  const [activeTab, setActiveTab] = useState("myJobs");
+
+  return (
+    <>
+      <Navbar />
+      <div className=" mx-auto mt-10 p-6 rounded-lg shadow-lg">
         <div className="flex border-b mb-6">
           <button
             className={`flex-1 py-2 text-center text-lg font-medium transition-all duration-300 ${
@@ -32,12 +33,11 @@ const JobsToggle = () => {
             Saved Jobs
           </button>
         </div>
-  
-        {activeTab === "myJobs" ? <JobsPage /> : <SavedJobsPage />}
+
+        {activeTab === "myJobs" ? <JobSearch /> : <SavedJobsPage />}
       </div>
-      </>
-    );
-  };
-  
-  export default JobsToggle;
-  
+    </>
+  );
+};
+
+export default JobsToggle;

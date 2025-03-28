@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import { BASE_URL } from "../../components/Constant/constant";
+import { useTranslation } from "react-i18next";
+import { ResumeContext } from "../../components/context/ResumeContext";
 
 function Payment() {
+  const { t } = useTranslation();
+  const { selectedLang } = useContext(ResumeContext);
   const handleChoosePlan3 = () => {
     const amount = 269; // Fixed price
     const token = localStorage.getItem("token"); // Retrieve token from localStorage
@@ -15,9 +19,13 @@ function Payment() {
     };
 
     axios
-      .post(`${BASE_URL}/api/user/paypal/create-payment`, payload, {
-        headers: { "Content-Type": "application/json" }, // Use JSON content type
-      })
+      .post(
+        `${BASE_URL}/api/user/paypal/create-payment?lang=${selectedLang}`,
+        payload,
+        {
+          headers: { "Content-Type": "application/json" }, // Use JSON content type
+        }
+      )
       .then((response) => {
         const data = response.data;
         if (data && data.data) {
@@ -44,9 +52,13 @@ function Payment() {
     };
 
     axios
-      .post(`${BASE_URL}/api/user/paypal/create-payment`, payload, {
-        headers: { "Content-Type": "application/json" }, // Use JSON content type
-      })
+      .post(
+        `${BASE_URL}/api/user/paypal/create-payment?lang=${selectedLang}`,
+        payload,
+        {
+          headers: { "Content-Type": "application/json" }, // Use JSON content type
+        }
+      )
       .then((response) => {
         const data = response.data;
         if (data && data.data) {
@@ -63,60 +75,56 @@ function Payment() {
         <table className="min-w-full leading-normal">
           <thead>
             <tr>
-              {/* <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                <div className="text-center mt-4">
-                  <p className="text-lg font-bold text-violet-900 m">Free</p>
-                  <button className='bg-red-200 text-blue-900 p-2 px-6 rounded-lg m-4  disabled:'>Your Plan</button>
-                </div>
-              </th> */}
               <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600  tracking-wider">
                 <div className="text-center">
-                  <p className="text-lg font-bold ">Resume Builder</p>
-                  <span className=" text-violet-900 ">starting</span>
+                  <p className="text-lg font-bold ">
+                    {t("payments.resume_builder")}
+                  </p>
+                  <span className=" text-violet-900 ">
+                    {t("payments.starting")}
+                  </span>
                   <span className=" text-violet-900 font-bold text-lg">
                     {" "}
-                    £ 0
+                    $ 0
                   </span>{" "}
                   <br />
-                  {/* <Link href="/dashboard/resume-builder"> */}
                   <button className="bg-blue-900 text-white p-2 rounded-lg m-2 mt-3">
-                    Free
+                    {t("payments.free")}
                   </button>
-                  {/* </Link> */}
                 </div>
               </th>
               <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600  tracking-wider">
                 <div className="text-center">
-                  <p className="text-lg font-bold">Expert human writer</p>
+                  <p className="text-lg font-bold">
+                    {t("payments.expert_writer")}
+                  </p>
                   <span className=" text-violet-900 font-bold text-lg">
                     {" "}
-                    £19
+                    $19
                   </span>{" "}
-                  <span className=" text-violet-900 ">/Resume </span>
+                  <span className=" text-violet-900 ">
+                    {t("payments.per_resume")}{" "}
+                  </span>
                   <br />
-                  <button
-                    className="bg-orange-700 text-white p-2 px-5 rounded-lg m-4 disabled:"
-                    //  onClick={handleChoosePlan3}
-                  >
-                    Choose this plan
+                  <button className="bg-cyan-800 text-white p-2 px-5 rounded-lg m-4 disabled:">
+                    {t("payments.choose_plan")}
                   </button>
                 </div>
               </th>
 
               <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600  tracking-wider">
                 <div className="text-center">
-                  <p className="text-lg font-bold">French English Combo</p>
+                  <p className="text-lg font-bold">{t("payments.combo")} </p>
                   <span className=" text-violet-900 font-bold text-lg">
                     {" "}
-                    £29
+                    $29
                   </span>{" "}
-                  <span className=" text-violet-900 ">/Resume </span>
+                  <span className=" text-violet-900 ">
+                    {t("payments.per_resume")}{" "}
+                  </span>
                   <br />
-                  <button
-                    className="bg-yellow-500 text-white p-2 px-5 rounded-lg m-4 disabled:"
-                    //  onClick={handleChoosePlan4}
-                  >
-                    Choose this plan
+                  <button className="bg-yellow-500 text-white p-2 px-5 rounded-lg m-4 disabled:">
+                    {t("payments.choose_plan")}
                   </button>
                 </div>
               </th>
@@ -125,77 +133,82 @@ function Payment() {
 
           <tbody>
             <tr className="text-center">
-              {/* <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600"> ✔️ Create optimized resumes</p>
-              </td> */}
               <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600"> ✔️ Create optimized resumes</p>
+                <p className="text-gray-600">
+                  {" "}
+                  {t("payments.features.optimized_resumes")}
+                </p>
               </td>
 
               <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600"> ✔️ Create optimized resumes</p>
+                <p className="text-gray-600">
+                  {" "}
+                  {t("payments.features.optimized_resumes")}
+                </p>
               </td>
 
               <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600"> ✔️ Create optimized resumes</p>
-              </td>
-            </tr>
-
-            <tr className="text-center">
-              {/* <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                 <p className="text-gray-600">
-                  ✔️ Copy and paste content from site
+                  {" "}
+                  {t("payments.features.optimized_resumes")}
                 </p>
-              </td> */}
-              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600">
-                  ✔️ Copy and paste content from site
-                </p>
-              </td>
-              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600">
-                  ✔️ Receive resume in pdf and docs
-                </p>
-              </td>
-              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600">
-                  ✔️ Receive resume in pdf and docs
-                </p>
-              </td>
-            </tr>
-            <tr className="text-center">
-              {/* <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600">✔️ Unlimited resumes edits</p>
-              </td> */}
-              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600">✔️ Unlimited resumes edits</p>
-              </td>
-              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600">✔️ Cover letter included</p>
-              </td>
-              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600">✔️ Cover letter included</p>
               </td>
             </tr>
 
             <tr className="text-center">
-              {/* <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600">✖️ </p>
-              </td> */}
               <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600">✔️ Save resume as pdf and docs</p>
+                <p className="text-gray-600">
+                  {t("payments.features.copy_paste")}
+                </p>
               </td>
               <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600">✔️ 3 revisions included</p>
+                <p className="text-gray-600">
+                  {t("payments.features.receive_pdf_docs")}
+                </p>
               </td>
               <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600">✔️ 3 revisions included</p>
+                <p className="text-gray-600">
+                  {t("payments.features.receive_pdf_docs")}
+                </p>
               </td>
             </tr>
             <tr className="text-center">
-              {/* <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600">✖️ </p>
-              </td> */}
+              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p className="text-gray-600">
+                  {" "}
+                  {t("payments.features.unlimited_edits")}
+                </p>
+              </td>
+              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p className="text-gray-600">
+                  {t("payments.features.cover_letter")}
+                </p>
+              </td>
+              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p className="text-gray-600">
+                  {t("payments.features.cover_letter")}
+                </p>
+              </td>
+            </tr>
+
+            <tr className="text-center">
+              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p className="text-gray-600">
+                  {t("payments.features.save_pdf_docs")}
+                </p>
+              </td>
+              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p className="text-gray-600">
+                  {t("payments.features.revisions")}
+                </p>
+              </td>
+              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <p className="text-gray-600">
+                  {t("payments.features.revisions")}
+                </p>
+              </td>
+            </tr>
+            <tr className="text-center">
               <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                 <p className="text-gray-600">
                   ✔️ Download fully formatted Resume
@@ -203,27 +216,32 @@ function Payment() {
               </td>
 
               <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600">✔️ Speak one on one with writer</p>
+                <p className="text-gray-600">
+                  {t("payments.features.speak_writer")}
+                </p>
               </td>
 
               <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600">✔️ Speak one on one with writer</p>
+                <p className="text-gray-600">
+                  {t("payments.features.speak_writer")}
+                </p>
               </td>
             </tr>
             <tr className="text-center">
-              {/* <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600">✖️ </p>
-              </td> */}
               <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                 <p className="text-gray-600">✖️ </p>
               </td>
 
               <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600">✔️ Final Delivery 1 week</p>
+                <p className="text-gray-600">
+                  {t("payments.features.final_delivery")}
+                </p>
               </td>
 
               <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <p className="text-gray-600">✔️Final Delivery 1 week</p>
+                <p className="text-gray-600">
+                  {t("payments.features.final_delivery")}
+                </p>
               </td>
             </tr>
           </tbody>

@@ -19,9 +19,7 @@ const AbroadiumCommunity = () => {
             </svg>
           </div>
           <div>
-            <h3 className="text-lg font-semibold">
-              Join the Abroadium Community!
-            </h3>
+            <h3 className="text-lg font-semibold">Join the Cibli Community!</h3>
             <p className="text-gray-600 max-w-md">
               Connect with professionals, industry experts, and like-minded
               peers in our vibrant discussion space. Share ideas, ask questions,

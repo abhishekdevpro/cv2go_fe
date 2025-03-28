@@ -37,7 +37,7 @@ const PayAndDownload = ({ resumeId, token, PayerID }) => {
 
       // API call to generate the PDF
       await axios.post(
-        `${BASE_URL}/api/user/generate-pdf1`,
+        `${BASE_URL}/api/user/generate-pdf-py`,
         { html: fullContent },
         {
           headers: {
@@ -46,7 +46,7 @@ const PayAndDownload = ({ resumeId, token, PayerID }) => {
           },
         }
       );
-
+      downloadPDF();
       toast.success("PDF generation request sent successfully!");
       // createPayment();
     } catch (error) {
@@ -59,6 +59,7 @@ const PayAndDownload = ({ resumeId, token, PayerID }) => {
     }
   };
   const userID = localStorage.getItem("user_id");
+
   const createPayment = async () => {
     let PlanId = userID == 136 ? "4" : "1";
 
@@ -139,12 +140,12 @@ const PayAndDownload = ({ resumeId, token, PayerID }) => {
     }
   };
 
-  const downloadPDF = async (orderId, resumeId, token) => {
+  const downloadPDF = async () => {
     try {
       setIsLoading(true);
 
       const response = await axios.get(
-        `${BASE_URL}/api/user/download-file/${orderId}/${resumeId}`,
+        `${BASE_URL}/api/user/download-file/11/${resumeId}`,
         {
           headers: {
             Authorization: token,
@@ -160,7 +161,7 @@ const PayAndDownload = ({ resumeId, token, PayerID }) => {
       link.href = url;
 
       // Set the file name
-      link.setAttribute("download", `resume_${orderId}.pdf`);
+      link.setAttribute("download", `resume.pdf`);
       document.body.appendChild(link);
       link.click();
 

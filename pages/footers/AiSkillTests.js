@@ -1,121 +1,104 @@
-import React from "react";
+import React, { useTransition } from "react";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
-
+import { useTranslation } from "react-i18next";
 function AiSkillTests() {
+  const { t } = useTranslation();
   return (
     <div>
       <Navbar />
       <div className=" max-w-4xl mx-auto my-5 p-6 sm:p-10 shadow-lg bg-white rounded-lg">
         <h1 className="text-4xl font-semibold my-4 underline ">
-          Ai Skill Tests
+          {t("Ai_Skill_Tests")}
         </h1>
         <h1 className="text-2xl font-semibold my-2 mt-5 ">
-          Elevate Your Hiring Process with AI Skill Tests
+          {t("Ai_Skill_Tests_heading1")}
         </h1>
-        At CV2GO , we understand the importance of finding the right talent for
-        your organization. Our AI Skill Tests are designed to streamline the
-        hiring process by accurately assessing candidates abilities and matching
-        them with the job requirements. Leveraging advanced AI technology, our
-        skill tests provide a reliable, efficient, and unbiased way to evaluate
-        potential hires.
+        {t("Ai_Skill_Tests_paragraph1")}
         <h1 className="text-2xl font-semibold my-2 mt-5">
-          Key Features of Our AI Skill Tests
+          {t("Ai_Skill_Tests_heading2")}
         </h1>
         <h1 className="text-sm font-semibold my-2">
-          1. Comprehensive Skill Assessments
+          {t("Ai_Skill_Tests_heading3")}
         </h1>
-        Our AI Skill Tests cover a wide range of skills across various
-        industries, including technical skills, soft skills, and role-specific
-        competencies. Whether you re hiring for IT, marketing, finance, or any
-        other field, our tests can be tailored to meet your specific needs.
+        {t("Ai_Skill_Tests_paragraph2")}
         <h1 className="text-sm font-semibold my-2">
-          2. Real-Time Results and Analytics
+          {t("Ai_Skill_Tests_heading4")}
         </h1>
-        Receive instant results and detailed analytics on candidates
-        performance. Our AI analyzes the test outcomes to provide insights into
-        each candidates strengths and areas for improvement, helping you make
-        data-driven hiring decisions.
+        {t("Ai_Skill_Tests_paragraph3")}
         <h1 className="text-sm font-semibold my-2">
-          3. Customizable Test Formats
+          {t("Ai_Skill_Tests_heading5")}
         </h1>
-        Design tests that align with your hiring requirements. You can choose
-        from multiple question formats, including multiple-choice, coding
-        challenges, case studies, and situational judgment tests. Customize the
-        difficulty level and duration to match the job role.
-        <h1 className="text-sm font-semibold my-2">4. Unbiased Evaluation</h1>
-        Our AI Skill Tests eliminate human biases from the evaluation process.
-        The AI objectively scores each test based on predefined criteria,
-        ensuring a fair assessment of all candidates.
-        <h1 className="text-sm font-semibold my-2">5. Adaptive Testing</h1>
-        Adaptive testing technology adjusts the difficulty of questions based on
-        the candidates performance. This ensures an accurate measurement of
-        their skill level and provides a more personalized testing experience.
-        <h1 className="text-sm font-semibold my-2">6. Integration with ATS</h1>
-        Our AI Skill Tests seamlessly integrate with popular Applicant Tracking
-        Systems (ATS). This allows you to manage candidates, track their
-        progress, and view test results all in one place, streamlining your
-        recruitment workflow.
-        <h1 className="text-sm font-semibold my-2">7. Skill Gap Analysis</h1>
-        Identify skill gaps within your existing team and use our AI Skill Tests
-        to assess training needs. This helps you create targeted development
-        programs and ensure your team has the necessary skills to succeed.
-        <h1 className="text-lg font-bold my-4">How It Works</h1>
+        {t("Ai_Skill_Tests_paragraph4")}
         <h1 className="text-sm font-semibold my-2">
-          Step 1: Define Your Requirements
+          4. {t("Ai_Skill_Tests_heading6")}
         </h1>
-        Determine the skills and competencies you need to assess for the
-        specific job role. Our team can help you outline the key criteria and
-        design a customized test.
-        <h1 className="text-sm font-semibold my-2">Step 2: Create the Test</h1>
-        Use our intuitive platform to create the AI Skill Test. Choose from a
-        variety of question types and formats, and set the difficulty level and
-        time limits according to your requirements.
+        {t("Ai_Skill_Tests_paragraph5")}
         <h1 className="text-sm font-semibold my-2">
-          Step 3: Invite Candidates
+          5. {t("Ai_Skill_Tests_heading7")}
         </h1>
-        Send test invitations to candidates via email or integrate the test link
-        into your job postings. Candidates can complete the test online at their
-        convenience.
-        <h1 className="text-sm font-semibold my-2">Step 4: Analyze Results</h1>
-        Review the real-time results and detailed analytics provided by our AI.
-        Compare candidates performance and identify the best fit for your job
-        role.
+        {t("Ai_Skill_Tests_paragraph6")}
         <h1 className="text-sm font-semibold my-2">
-          Step 5: Make Informed Decisions
+          6. {t("Ai_Skill_Tests_heading8")}
         </h1>
-        Use the insights gained from the AI Skill Tests to make confident,
-        data-driven hiring decisions. The comprehensive assessment results
-        ensure you select the most qualified candidates for your organization.
+        {t("Ai_Skill_Tests_paragraph7")}
+        <h1 className="text-sm font-semibold my-2">
+          7. {t("Ai_Skill_Tests_heading9")}
+        </h1>
+        {t("Ai_Skill_Tests_paragraph8")}
         <h1 className="text-lg font-bold my-4">
-          Benefits of Using AI Skill Tests
+          {" "}
+          {t("Ai_Skill_Tests_heading10")}
         </h1>
-        <h1 className="text-sm font-semibold my-2">Efficiency and Speed</h1>
-        Automate the initial screening process and reduce the time spent on
-        manual evaluations. Our AI Skill Tests provide quick and accurate
-        assessments, speeding up your hiring process.
-        <h1 className="text-sm font-semibold my-2">Enhanced Accuracy</h1>
-        Gain a deeper understanding of candidates abilities with precise and
-        objective evaluations. Our AI technology ensures consistent and reliable
-        results.
         <h1 className="text-sm font-semibold my-2">
-          Improved Candidate Experience
+          {t("Ai_Skill_Tests_heading11")}
         </h1>
-        Offer candidates a seamless and user-friendly testing experience. The
-        adaptive nature of our tests keeps candidates engaged and motivated.
-        <h1 className="text-sm font-semibold my-2">Cost-Effective Hiring</h1>
-        Reduce the costs associated with traditional hiring methods. Our AI
-        Skill Tests minimize the need for multiple interview rounds and help you
-        identify top talent early in the process.
+        {t("Ai_Skill_Tests_paragraph9")}
         <h1 className="text-sm font-semibold my-2">
-          Start Using AI Skill Tests Today
+          {" "}
+          {t("Ai_Skill_Tests_heading12")}
         </h1>
-        Transform your hiring process with CV2GO ’s AI Skill Tests. Sign up now
-        to experience the benefits of accurate, efficient, and unbiased
-        candidate assessments.
-        <h1 className="text-lg font-bold my-4">Get Started</h1>
-        Ready to elevate your hiring process? Visit our AI Skill Tests page and
-        start creating customized skill assessments today!
+        {t("Ai_Skill_Tests_paragraph10")}
+        <h1 className="text-sm font-semibold my-2">
+          {t("Ai_Skill_Tests_heading13")}
+        </h1>
+        {t("Ai_Skill_Tests_paragraph11")}
+        <h1 className="text-sm font-semibold my-2">
+          {" "}
+          {t("Ai_Skill_Tests_heading14")}
+        </h1>
+        {t("Ai_Skill_Tests_paragraph12")}
+        <h1 className="text-sm font-semibold my-2">
+          {t("Ai_Skill_Tests_heading15")}
+        </h1>
+        {t("Ai_Skill_Tests_paragraph13")}
+        <h1 className="text-lg font-bold my-4">
+          {t("Ai_Skill_Tests_heading14")}
+        </h1>
+        <h1 className="text-sm font-semibold my-2">
+          {t("Ai_Skill_Tests_heading17")}
+        </h1>
+        {t("Ai_Skill_Tests_paragraph14")}
+        <h1 className="text-sm font-semibold my-2">
+          {t("Ai_Skill_Tests_heading18")}
+        </h1>
+        {t("Ai_Skill_Tests_paragraph15")}
+        <h1 className="text-sm font-semibold my-2">
+          {t("Ai_Skill_Tests_heading19")}
+        </h1>
+        {t("Ai_Skill_Tests_paragraph16")}
+        <h1 className="text-sm font-semibold my-2">
+          {t("Ai_Skill_Tests_heading20")}
+        </h1>
+        {t("Ai_Skill_Tests_paragraph17")}
+        <h1 className="text-sm font-semibold my-2">
+          {t("Ai_Skill_Tests_heading21")}
+        </h1>
+        {t("Ai_Skill_Tests_paragraph18")}
+        <h1 className="text-lg font-bold my-4">
+          {t("Ai_Skill_Tests_heading22")}
+        </h1>
+        {t("Ai_Skill_Tests_paragraph19")}
       </div>
       <Footer />
     </div>

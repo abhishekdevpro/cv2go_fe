@@ -4,8 +4,12 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import { BASE_URL } from "../../../../components/Constant/constant";
+import { useTranslation } from "react-i18next";
+import { useContext } from "react";
+import { ResumeContext } from "../../../../components/context/ResumeContext";
 
 const Testpaper = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const { skillId, skillName } = router.query; // Access dynamic route params
 
@@ -16,6 +20,7 @@ const Testpaper = () => {
   const [showResults, setShowResults] = useState(false);
   const [results, setResults] = useState({});
   const [skillAssessmentId, setSkillAssessmentId] = useState(null);
+  const { selectedLang } = useContext(ResumeContext);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -32,7 +37,9 @@ const Testpaper = () => {
           const response = await axios.get(
             ` ${BASE_URL}/api/user/skill-assessment?skill_id=${parseInt(
               skillId
-            )}&skill_name=${encodeURIComponent(skillName)}`,
+            )}&skill_name=${encodeURIComponent(
+              skillName
+            )}&lang=${selectedLang}`,
             {
               headers: {
                 Authorization: token,
@@ -76,7 +83,7 @@ const Testpaper = () => {
 
     try {
       const response = await axios.put(
-        ` ${BASE_URL}/api/user/skill-assessment/${skillAssessmentId}`,
+        ` ${BASE_URL}/api/user/skill-assessment/${skillAssessmentId}?lang=${selectedLang}`,
         {
           user_id: parseInt(jobSeekerId, 10),
           skill_id: parseInt(skillId, 10),
@@ -133,26 +140,6 @@ const Testpaper = () => {
 
   if (loading) {
     return (
-      // <div className="font-bold mx-auto text-xl">
-      //   <div className="w-100 d-flex flex-row justify-content-center align-items-center bg-white p-5">
-      //     <div
-      //       className="w-75 d-flex flex-column align-items-center"
-      //       style={{ gap: "7px" }}
-      //     >
-      //       <div className="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center">
-      //         <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-900 h-64 w-64 pt-20 ps-16">
-      //           Please Wait..
-      //         </div>
-      //       </div>
-      //       <h2 className="text-violet-950">
-      //         Hold On A Second! We are Processing your request...!
-      //       </h2>
-      //       <p className="p-0 m-0" style={{ color: "red", fontWeight: "500" }}>
-      //         Don’t Shut or Back Your Window!
-      //       </p>
-      //     </div>
-      //   </div>
-      // </div>
       <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-80 z-50">
         <div className="flex flex-col items-center">
           {/* Loader Spinner */}
@@ -160,10 +147,10 @@ const Testpaper = () => {
 
           {/* Text Content */}
           <h2 className="text-white text-2xl font-semibold mt-6 text-center">
-            Hold On A Second! We are Processing your request...
+            {t("testPaper.processingRequest")}
           </h2>
           <p className="text-red-500 text-lg font-medium mt-2 text-center">
-            Don’t Close or Navigate Away!
+            {t("testPaper.dontCloseWindow")}
           </p>
         </div>
       </div>
@@ -171,7 +158,12 @@ const Testpaper = () => {
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return (
+      <div>
+        {t("testPaper.error")}
+        {error}
+      </div>
+    );
   }
 
   return (
@@ -183,17 +175,26 @@ const Testpaper = () => {
               className="w-75 d-flex flex-column align-items-center p-20 font-bold border-2 rounded-lg"
               style={{ gap: "12px" }}
             >
-              <h3>Total Questions: {results.total_question}</h3>
-              <h3 className="m-2">Right Answer: {results.right_answer}</h3>
-              <h3>Wrong Answer: {results.wrong_answer}</h3>
+              <h3>
+                {" "}
+                {t("testPaper.totalQuestions")}: {results.total_question}
+              </h3>
               <h3 className="m-2">
-                Percentage: {Math.floor(results.Percentage)}%
+                {" "}
+                {t("testPaper.rightAnswer")}: {results.right_answer}
+              </h3>
+              <h3>
+                {" "}
+                {t("testPaper.wrongAnswer")}: {results.wrong_answer}
+              </h3>
+              <h3 className="m-2">
+                {t("testPaper.percentage")}: {Math.floor(results.Percentage)}%
               </h3>
               <button
                 className="p-2 bg-cyan-600 rounded-md text-white hover:bg-cyan-600 mt-4"
                 onClick={handleBack}
               >
-                Back
+                {t("testPaper.back")}
               </button>
             </div>
           </div>
@@ -240,21 +241,21 @@ const Testpaper = () => {
                     onClick={handlePrevious}
                     disabled={currentQuestionIndex === 0}
                   >
-                    ↩️ Previous
+                    {t("testPaper.previous")}
                   </button>
                   {currentQuestionIndex === questions.length - 1 ? (
                     <button
-                      className="p-2 bg-orange-500 rounded-md text-white hover:bg-orange-700"
+                      className="p-2 bg-cyan-600 rounded-md text-white hover:bg-cyan-800"
                       onClick={handleSubmit}
                     >
-                      🎓 Submit
+                      {t("testPaper.submit")}
                     </button>
                   ) : (
                     <button
                       className="p-2 bg-cyan-600 rounded-md text-white hover:bg-cyan-600 mt-4"
                       onClick={handleNext}
                     >
-                      ↪️ Next
+                      {t("testPaper.next")}
                     </button>
                   )}
                 </div>

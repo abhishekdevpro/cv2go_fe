@@ -80,9 +80,9 @@ function Placement() {
         achieve your career goals. At CV2GO , we’re dedicated to your success
         and are here to support you every step of the way.
         <h1 className="text-sm font-bold my-2 mt-5 ">Contact Us</h1>
-        Reach out to us at [career@CV2GO .ca](mailto:career@CV2GO .ca) to to
-        schedule a consultation. Let CV2GO be your partner in navigating the job
-        market and securing the perfect role for your future.
+        Reach out to us at [career@CV2GO .ca](mailto:career@Create My Resume
+        .ca) to to schedule a consultation. Let CV2GO be your partner in
+        navigating the job market and securing the perfect role for your future.
       </div>
     </>
   );
