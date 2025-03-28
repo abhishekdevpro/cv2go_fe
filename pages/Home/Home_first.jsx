@@ -187,7 +187,7 @@ function Home_first() {
             <div className="px-3 py-3 w-full md:w-[500px]">
               <div className="flex flex-col gap-4">
                 <div className="font-extrabold text-5xl font-sans">
-                  " CV2GO" AI Powered Resume Tool, is Live NOW
+                  &quot;CV2GO&quot; AI Powered Resume Tool, is Live NOW
                 </div>
 
                 <div className="text-lg font-medium text-slate-700">
