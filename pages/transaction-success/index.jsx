@@ -9,7 +9,7 @@ const PaymentSuccess = () => {
         <div className="flex flex-col items-center text-center">
           {/* Success Icon */}
           <div className="mb-4">
-            <CheckCircle className="w-16 h-16 text-orange-500" />
+            <CheckCircle className="w-16 h-16 text-green-500" />
           </div>
 
           {/* Main Heading */}

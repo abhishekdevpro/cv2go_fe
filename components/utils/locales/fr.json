@@ -2,56 +2,1372 @@
   "dashboard": "Tableau de bord",
   "my_resumes": "Mes CV",
   "cover_letter": "Lettre de motivation",
-  "ai_resume_builder": "Constructeur de CV IA",
+  "ai_resume_builder": "Générateur de CV IA",
   "jobs": "Emplois",
   "resources": "Ressources",
-  "cibli_job_id": "ID CV2GO",
+  "cibli_job_id": "Identifiant  CV2GO",
   "home": "Accueil",
   "profile": "Profil",
   "logout": "Se déconnecter",
   "login": "Se connecter",
-  
+  "signup":"S'inscrire",
+  "settings": "Paramètres",
+   "resume_tool_live": "L'outil de CV basé sur l'IA « CV2GO » est désormais disponible !",
+   "resume_features":"Score de CV , CV amélioré et bien plus encore. Postulez dès maintenant en toute confiance grâce à notre solution tout-en-un sous un même toit.",
     "contact_us": "Contactez-nous",
-    "is_live_now": "est maintenant en ligne",
-    "resume_score": "Score de CV",
-    "enhanced_resume": "CV Amélioré",
-    "apply_job_with_confidence": "Postulez maintenant avec confiance grâce à notre solution tout-en-un sous un même toit.",
+ 
     "build_resume": "Construire votre CV",
     "reviews_certified": "Avis certifiés par les recruteurs et appréciés par les chercheurs d'emploi",
-    "featured_on": "Comme présenté sur",
+    "featured_on": "Tel que présenté sur",
     
-      "cibli_job": "CV2GO",
-      "ai_powered_resume_tool": "Outil de CV alimenté par l'IA",
+    
+      
       "much_more": "& bien plus encore.",
       
-        "explore_resume_services": "Découvrez nos services de CV optimisés par l'IA",
+        "explore_resume_services": "Découvrez nos services de CV basés sur l'IA",
       
         
-          "resume_stand_out": "Faites en sorte que votre CV se démarque de la concurrence avec notre IA robuste",
+          "resume_stand_out": "Donnez à votre CV une longueur d'avance sur la concurrence grâce à notre IA robuste",
           "upload_resume": "Télécharger le CV",
           "ai_analysis": "Analyse par IA",
           "select_design": "Sélectionner un design",
           "improve_with_ai": "Améliorer avec l'IA",
           "download": "Télécharger",
           "create_resume": "Créer mon CV",
-        
+        "saving":"Sauvegarde en cours...",
         
           
             "how_ai_works": "Comment notre IA de CV fonctionne pour vous",
             "check_resume_score": "Vérifiez le score de votre CV en quelques secondes avec seulement quelques clics.",
             "ai_suggests_edits": "Notre IA effectue des vérifications approfondies sur votre CV et vous suggère des modifications.",
-            "land_abroad_jobs": "Obtenez des entretiens à l'étranger grâce à notre technologie IA.",
+            "land_abroad_jobs": "Terre à l'étranger Entretiens avec notre technologie IA.",
             "improve_resume_ai": "Améliorez votre CV avec notre IA robuste, en quelques clics seulement.",
             "explore_templates": "Découvrez notre large gamme de modèles tendance que les recruteurs adorent voir",
             "chosen_by_experts": "Choisi et conçu par nos experts",
             "backed_by_technology": "Soutenu par notre technologie",
-            "powered_by_ai": "Alimenté par notre IA robuste",
-            "ready_in_15_minutes": "Prêt en moins de 15 minutes",
+            "french_resume": "CV Français",
+  "english_resume": "CV Anglais",
+            "powered_by_ai": "Propulsé par notre IA robuste",
+            "ready_in_15_minutes": "Préparez-le en moins de 15 minutes",
             "certified_by_recruiters": "Certifié par des recruteurs et admiré par les chercheurs d'emploi",
             "looking_cover_letter": "Vous recherchez des lettres de motivation impressionnantes ?",
             "explore_cover_letters": "Découvrez nos 25+ lettres de motivation premium, exclusivement conçues par nos experts.",
-            "create_cv": "Créez votre CV"
-          
-          
+            "create_cv": "Créez votre CV",
+           
+  "alt1_h3": "Exemple de CV d'éditeur adjoint",
+  "alt2_h3": "Modèle de CV d'agriculteur",
+  "alt3_h3": "Modèle de CV de médecin",
+            "title1_h3":"Créer un modèle de CV",
+             "title2_h3":"Modèle de CV simple",
+              "title3_h3":"Modèle de CV moderne",
+              "title_h4":"Exemple de lettre de motivation",
+            "neweststratigies":"Les dernières stratégies de nos conseillers en recherche de carrière",
+            "paragraphhome_fourth" :"Vous n'êtes jamais seul dans votre recherche d'emploi. Que vous rédigiez une lettre de motivation, que vous vous prépariez à un entretien ou que vous négociiez votre salaire, notre centre de ressources propose des articles qui vous aideront à franchir la prochaine étape de votre carrière.",
+            "card_title1":"Comment l'IA révolutionne la création de CV : guide du débutant",
+            "card_title2":"Générateurs de CV basés sur l'IA ou méthodes traditionnelles : quelle est la meilleure solution ?",
+             "card_title3":"Les 5 principaux avantages de l'utilisation d'un générateur de CV basé sur l'IA pour les demandeurs d'emploi",
+              "card_title4":"Guide étape par étape pour créer un CV gagnant avec des outils d'IA",
+                "get_moreadvice":"Obtenez plus de conseils de carrière",
+                "choose_plan":"Choisissez un plan, lequel vous convient le mieux ?",
+                "resume_builder": "Générateur de CV",
+  "resume_description": "Pertinent pour l'automatisation et le téléchargement unique.",
+  "starting_price": "À partir de",
+  "price_currency": "$",
+  "price_amount": "0",
+  "feature1": "Créer des CV optimisés",
+  "feature2": "Copier et coller du contenu depuis le site",
+  "feature3": "Modifications illimitées du CV",
+  "feature4": "Enregistrer le CV au format PDF et DOCs",
+  "feature5": "Télécharger un CV entièrement formaté",
+  "get_started": "Commencer gratuitement",
+  "expert_writer": "Rédacteur Humain Expert",
+  "expert_description": "Conçu par des rédacteurs de CV experts",
   
+  "price_amount_b": "19",
+  "price_per_resume": "/CV",
+  "feature1_b": "Créer des CV optimisés",
+  "feature2_b": "Recevoir le CV en PDF et DOCs",
+  "feature3_b": "Lettre de motivation incluse",
+  "feature4_b": "3 révisions incluses",
+  "feature5_b": "Entretien individuel avec le rédacteur",
+  "feature6_b": "Livraison finale en 1 semaine",
+  "get_started_b": "Commencer",
+  "combo_title": "Combo Français-Anglais",
+  "combo_description": "Conçu par des rédacteurs de CV experts",
+  "combo_price_currency": "$",
+  "combo_price_amount": "29",
+  "combo_price_per_resume": "/CV",
+  "feature1_c": "Créer des CV optimisés",
+  "feature2_c": "Recevoir le CV en PDF et DOCs",
+  "feature3_c": "Lettre de motivation incluse",
+  "feature4_c": "3 révisions incluses",
+  "feature5_c": "Entretien individuel avec le rédacteur",
+  "feature6_c": "Livraison finale en 1 semaine",
+   "getintouch":"Entrer en contact",
+   "contact_paragraph":"Créez des CV professionnels et gagnants en quelques minutes grâce à nos outils basés sur l'IA et aux suggestions d'experts !",
+   "we_are_here": "Nous sommes là pour vous aider",
+   "contact_anytime": "Contactez-nous à tout moment",
+   "phone": "Téléphone",
+   "email_us": "Envoyez-nous un e-mail",
+   "message_us": "Envoyez-nous un message",
+   "reach_out": "Contactez-nous pour toute assistance",
+   "chat": "Discussion",
+   "form": {
+     "name": "Nom",
+     "phone": "Téléphone",
+     "email": "E-mail",
+     "remark": "Remarque",
+     "send": "Envoyer",
+
+      "error_message": "Échec de l'envoi du formulaire",
+    "success_message": "Message envoyé avec succès !"
+   },
+  
+    "footer": {
+      "building_careers":"Construire les carrières de demain",
+      "get_our_weekly": "Recevez notre bulletin hebdomadaire",
+      "type_your_email": "Saisissez votre e-mail...",
+      "subscribe": "S'abonner",
+      "cibli_job": "CV2GO",
+      "about_us": "À propos de nous",
+      "careers": "Carrières",
+      "resources": "Ressources",
+      "support": "Support",
+      "salary_tool": "Outil de salaire",
+      "terms_conditions": "Termes et conditions",
+      "privacy_policy": "Politique de confidentialité",
+      "scope_products": "Portée et produits",
+      "ai_resume_builder": "Générateur de CV IA",
+      "ai_skill_tests": "Tests de compétences IA",
+      "ai_cv_parsing": "Analyse de CV IA",
+      "ai_resources": "Ressources IA",
+      "ai_resume_accuracy": "IA - Précision du CV",
+      "ai_resume_enhancer": "IA - Amélioration du CV",
+      "ai_job_match_apply": "IA - Correspondance et candidature aux emplois",
+      "copyright": "© Copyright By info@CV2GO Tous droits réservés",
+       "toast_success":"Abonné avec succès !"
+    },
+    
+      "about_us": "À propos de nous",
+      "welcome_message": "Bienvenue chez CV2GO, votre partenaire de confiance pour créer le CV idéal qui ouvre les portes à de nouvelles opportunités de carrière. Nous nous spécialisons dans la création de CV personnalisés et professionnels mettant en valeur vos compétences, expériences et réalisations uniques.",
+      "our_mission": "Notre Mission",
+      "mission_description": "Chez CV2GO, notre mission est d’aider les chercheurs d’emploi en fournissant des CV conçus par des experts qui laissent une impression durable. Nous comprenons que votre CV est bien plus qu’un simple document ; c’est un reflet de votre parcours professionnel et de vos aspirations. Notre objectif est de vous aider à vous démarquer sur un marché du travail compétitif et à obtenir le poste que vous méritez.",
+      "why_choose_us": "Pourquoi nous choisir ?",
+      "expertise_experience": "Expertise et Expérience",
+      "expertise_description": "Notre équipe de rédacteurs de CV expérimentés et de coachs de carrière apporte des années d’expérience dans l’industrie. Nous restons à jour avec les dernières tendances en matière de mise en forme et de contenu des CV, garantissant que votre CV répond aux normes et attentes actuelles.",
+      "personalized_approach": "Approche Personnalisée",
+      "personalized_description": "Nous croyons que chaque individu est unique, tout comme son parcours professionnel. Notre approche personnalisée signifie que nous prenons le temps de comprendre votre parcours, vos objectifs de carrière et vos forces. Nous adaptons votre CV pour mettre en avant vos compétences et réalisations les plus pertinentes, en faisant un outil puissant pour votre recherche d’emploi.",
+      "proven_results": "Résultats Prouvés",
+      "proven_results_description": "Le succès de nos clients est notre priorité absolue. Nous avons aidé des chercheurs d’emploi de divers secteurs à décrocher des entretiens et des offres d’emploi. Nos CV professionnels ont prouvé leur efficacité en augmentant la visibilité et l’impact, vous donnant ainsi la confiance nécessaire pour poursuivre vos objectifs de carrière.",
+      "our_services": "Nos Services",
+      "resume_writing": "Rédaction de CV",
+      "resume_writing_description": "Que vous soyez un jeune diplômé, un professionnel en milieu de carrière ou un cadre expérimenté, notre service de rédaction de CV sur mesure est conçu pour répondre à vos besoins. Nous créons des CV percutants et compatibles ATS qui mettent en avant vos qualifications et vous démarquent auprès des employeurs.",
+      "cover_letter_writing": "Rédaction de lettre de motivation",
+      "cover_letter_description": "Complétez votre CV avec une lettre de motivation bien rédigée. Nous rédigeons des lettres convaincantes qui racontent votre histoire et expliquent pourquoi vous êtes le candidat idéal pour le poste.",
+      "linkedin_optimization": "Optimisation de profil LinkedIn",
+      "linkedin_optimization_description": "À l’ère du numérique, un profil LinkedIn solide est essentiel. Nous optimisons votre profil LinkedIn pour augmenter votre visibilité, établir des connexions avec des employeurs potentiels et mettre en avant votre marque professionnelle.",
+      "career_coaching": "Coaching de carrière",
+      "career_coaching_description": "Nos services de coaching de carrière vous offrent l’accompagnement et le soutien nécessaires pour naviguer dans votre recherche d’emploi, préparer vos entretiens et prendre des décisions éclairées concernant votre carrière.",
+      "join_community": "Rejoignez Notre Communauté",
+      "join_community_description": "Chez CV2GO, nous sommes plus qu’un service de rédaction de CV. Nous sommes une communauté de professionnels engagés à se soutenir mutuellement dans leur développement de carrière. Rejoignez-nous dès aujourd’hui et faites le premier pas vers la réalisation de vos aspirations professionnelles.",
+     
+      "contact_us_description": "Prêt à transformer votre CV et à saisir de nouvelles opportunités ? Contactez-nous dès aujourd’hui et laissez CV2GO vous aider à rédiger le CV parfait pour votre parcours professionnel.",
+      
+        "careers_title": "Carrières chez CV2GO",
+        "join_our_team": "Rejoignez notre équipe",
+        "join_our_team_description": "Chez CV2GO, nous nous engageons à aider les individus à atteindre leurs objectifs de carrière grâce à des CV soigneusement rédigés et des services de carrière personnalisés. Notre équipe est passionnée par l’idée d’avoir un impact positif sur la vie des chercheurs d’emploi, et nous sommes toujours à la recherche de talents partageant notre vision et notre engagement.",
+        
+        "why_work_with_us": "Pourquoi travailler avec nous ?",
+        "innovative_environment": "Environnement innovant",
+        "innovative_environment_description": "Nous favorisons une culture de l'innovation et de l'apprentissage continu. Notre équipe reste à la pointe des tendances du secteur, garantissant ainsi des services de qualité à nos clients. Vous aurez l’opportunité de travailler avec les outils et techniques les plus récents en matière de rédaction de CV et de coaching de carrière.",
+        
+        "collaborative_culture": "Culture collaborative",
+        "collaborative_culture_description": "Chez CV2GO, nous croyons en la puissance de la collaboration. Nos membres travaillent en étroite collaboration, partagent leurs idées et se soutiennent mutuellement pour atteindre des objectifs communs. Vous ferez partie d’une communauté bienveillante qui valorise vos contributions et encourage votre développement professionnel.",
+        
+        "impactful_work": "Travail impactant",
+        "impactful_work_description": "Votre travail chez CV2GO aura un impact direct sur la vie de nos clients. En aidant les chercheurs d’emploi à se présenter sous leur meilleur jour auprès des employeurs, vous jouerez un rôle clé dans leur réussite professionnelle. Il n’y a rien de plus gratifiant que de savoir que vous avez contribué au succès de quelqu'un.",
+        
+        "career_development": "Développement de carrière",
+        "career_development_description": "Nous investissons dans la croissance et le développement de notre équipe. Vous bénéficierez de formations continues et d'opportunités de développement professionnel, vous permettant d’améliorer vos compétences et de progresser dans votre carrière. Que vous soyez un professionnel expérimenté ou débutant, nous offrons un chemin clair pour votre progression.",
+        
+        "current_openings": "Postes disponibles",
+        "resume_writer": "Rédacteur de CV",
+        "resume_writer_description": "Rejoignez notre équipe d’experts en rédaction de CV et aidez nos clients à créer des CV percutants. Vous travaillerez en étroite collaboration avec les chercheurs d’emploi pour comprendre leurs objectifs et mettre en valeur leurs compétences et réalisations.",
+        
+        "career_coach": "Coach de carrière",
+        "career_coach_description": "En tant que coach de carrière, vous apporterez des conseils personnalisés aux clients en recherche d’emploi. Vous les aiderez dans la préparation aux entretiens, les stratégies de recherche d’emploi et la planification de carrière.",
+        
+        "linkedin_specialist": "Spécialiste LinkedIn",
+        "linkedin_specialist_description": "Optimisez les profils LinkedIn de nos clients pour augmenter leur visibilité et leur présence professionnelle. Vous créerez des profils convaincants qui mettront en avant leurs compétences et expériences, les connectant ainsi à de nouvelles opportunités.",
+        
+        "customer_support": "Représentant du service client",
+        "customer_support_description": "Offrez un support exceptionnel à nos clients en répondant à leurs questions et en résolvant les problèmes liés à nos services. Vous veillerez à ce que chaque client vive une expérience positive avec CV2GO.",
+        
+        "how_to_apply": "Comment postuler",
+        "how_to_apply_description": "Si vous êtes passionné par l’aide aux autres et souhaitez faire partie d’une équipe dynamique et en pleine croissance, nous aimerions vous entendre. Pour postuler à un poste chez CV2GO, veuillez envoyer votre CV et une lettre de motivation à",
+        "apply_email": "career@Genesistech.ca",
+        
+        "join_us": "Rejoignez-nous et faites la différence",
+        "join_us_description": "Chez CV2GO, vous aurez l’opportunité d’avoir un impact significatif chaque jour. Rejoignez-nous et contribuez à façonner l’avenir des chercheurs d’emploi à travers le monde. Nous avons hâte de vous accueillir dans notre équipe !",
+        
+          "salary_tools_title": "Outils de Salaire",
+          "salary_tools_for_job_seekers": "Outils de Salaire pour les Chercheurs d'Emploi",
+          "navigate_your_career": "Naviguez dans Votre Carrière en Toute Confiance",
+          "salary_tools_intro": "Comprendre votre valeur sur le marché et négocier votre salaire sont des étapes cruciales dans votre recherche d'emploi et votre avancement de carrière. Chez CV2GO, nous vous donnons accès à divers outils et ressources pour vous aider à prendre des décisions éclairées sur votre rémunération.",
+        
+          "comprehensive_salary_tools": "Outils de Salaire Complets",
+          "salary_calculators": "Calculatrices de Salaire",
+          "salary_calculators_desc": "Les calculatrices de salaire vous permettent d'entrer votre poste, votre localisation et votre niveau d'expérience pour obtenir une estimation du salaire moyen pour votre position. Ces outils prennent en compte les tendances du secteur, les variations géographiques et la taille de l'entreprise pour fournir des données précises.",
+        
+          "industry_reports": "Rapports sur l'Industrie",
+          "industry_reports_desc": "L'accès à des rapports détaillés sur l'industrie peut vous donner une meilleure compréhension des tendances salariales dans votre domaine. Ces rapports comprennent souvent des informations sur les salaires moyens, les avantages et les packages de rémunération pour divers rôles et niveaux d'expérience.",
+        
+          "cost_of_living": "Comparaisons du Coût de la Vie",
+          "cost_of_living_desc": "Lorsque vous envisagez des offres d'emploi dans différentes villes, il est important de prendre en compte le coût de la vie. Des outils comme Numbeo et Expatistan fournissent des comparaisons détaillées pour vous aider à prendre une décision éclairée sur un éventuel déménagement.",
+        
+          "company_reviews": "Avis sur les Entreprises",
+          "company_reviews_desc": "Des sites comme Glassdoor et Indeed offrent des avis d'employés actuels et anciens, partageant leurs expériences, y compris des informations sur les salaires et les avantages sociaux.",
+        
+          "how_cibli_job_can_help": "Comment CV2GO Peut Vous Aider",
+          "one_on_one_coaching": "Coaching Individuel",
+          "one_on_one_coaching_desc": "Nos coachs de carrière vous guident dans la recherche salariale et la négociation. Nous vous aidons à préparer les discussions sur le salaire et à développer des stratégies de négociation efficaces.",
+        
+          "exclusive_resources": "Ressources Exclusives",
+          "exclusive_resources_desc": "En tant que client de CV2GO, vous aurez accès à des ressources exclusives, notamment des rapports sur l'industrie, des enquêtes salariales et des ateliers de négociation.",
+        
+          "maximize_earning": "Maximisez Votre Potentiel de Revenu",
+          "maximize_earning_desc": "Ne laissez pas votre salaire au hasard. Prenez le contrôle de votre carrière et maximisez votre potentiel de revenus avec l'aide des outils et ressources de CV2GO.",
+          
+            "privacyPolicy": "Politique de Confidentialité",
+            "intro": "Chez CV2GO, nous accordons une grande importance à votre confidentialité et nous nous engageons à protéger vos informations personnelles. Cette Politique de Confidentialité explique comment nous collectons, utilisons et protégeons vos données lorsque vous utilisez notre site Web et nos services.",
+            "sections": {
+              "informationWeCollect": "1. Informations que Nous Collectons",
+              "howWeUse": "2. Comment Nous Utilisons Vos Informations",
+              "dataSecurity": "3. Sécurité des Données",
+              "sharingInformation": "4. Partage de Vos Informations",
+              "yourRights": "5. Vos Droits et Choix",
+              "cookiesTracking": "6. Cookies et Suivi",
+              "thirdPartyLinks": "7. Liens Tiers",
+              "childrensPrivacy": "8. Confidentialité des Enfants",
+              "changesPolicy": "9. Modifications de Cette Politique",
+              "contactUs": "10. Contactez-Nous"
+            },
+            "informationWeCollect": {
+              "personal": "Nous pouvons collecter des informations personnelles telles que votre nom, email, numéro de téléphone, adresse postale, détails du CV et informations de paiement.",
+              "nonPersonal": "Nous collectons également des informations non personnelles comme l'adresse IP, le type de navigateur et le comportement sur le site Web pour améliorer nos services."
+            },
+            "howWeUse": {
+              "serviceDelivery": "Nous utilisons vos informations pour fournir des services de rédaction de CV, de coaching de carrière et d’optimisation de profil LinkedIn.",
+              "communication": "Nous pouvons vous contacter concernant nos services, mises à jour et offres promotionnelles. Vous pouvez vous désinscrire à tout moment.",
+              "analysis": "Les données non personnelles nous aident à analyser l'utilisation du site Web et à améliorer la sécurité."
+            },
+            "dataSecurity": "Nous utilisons des mesures de sécurité appropriées pour protéger vos données, mais nous ne pouvons pas garantir une sécurité absolue.",
+            "sharingInformation": {
+              "thirdParty": "Nous pouvons partager des données avec des partenaires de confiance comme des prestataires de paiement et des services d’emailing.",
+              "businessTransfers": "En cas de fusion ou de vente, vos informations peuvent être transférées.",
+              "legalRequirements": "Nous pouvons divulguer vos données si la loi l'exige."
+            },
+            "yourRights": {
+              "accessCorrection": "Vous pouvez mettre à jour ou corriger vos données personnelles à tout moment.",
+              "dataDeletion": "Vous pouvez demander la suppression de vos données, sous réserve des obligations légales.",
+              "optOut": "Vous pouvez vous désinscrire des emails promotionnels à tout moment."
+            },
+            "cookiesTracking": "Nous utilisons des cookies pour améliorer votre expérience. Vous pouvez gérer les paramètres des cookies dans votre navigateur.",
+            "thirdPartyLinks": "Notre site Web peut contenir des liens vers des sites tiers. Nous ne sommes pas responsables de leurs politiques de confidentialité.",
+            "childrensPrivacy": "Nos services ne sont pas destinés aux personnes de moins de 18 ans. Si un enfant fournit des données personnelles, nous les supprimerons.",
+            "changesPolicy": "Nous pouvons mettre à jour cette Politique de Confidentialité. La poursuite de l'utilisation de nos services après des modifications signifie l'acceptation de la politique révisée.",
+            "contactUs": "Si vous avez des questions, contactez-nous à :",
+            "email_name": "abc@genesistech.ca",
+          
+            
+              "title": "Générateur de CV IA",
+              "introduction": "Révolutionner le processus de candidature",
+              "description": "Bienvenue sur le Générateur de CV IA de CV2GO – une solution innovante conçue pour simplifier la création de CV et vous aider à décrocher l’emploi de vos rêves. Notre technologie IA avancée facilite la rédaction de CV en mettant en valeur vos compétences et réalisations de la meilleure façon possible.",
+              "key_features": "Principales Fonctionnalités",
+              "features": [
+                {
+                  "title": "Génération de Contenu Intelligent",
+                  "description": "Notre IA analyse vos données et génère un contenu personnalisé conforme aux standards du secteur et optimisé pour les systèmes de suivi des candidatures (ATS)."
+                },
+                {
+                  "title": "Modèles Personnalisables",
+                  "description": "Choisissez parmi une gamme de modèles professionnels adaptés à différents secteurs. Personnalisez les mises en page, polices et couleurs pour correspondre à votre image de marque."
+                },
+                {
+                  "title": "Optimisation des Compétences et Mots-Clés",
+                  "description": "L’IA analyse les offres d’emploi et suggère des mots-clés pertinents pour augmenter vos chances de passer les filtres ATS et d’attirer les recruteurs."
+                },
+                {
+                  "title": "Commentaires et Suggestions en Temps Réel",
+                  "description": "Recevez des commentaires instantanés sur le contenu, la structure et l’impact de votre CV. Améliorez votre CV grâce aux suggestions basées sur l’IA."
+                },
+                {
+                  "title": "Interface Facile à Utiliser",
+                  "description": "Notre plateforme conviviale facilite la création de CV pour tous, des jeunes diplômés aux professionnels expérimentés."
+                },
+                {
+                  "title": "Sections Spécifiques à l'Expérience",
+                  "description": "L’IA vous aide à structurer votre CV en recommandant des sections pertinentes telles que l’expérience professionnelle, l’éducation, les certifications et les projets."
+                },
+                {
+                  "title": "Support Multilingue",
+                  "description": "Créez des CV en plusieurs langues pour répondre aux attentes des employeurs internationaux."
+                }
+              ],
+              "how_it_works": "Comment ça Marche",
+              "steps": [
+                {
+                  "title": "Étape 1 : Inscription et Saisie de vos Informations",
+                  "description": "Créez un compte sur CV2GO et renseignez vos informations professionnelles, y compris votre expérience, formation, compétences et réalisations."
+                },
+                {
+                  "title": "Étape 2 : Choisissez un Modèle",
+                  "description": "Parcourez nos modèles professionnels et sélectionnez celui qui convient le mieux à votre secteur et à votre style."
+                },
+                {
+                  "title": "Étape 3 : Générez et Personnalisez votre CV",
+                  "description": "L’IA génère un brouillon de CV basé sur vos données. Personnalisez le contenu et la mise en page en profitant des retours en temps réel."
+                },
+                {
+                  "title": "Étape 4 : Téléchargez et Postulez",
+                  "description": "Téléchargez votre CV en format PDF, DOCX ou autres et commencez à postuler en toute confiance."
+                }
+              ],
+              "why_choose_us_AI": "Pourquoi Choisir Notre Générateur de CV IA ?",
+              "benefits": [
+                {
+                  "title": "Rapidité et Efficacité",
+                  "description": "Créez un CV de haute qualité en quelques minutes, en économisant du temps et des efforts."
+                },
+                {
+                  "title": "Qualité Professionnelle",
+                  "description": "Des designs et contenus élaborés par des experts garantissent un CV professionnel et percutant."
+                },
+                {
+                  "title": "Visibilité Accrue",
+                  "description": "Les CV optimisés pour les ATS augmentent vos chances d’être remarqué par les recruteurs."
+                },
+                {
+                  "title": "Amélioration Continue",
+                  "description": "Notre IA évolue avec les tendances du marché, offrant des outils de création de CV toujours à jour."
+                }
+              ],
+              "cta": {
+                "title": "Commencez à Créer votre CV dès Aujourd'hui",
+                "description": "Transformez votre processus de candidature avec le Générateur de CV IA de CV2GO. Inscrivez-vous dès maintenant et franchissez la première étape vers votre emploi idéal avec un CV professionnel qui met en valeur vos compétences et qualifications uniques.",
+                "button": "Commencer"
+              },
+              
+               
+                  "Ai_Skill_Tests": "Tests de compétences en IA",
+                  "Ai_Skill_Tests_heading1": "Améliorez votre processus de recrutement avec les tests de compétences en IA",
+                  "Ai_Skill_Tests_heading2": "Principales caractéristiques de nos tests de compétences en IA",
+                  "Ai_Skill_Tests_heading3": "Évaluations complètes des compétences",
+                  "Ai_Skill_Tests_heading4": "Résultats en temps réel et analyses",
+                  "Ai_Skill_Tests_heading5": "Formats de test personnalisables",
+                  "Ai_Skill_Tests_heading6": "Évaluation impartiale",
+                  "Ai_Skill_Tests_heading7": "Tests adaptatifs",
+                  "Ai_Skill_Tests_heading8": "Intégration avec les ATS",
+                  "Ai_Skill_Tests_heading9": "Analyse des écarts de compétences",
+                  "Ai_Skill_Tests_heading10": "Comment ça fonctionne",
+                  "Ai_Skill_Tests_heading11": "Étape 1 : Définissez vos exigences",
+                  "Ai_Skill_Tests_heading12": "Étape 2 : Créez le test",
+                  "Ai_Skill_Tests_heading13": "Étape 3 : Invitez des candidats",
+                  "Ai_Skill_Tests_heading14": "Étape 4 : Analysez les résultats",
+                  "Ai_Skill_Tests_heading15": "Étape 5 : Prenez des décisions éclairées",
+                  "Ai_Skill_Tests_heading16": "Avantages de l'utilisation des tests de compétences en IA",
+                  "Ai_Skill_Tests_heading17": "Efficacité et rapidité",
+                  "Ai_Skill_Tests_heading18": "Précision améliorée",
+                  "Ai_Skill_Tests_heading19": "Expérience améliorée pour les candidats",
+                  "Ai_Skill_Tests_heading20": "Recrutement rentable",
+                  "Ai_Skill_Tests_heading21": "Commencez à utiliser les tests de compétences en IA dès aujourd’hui",
+                  "Ai_Skill_Tests_heading22": "Commencer",
+                  "Ai_Skill_Tests_paragraph1": "Chez CV2GO, nous comprenons l'importance de trouver le bon talent pour votre organisation. Nos tests de compétences en IA sont conçus pour simplifier le processus de recrutement en évaluant avec précision les capacités des candidats et en les associant aux exigences du poste. Grâce à une technologie IA avancée, nos tests offrent un moyen fiable, efficace et impartial d’évaluer les candidats potentiels.",
+                  "Ai_Skill_Tests_paragraph2": "Nos tests de compétences en IA couvrent un large éventail de compétences dans divers secteurs, notamment les compétences techniques, les compétences interpersonnelles et les compétences spécifiques à un rôle. Que vous recrutiez pour l'informatique, le marketing, la finance ou tout autre domaine, nos tests peuvent être adaptés à vos besoins spécifiques.",
+                  "Ai_Skill_Tests_paragraph3": "Recevez des résultats instantanés et des analyses détaillées sur la performance des candidats. Notre IA analyse les résultats des tests pour fournir des informations sur les forces et les domaines d'amélioration de chaque candidat, vous aidant ainsi à prendre des décisions de recrutement basées sur les données.",
+                  "Ai_Skill_Tests_paragraph4": "Créez des tests alignés sur vos besoins de recrutement. Vous pouvez choisir parmi plusieurs formats de questions, notamment les choix multiples, les défis de codage, les études de cas et les tests de jugement situationnels. Personnalisez le niveau de difficulté et la durée en fonction du poste.",
+                  "Ai_Skill_Tests_paragraph5": "Nos tests de compétences en IA éliminent les biais humains du processus d'évaluation. L’IA évalue objectivement chaque test en fonction de critères prédéfinis, garantissant une évaluation équitable de tous les candidats.",
+                  "Ai_Skill_Tests_paragraph6": "La technologie de tests adaptatifs ajuste la difficulté des questions en fonction des performances des candidats. Cela garantit une mesure précise de leur niveau de compétence et offre une expérience de test plus personnalisée.",
+                  "Ai_Skill_Tests_paragraph7": "Nos tests de compétences en IA s'intègrent parfaitement aux systèmes de suivi des candidatures (ATS) populaires. Cela vous permet de gérer les candidats, de suivre leur progression et de consulter les résultats des tests au même endroit, simplifiant ainsi votre processus de recrutement.",
+                  "Ai_Skill_Tests_paragraph8": "Identifiez les lacunes en compétences au sein de votre équipe existante et utilisez nos tests de compétences en IA pour évaluer les besoins en formation. Cela vous aide à mettre en place des programmes de développement ciblés et à vous assurer que votre équipe possède les compétences nécessaires pour réussir.",
+                  "Ai_Skill_Tests_paragraph9": "Déterminez les compétences et les aptitudes que vous devez évaluer pour le poste spécifique. Notre équipe peut vous aider à définir les critères clés et à concevoir un test personnalisé.",
+                  "Ai_Skill_Tests_paragraph10": "Utilisez notre plateforme intuitive pour créer le test de compétences en IA. Choisissez parmi une variété de types et de formats de questions, et définissez le niveau de difficulté et les limites de temps selon vos exigences.",
+                  "Ai_Skill_Tests_paragraph11": "Envoyez des invitations aux candidats par e-mail ou intégrez le lien du test dans vos offres d'emploi. Les candidats peuvent passer le test en ligne à leur convenance.",
+                  "Ai_Skill_Tests_paragraph12": "Consultez les résultats en temps réel et les analyses détaillées fournies par notre IA. Comparez la performance des candidats et identifiez le meilleur profil pour le poste.",
+                  "Ai_Skill_Tests_paragraph13": "Utilisez les informations obtenues grâce aux tests de compétences en IA pour prendre des décisions de recrutement éclairées. Les résultats complets des évaluations garantissent que vous sélectionnez les candidats les plus qualifiés pour votre organisation.",
+                  "Ai_Skill_Tests_paragraph14": "Automatisez le processus de présélection et réduisez le temps consacré aux évaluations manuelles. Nos tests de compétences en IA fournissent des évaluations rapides et précises, accélérant ainsi votre processus de recrutement.",
+                  "Ai_Skill_Tests_paragraph15": "Obtenez une meilleure compréhension des capacités des candidats grâce à des évaluations précises et objectives. Notre technologie IA garantit des résultats cohérents et fiables.",
+                  "Ai_Skill_Tests_paragraph16": "Offrez aux candidats une expérience de test fluide et conviviale. La nature adaptative de nos tests maintient leur engagement et leur motivation.",
+                  "Ai_Skill_Tests_paragraph17": "Réduisez les coûts associés aux méthodes de recrutement traditionnelles. Nos tests de compétences en IA minimisent le besoin de multiples tours d’entretiens et vous aident à identifier rapidement les meilleurs talents.",
+                  "Ai_Skill_Tests_paragraph18": "Transformez votre processus de recrutement avec les tests de compétences en IA de CV2GO. Inscrivez-vous dès maintenant pour découvrir les avantages d’une évaluation précise, efficace et impartiale des candidats.",
+                  "Ai_Skill_Tests_paragraph19": "Prêt à améliorer votre processus de recrutement ? Visitez notre page sur les tests de compétences en IA et commencez à créer des évaluations de compétences personnalisées dès aujourd’hui !",
+                
+                    "Terms-and-Conditions": {
+                      "title": "Conditions Générales",
+                      "introduction": "Bienvenue sur CV2GO. Ces conditions générales définissent les règles et réglementations d'utilisation du site web et des services de CV2GO. En accédant à ce site et en utilisant nos services, vous acceptez ces conditions générales dans leur intégralité. Si vous n'êtes pas d'accord avec une partie de ces conditions, veuillez ne pas utiliser notre site ou nos services.",
+                      "sections": [
+                        {
+                          "title": "1. Définitions",
+                          "list": [
+                            "Client : Toute personne physique ou morale utilisant les services de CV2GO.",
+                            "Entreprise : CV2GO.",
+                            "Services : Rédaction de CV, coaching de carrière, optimisation du profil LinkedIn et autres services liés à la carrière fournis par CV2GO."
+                          ]
+                        },
+                        {
+                          "title": "2. Utilisation des services",
+                          "list": [
+                            "Les clients doivent fournir des informations exactes et complètes lors de l'utilisation de nos services.",
+                            "Les services sont destinés à un usage personnel uniquement. Toute redistribution ou revente de nos services est interdite.",
+                            "Les clients s'engagent à utiliser nos services conformément aux lois et réglementations en vigueur."
+                          ]
+                        },
+                        {
+                          "title": "3. Paiement et remboursements",
+                          "list": [
+                            "Le paiement des services doit être effectué en totalité avant le début de toute prestation.",
+                            "Tous les frais sont non remboursables sauf indication contraire dans un accord spécifique.",
+                            "En cas d'insatisfaction, les clients doivent nous contacter sous 7 jours après réception du produit final. Nous ferons des efforts raisonnables pour résoudre tout problème."
+                          ]
+                        },
+                        {
+                          "title": "4. Propriété intellectuelle",
+                          "list": [
+                            "Tout le contenu, les matériaux et les services fournis par CV2GO sont protégés par des lois sur la propriété intellectuelle.",
+                            "Les clients bénéficient d'une licence limitée pour utiliser le contenu à des fins personnelles et non commerciales.",
+                            "Toute reproduction, distribution ou modification sans consentement écrit préalable est interdite."
+                          ]
+                        },
+                        {
+                          "title": "5. Confidentialité",
+                          "list": [
+                            "CV2GO respecte la vie privée et la confidentialité de ses clients.",
+                            "Toute information personnelle fournie sera utilisée uniquement pour la prestation des services et ne sera pas partagée avec des tiers sans consentement explicite.",
+                            "Les clients s'engagent à ne pas divulguer les informations confidentielles obtenues via nos services."
+                          ]
+                        },
+                        {
+                          "title": "6. Limitation de responsabilité",
+                          "list": [
+                            "CV2GO ne sera pas responsable des dommages directs, indirects ou consécutifs résultant de l'utilisation de nos services.",
+                            "Nous ne garantissons pas un emploi ou des résultats spécifiques après l'utilisation de nos services."
+                          ]
+                        },
+                        {
+                          "title": "7. Clause de non-garantie",
+                          "list": [
+                            "Nos services sont fournis 'tels quels' et 'selon disponibilité'. CV2GO ne garantit pas l'exactitude ou l'exhaustivité des services.",
+                            "Nous ne garantissons pas que nos services répondront aux attentes des clients."
+                          ]
+                        },
+                        {
+                          "title": "8. Modifications des conditions générales",
+                          "list": [
+                            "CV2GO se réserve le droit de modifier ces conditions générales à tout moment sans préavis.",
+                            "L'utilisation continue de nos services après toute modification implique l'acceptation des nouvelles conditions."
+                          ]
+                        },
+                        {
+                          "title": "9. Droit applicable",
+                          "list": [
+                            "Ces conditions générales sont régies par les lois du pays où opère CV2GO.",
+                            "Tout litige sera soumis à la juridiction exclusive des tribunaux compétents."
+                          ]
+                        },
+                        {
+                          "title": "10. Contact",
+                          "list": [
+                            "Si vous avez des questions concernant ces conditions générales, veuillez nous contacter à :",
+                            "Email : abc@genesistech.ca"
+                          ]
+                        }
+                      ],
+                      "closing": "Ces conditions garantissent une compréhension claire de nos services et des responsabilités de CV2GO et de ses clients.",
+                      "contact": "Si vous avez des questions, contactez-nous."
+                    }    ,
+                    
+                      "Ai_CV_Parsing_h": "Analyse de CV par IA",
+                      "Ai_CV_Parsing_h1": "Transformer le recrutement avec une analyse avancée des CV par IA",
+                      "Ai_CV_Parsing_h2": "Caractéristiques clés de notre outil d'analyse de CV par IA",
+                      "Ai_CV_Parsing_h3": "Extraction de données précise",
+                      "Ai_CV_Parsing_h4": "Prise en charge de plusieurs formats",
+                      "Ai_CV_Parsing_h5": "Traitement du langage naturel (NLP)",
+                      "Ai_CV_Parsing_h6": "Correspondance automatisée des candidats",
+                      "Ai_CV_Parsing_h7": "Extraction des compétences et des mots-clés",
+                      "Ai_CV_Parsing_h8": "Règles d'analyse personnalisables",
+                      "Ai_CV_Parsing_h9": "Conformité et confidentialité",
+                      "Ai_CV_Parsing_h10": "Comment ça marche",
+                      "Ai_CV_Parsing_h11": "Étape 1 : Téléchargez les CV",
+                      "Ai_CV_Parsing_h12": "Étape 2 : Analyse et extraction des données",
+                      "Ai_CV_Parsing_h13": "Étape 3 : Examiner et analyser",
+                      "Ai_CV_Parsing_h14": "Étape 4 : Automatiser la correspondance des candidats",
+                      "Ai_CV_Parsing_h15": "Étape 5 : Prendre des décisions de recrutement éclairées",
+                      "Ai_CV_Parsing_h16": "Avantages de l'utilisation de l'analyse de CV par IA",
+                      "Ai_CV_Parsing_h17": "Efficacité et rapidité",
+                      "Ai_CV_Parsing_h18": "Précision améliorée",
+                      "Ai_CV_Parsing_h19": "Expérience candidat optimisée",
+                      "Ai_CV_Parsing_h20": "Évolutivité",
+                      "Ai_CV_Parsing_h21": "Commencez à utiliser l'analyse de CV par IA dès aujourd'hui",
+                      "Ai_CV_Parsing_h22": "Commencer",
+                      "Ai_CV_Parsing_p1": "Chez CV2GO, nous exploitons une technologie avancée d'analyse de CV par IA pour rationaliser le processus de recrutement, le rendant plus rapide et plus efficace pour les employeurs et les candidats. Notre outil d'analyse de CV par IA extrait et analyse avec précision les informations clés des CV, vous aidant à identifier rapidement et efficacement les meilleurs candidats.",
+                      "Ai_CV_Parsing_p2": "Notre analyseur de CV par IA utilise des algorithmes sophistiqués pour extraire les informations essentielles des CV, notamment les informations personnelles, les coordonnées, l'expérience professionnelle, l'éducation, les compétences et les certifications. Les données extraites sont organisées dans un format structuré, facilitant ainsi l'examen et la comparaison des candidats.",
+                      "Ai_CV_Parsing_p3": "Notre analyseur peut traiter des CV dans divers formats, tels que PDF, DOC, DOCX et TXT. Cette flexibilité garantit que, quelle que soit la manière dont les candidats soumettent leurs CV, notre outil peut les traiter et les analyser efficacement.",
+                      "Ai_CV_Parsing_p4": "Grâce à des techniques avancées de NLP, notre analyseur de CV par IA comprend le contexte et les nuances du langage humain. Cela lui permet d'interpréter avec précision les titres de poste, les compétences et les responsabilités, même s'ils sont formulés différemment dans les CV.",
+                      "Ai_CV_Parsing_p5": "Notre outil d'analyse de CV par IA s'intègre parfaitement à votre système de suivi des candidatures (ATS), en faisant correspondre automatiquement les profils de candidats avec les descriptions de poste. Cette automatisation réduit l'effort manuel et garantit que seuls les candidats les plus pertinents sont présélectionnés.",
+                      "Ai_CV_Parsing_p6": "L'analyseur identifie et extrait les compétences clés et les mots-clés des CV, en les comparant aux exigences du poste. Cela garantit que les candidats répondant aux critères nécessaires sont priorisés, améliorant ainsi la qualité de votre vivier de talents.",
+                      "Ai_CV_Parsing_p7": "Adaptez les règles d'analyse à vos besoins spécifiques en matière de recrutement. Vous pouvez définir les critères d'extraction et de priorisation des informations, garantissant que l'analyseur s'aligne sur votre stratégie de recrutement.",
+                      "Ai_CV_Parsing_p8": "Nous accordons une grande importance à la sécurité et à la confidentialité des données. Notre outil d'analyse de CV par IA est conforme à toutes les réglementations en vigueur en matière de protection des données, garantissant que les informations des candidats sont traitées avec le plus grand soin.",
+                      "Ai_CV_Parsing_p9": "Téléchargez des CV individuels ou des fichiers de CV en masse dans l'outil d'analyse de CV par IA. Notre système prend en charge divers formats de fichiers et garantit un traitement rapide et efficace.",
+                      "Ai_CV_Parsing_p10": "L'analyseur de CV par IA traite les CV téléchargés, extrait les informations clés et les organise dans un format structuré. Cela inclut des détails tels que les coordonnées, l'historique professionnel, l'éducation, les compétences, et plus encore.",
+                      "Ai_CV_Parsing_p11": "Accédez aux données analysées via un tableau de bord intuitif. Passez en revue et analysez les profils des candidats, comparez les qualifications et filtrez les candidats selon vos critères spécifiques.",
+                      "Ai_CV_Parsing_p12": "Intégrez les données analysées à votre ATS pour automatiser le processus de correspondance des candidats. L'IA fait correspondre les profils des candidats avec les descriptions de poste, garantissant que seuls les candidats les plus qualifiés sont présélectionnés.",
+                      "Ai_CV_Parsing_p13": "Utilisez les données structurées et détaillées pour prendre des décisions de recrutement éclairées. Notre outil d'analyse de CV par IA vous offre une vue complète de chaque candidat, vous permettant de sélectionner le meilleur profil pour votre entreprise.",
+                      "Ai_CV_Parsing_p14": "Réduisez le temps consacré au tri manuel des CV et à la saisie des données. Notre analyseur de CV par IA traite rapidement et avec précision les CV, vous permettant de vous concentrer sur des tâches de recrutement à plus forte valeur ajoutée.",
+                      "Ai_CV_Parsing_p15": "Éliminez les erreurs humaines et les biais du processus de sélection des CV. Notre technologie IA garantit une extraction de données cohérente et précise, menant à de meilleures décisions de recrutement.",
+                      "Ai_CV_Parsing_p16": "Offrez une expérience de recrutement plus fluide et plus rapide aux candidats. Grâce à un traitement rapide et précis des CV, les candidats reçoivent des retours et des mises à jour en temps opportun.",
+                      "Ai_CV_Parsing_p17": "Gérez sans effort de gros volumes de CV. Notre outil d'analyse de CV par IA peut s'adapter aux besoins des campagnes de recrutement à grande échelle, garantissant qu'aucun candidat n'est négligé.",
+                      "Ai_CV_Parsing_p18": "Révolutionnez votre processus de recrutement avec l'outil d'analyse de CV par IA de CV2GO. Inscrivez-vous dès maintenant pour découvrir les avantages d'un traitement des CV efficace, précis et automatisé.",
+                      "Ai_CV_Parsing_p19": "Prêt à transformer votre processus de recrutement ? Visitez notre page d'analyse de CV par IA et commencez à optimiser votre sélection de candidats dès aujourd'hui !",
+                      
+                        "AI-Enhanced_h": "Précision du CV Améliorée par l'IA",
+                        "AI-Enhanced_h1": "Garantir la précision et la fiabilité dans la création de CV",
+                        "AI-Enhanced_h1A": "Principales caractéristiques de la précision du CV améliorée par l'IA",
+                        "AI-Enhanced_h2": "Vérification de la grammaire et de l'orthographe",
+                        "AI-Enhanced_h3": "Cohérence et mise en forme",
+                        "AI-Enhanced_h3A": "Vérification des données",
+                        "AI-Enhanced_h4": "Correspondance des compétences et des mots-clés",
+                        "AI-Enhanced_h5": "Réalisations quantitatives",
+                        "AI-Enhanced_h6": "Pertinence et clarté",
+                        "AI-Enhanced_h7": "Détection du plagiat",
+                        "AI-Enhanced_h8": "Comment ça marche",
+                        "AI-Enhanced_h9": "Étape 1 : Téléchargez votre CV",
+                        "AI-Enhanced_h10": "Étape 2 : Analyse par IA",
+                        "AI-Enhanced_h11": "Étape 3 : Recevez des commentaires",
+                        "AI-Enhanced_h12": "Étape 4 : Apportez des ajustements",
+                        "AI-Enhanced_h13": "Étape 5 : Revue finale",
+                        "AI-Enhanced_h14": "Avantages de la précision du CV améliorée par l'IA",
+                        "AI-Enhanced_h15": "Présentation professionnelle",
+                        "AI-Enhanced_h16": "Confiance accrue",
+                        "AI-Enhanced_h17": "Taux de réussite plus élevé",
+                        "AI-Enhanced_h18": "Gain de temps et d'efforts",
+                        "AI-Enhanced_h19": "Améliorez la précision de votre CV dès aujourd'hui",
+                        "AI-Enhanced_p1": "Chez CV2GO, nous comprenons que la précision de votre CV peut avoir un impact significatif sur vos chances d'obtenir votre emploi de rêve. Nos outils de précision de CV améliorés par l'IA garantissent que votre CV est non seulement attrayant mais aussi précis et sans erreur.",
+                        "AI-Enhanced_p2": "Nos outils alimentés par l'IA vérifient minutieusement les erreurs de grammaire, d'orthographe et de ponctuation, garantissant un CV professionnel et sans fautes.",
+                        "AI-Enhanced_p3": "L'IA examine la mise en forme de votre CV pour assurer une cohérence visuelle et une présentation uniforme.",
+                        "AI-Enhanced_p4": "Notre IA vérifie les informations clés telles que les dates d'emploi, les titres de poste et les qualifications éducatives pour éviter toute incohérence.",
+                        "AI-Enhanced_p5": "L'IA compare votre CV aux descriptions de poste pour s'assurer qu'il contient les compétences et mots-clés pertinents.",
+                        "AI-Enhanced_p6": "L'IA vous aide à quantifier vos réalisations avec des chiffres concrets.",
+                        "AI-Enhanced_p7": "Elle analyse la pertinence et la clarté de votre contenu.",
+                        "AI-Enhanced_p8": "L'IA détecte le plagiat pour garantir un contenu unique.",
+                        "AI-Enhanced_p18": "Transformez votre CV avec CV2GO. Inscrivez-vous maintenant !",
+                        
+                          "basic_information": "INFORMATIONS DE BASE",
+                          "first_name": "Prénom",
+                          "last_name": "Nom de famille",
+                          "professional_title": "Titre professionnel",
+                          "languages": "Langues",
+                          "age": "Âge",
+                          "current_salary": "Salaire actuel ($)",
+                          "expected_salary": "Salaire attendu ($)",
+                          "description": "Description",
+                          "phone_number": "Numéro de téléphone",
+                          "email": "E-mail",
+                          "choose_file": "Choisir un fichier",
+                          "image_uploaded": "Image téléchargée",
+                          "no_file_chosen": "Aucun fichier choisi",
+                          "update_profile": "Mettre à jour le profil",
+                          "profile_updated": "Profil mis à jour avec succès",
+                          "profile_update_failed": "Échec de la mise à jour du profil",
+                          "loading": "Chargement...",
+                          "remove_photo": "Supprimer la photo",
+                          "photo_removed": "Photo de profil supprimée avec succès",
+                          "photo_remove_failed": "Échec de la suppression de la photo de profil",
+                          
+                            "dashboard": "Tableau de bord",
+                            "profile": "Profil",
+                            "ai_resume_builder": "Générateur de CV IA",
+                            "my_resumes": "Mes CVs",
+                            "my_cover_letters": "Mes Lettres de Motivation",
+                            "my_jobs": "Mes Emplois",
+                            "notifications": "Notifications",
+                            "skill_test": "Test de Compétences",
+                            "skill_history": "Historique des Compétences",
+                            "payment": "Paiement",
+                            "logout": "Se Déconnecter",
+                            
+                              "myresume": {
+                                "title": "Mes CVs",
+                                "create_new_resume": "Créer un Nouveau CV",
+                                "sr_no": "N°",
+                                "my_resume": "Mon CV",
+                                "modification": "Modification",
+                                "created": "Créé",
+                                "strength": "Force",
+                                "actions": "Actions",
+                                "edit": "Modifier",
+                                "delete": "Supprimer",
+                                "please_upload_resume": "Veuillez télécharger un CV.",
+                                "delete_confirmation": "Êtes-vous sûr de vouloir supprimer ce CV ?",
+                                "cancel": "Annuler",
+                                "edit_resume_title": "Modifier le Titre du CV",
+                                "enter_new_resume_title": "Entrez un nouveau titre de CV",
+                                "save": "Enregistrer",
+                                "create_first_resume": "Créez votre premier CV.",
+                                "fetch_resume_error": "Échec de la récupération des CV.",
+                                "resume_deleted_success": "Votre CV a été supprimé avec succès.",
+                                "resume_deleted_error": "Échec de la suppression de votre CV.",
+                                "resume_title_updated_success": "Le titre du CV a été mis à jour avec succès.",
+                                "resume_title_updated_error": "Échec de la mise à jour du titre du CV."
+                              },
+                             
+                                "mycvletter": {
+                                  "no_coverletters": "Aucune lettre de motivation disponible.",
+                                  "fetch_coverletters_error": "Échec de la récupération des lettres de motivation.",
+                                  "resume_deleted_success": "Lettre de motivation supprimée avec succès.",
+                                  "resume_deleted_error": "Échec de la suppression de la lettre de motivation.",
+                                  "resume_title_updated_success": "Le titre de la lettre de motivation a été mis à jour avec succès.",
+                                  "resume_title_updated_error": "Échec de la mise à jour du titre de la lettre de motivation.",
+                                  "create_new_coverletter": "Créer une nouvelle lettre de motivation",
+                                  "sr_no": "N°",
+                                  "my_cover_letters": "Mes lettres de motivation",
+                                  "modification": "Modification",
+                                  "created": "Créé",
+                                  "actions": "Actions",
+                                  "please_upload_coverletter": "Veuillez télécharger une lettre de motivation.",
+                                  "edit_cover_letter_title": "Modifier le titre de la lettre de motivation",
+                                  "enter_new_coverletter_title": "Entrez un nouveau titre de lettre de motivation",
+                                  "cancel": "Annuler",
+                                  "save": "Enregistrer",
+                                  "delete_confirm": "Êtes-vous sûr de vouloir supprimer cette lettre de motivation ?",
+                                  "delete": "Supprimer",
+                                  "download_error": "Échec du téléchargement du fichier. Veuillez réessayer plus tard."
+                                },
+                                "jobsearch":{
+                                  "my_jobs": "Mes emplois",
+                                  "job_search": "Recherche d'emploi",
+                                  "keywords": "Mots-clés",
+                                  "keywords_placeholder": "Entrez le titre du poste, par ex. 'Développeur'",
+                                  "location": "Emplacement",
+                                  "location_placeholder": "Entrez une ville ou un pays, par ex. 'Berlin'",
+                                  "search_jobs": "Rechercher des emplois",
+                                  "loading": "Chargement...",
+                                  "error_message": "Échec de la récupération des offres d'emploi. Veuillez réessayer plus tard.",
+                                  "apply_now": "Postuler maintenant"
+                                },
+                                 "notification_coming_soon": "🙋‍♀️ Notification à venir bientôt",
+                                 "skill": {
+    "welcome_message": "Bienvenue à l'évaluation des compétences",
+    "instructions": "Veuillez prendre un moment pour lire attentivement les instructions avant de continuer.",
+    "continue": "Continuer",
+    "take_skill_assessment": "👨‍💻 Passer l'évaluation des compétences",
+    "total_questions": "❓ Nombre total de questions",
+    "right_answers": "📌 Réponses correctes",
+    "wrong_answers": "⚠️ Réponses incorrectes",
+    "percentage": "📈 Pourcentage",
+    "take_test": "✍ Passer le test",
+    "no_skills": "Aucune donnée de compétences disponible.",
+    "instructions_title": "📜 Instructions",
+    "common_instructions": "Les instructions suivantes sont communes à tous les utilisateurs.",
+    "instruction_1": "La durée du test est de 10 minutes*. Votre réponse est automatiquement soumise après 10 minutes*.",
+    "instruction_2": "Ce test comprend 15* questions à choix multiples.",
+    "instruction_3": "Vous pouvez répondre aux questions dans n'importe quel ordre.",
+    "instruction_4": "Veuillez sélectionner la bonne réponse et cliquer sur le bouton Enregistrer et suivant.",
+    "instruction_5": "Veuillez cliquer sur Ignorer si vous souhaitez ignorer une question. Vous pouvez revenir plus tard pour y répondre.",
+    "instruction_6": "Veuillez cliquer sur le bouton Soumettre l'évaluation après avoir répondu à toutes les questions.",
+    "instruction_7": "Ne fermez pas la fenêtre avant de soumettre le test.",
+    "instruction_8": "Les tests seront automatiquement soumis après la durée limite.",
+    "proceed_to_test": "Passer au test",
+ "create_or_upload": "Veuillez créer ou télécharger un CV pour passer le test en utilisant le lien ci-dessous.",
+    "create_new_resume": "Créer un nouveau CV",
+     "close": "Fermer",
+    "toast": {
+      "resume_required": "Veuillez d'abord ajouter un CV avant de passer le test.",
+      "test_started": "Le test a commencé!",
+      "unauthorized": "Accès non autorisé. Veuillez vous reconnecter.",
+      "loading_error": "Erreur lors du chargement des données des compétences."
+    }
+  },
+  "testPaper": {
+    "loadingMessage": "Veuillez patienter...",
+    "processingRequest": "Un instant ! Nous traitons votre demande...!",
+    "dontCloseWindow": "Ne fermez pas ou ne revenez pas en arrière dans votre fenêtre !",
+    "totalQuestions": "Nombre total de questions",
+    "rightAnswer": "Bonne réponse",
+    "wrongAnswer": "Mauvaise réponse",
+    "percentage": "Pourcentage",
+    "back": "Retour",
+    "previous": "↩️ Précédent",
+    "next": "↪️ Suivant",
+    "submit": "🎓 Soumettre",
+    "errorFetching": "Erreur lors de la récupération des questions",
+    "error":"Erreur"
+  },
+                                
+  "skillhistory": {
+    "title": "Historique des Compétences",
+    "no_history": "Votre historique d'évaluation des compétences apparaîtra ici.",
+    "date_time": "Date / Heure",
+    "verification_status": "Statut de Vérification",
+    "total_questions": "Nombre Total de Questions",
+    "right_answers": "Bonnes Réponses",
+    "wrong_answers": "Mauvaises Réponses",
+    "percentage": "Pourcentage",
+    "verified": "Vérifié",
+    "not_verified": "Non Vérifié"
+  },
+  "payments": {
+    "title": "Plans de Paiement",
+    "resume_builder": "Créateur de CV",
+    "starting": "à partir de",
+    "free": "Gratuit",
+    "expert_writer": "Rédacteur Humain Expert",
+    "combo": "Combo Français Anglais",
+    "per_resume": "/CV",
+    "choose_plan": "Choisissez ce plan",
+    "features": {
+      "optimized_resumes": "✔️ Créez des CV optimisés",
+      "copy_paste": "✔️ Copier et coller du contenu depuis le site",
+      "receive_pdf_docs": "✔️ Recevez votre CV en pdf et doc",
+      "unlimited_edits": "✔️ Modifications illimitées du CV",
+      "cover_letter": "✔️ Lettre de motivation incluse",
+      "save_pdf_docs": "✔️ Enregistrez le CV en pdf et doc",
+      "revisions": "✔️ 3 révisions incluses",
+      "speak_writer": "✔️ Parlez en tête-à-tête avec l'écrivain",
+      "final_delivery": "✔️ Livraison finale en 1 semaine"
+    }                       
+                              
+                            
+                            
+                          
+                          
+                        
+                        
+                      
+                      
+  },
+  "modal": {
+    "title": "CV2GO ID",
+    "subtitle": "Votre accès unique aux solutions de carrière",
+    "coming_soon": "Bientôt disponible !",
+    "status": "Statut du développement :",
+    "progress": "90% Complet",
+    "description": "CV2GO ID vous permettra de vous connecter facilement à tous nos services avec un seul compte. Restez à l'écoute pour le lancement !",
+    "signup": "Vous voulez savoir quand CV2GO ID sera en ligne ? Inscrivez-vous pour recevoir des mises à jour !",
+    "email_placeholder": "Entrez votre email",
+    "notify_button": "Prévenez-moi",
+    "close_button": "Fermer",
+    "in_progress":"En cours"
+  },
+  "dashboard_page":{
+    "createResume": "Créer un nouveau CV",
+    "createCoverLetter": "Créer de nouvelles lettres de motivation",
+    "myProfileDashboard": "Mon tableau de bord",
+    "recommendedSteps": "Vos prochaines étapes recommandées"
+  },
+  "dashboard_sidebar":{
+    "resumeStrength": "Force du CV :",
+    "improve": "Améliorer",
+    "createResume": "Créer un nouveau CV",
+    "edit": "Modifier",
+    "viewAll": "Voir tout",
+    "loading": "Chargement...",
+    "downloadFailed": "Échec du téléchargement du fichier. Veuillez réessayer plus tard."
+  },
+  "resumeStrength": {
+    "resumeStrength": "Force du CV",
+    "fixResume": "Corriger le CV",
+    "foundErrors": "Nous avons trouvé {{errors}} erreurs dans votre CV.",
+    "useTool": "Utilisez notre outil de vérification du CV pour les corriger.",
+    "improveResume": "Améliorer le CV",
+     "improveATS":"Améliorer le ATS",
+    "sections": {
+      "personalInformation": "Informations personnelles",
+      "socialLinks": "Liens sociaux",
+      "personalSummary": "Résumé personnel",
+      "education": "Éducation",
+      "workHistory": "Historique professionnel",
+      "projects": "Projets",
+      "skills": "Compétences",
+      "languages": "Langues",
+      "certification": "Certification"
+    }
+  },
+  "improvements": {
+    "title": "Domaines d'amélioration",
+    "file_format": "Format de fichier",
+    "keyword_optimization": "Optimisation des mots-clés"
+  },
+  "formatting": {
+    "title": "Liste de vérification du formatage",
+    "bullet_points": "Utilisation des puces",
+    "bullet_points_desc": "Utilisation appropriée des puces dans les sections du CV",
+    "clear_headings": "Titres clairs",
+    "clear_headings_desc": "Les titres des sections sont clairs et bien définis",
+    "consistent_font": "Police cohérente",
+    "consistent_font_desc": "Utilisation cohérente des polices dans tout le CV",
+    "contact_info": "Informations de contact visibles",
+    "contact_info_desc": "Les informations de contact sont clairement visibles"
+  },
+  "overall_comments": "Commentaires généraux",
+  "button": {
+    "improve": "Procéder à l'amélioration..."
+  },
+  "toast": {
+    "ats_success": "ATS mis à jour avec succès",
+    "no_response": "Aucune donnée de réponse reçue",
+    "error": "Une erreur est survenue"
+  },
+  "dashboard_interview":
+  {
+    "clearInterview": "Réussissez votre entretien",
+    "description": "Obtenez des informations précieuses grâce à nos ressources rédigées par des experts et recevez des mises à jour hebdomadaires directement dans votre boîte de réception.",
+    "visitResources": "Visitez les ressources"
+  },
+  "dashboard_cvletter":{
+    "yourCoverLetters": "Vos lettres de motivation",
+    "viewCoverLetters": "Voir les lettres de motivation"
+  },
+  "createResume":{
+    "welcome_resumebuilder":"Bienvenue sur Resume Builder",
+    "create_resume":"Cliquez sur le bouton ci-dessous pour créer votre CV.",
+    "resume_btn":"Créez votre CV",
+    "creating":"Création..."
+  },
+  "analyzingResume": {
+    "title": "Analyse du CV...",
+    "description": "Veuillez patienter pendant que nous traitons votre document"
+  },
+  
+    "experienceStep": {
+      "title": "Depuis combien de temps travaillez-vous ?",
+      "description": "Nous trouverons les meilleurs modèles adaptés à votre niveau d'expérience.",
+      "options": {
+        "none": "Aucune expérience",
+        "less-3": "Moins de 3 ans",
+        "3-5": "3-5 ans",
+        "5-10": "5-10 ans",
+        "10-plus": "10+ ans"
+      }
+    },
+    "templateStep": {
+    "choose_template": "Choisissez votre modèle parfait",
+    "select_design": "Sélectionnez un design qui représente le mieux votre style professionnel",
+    "color_theme": "Thème de couleur",
+    "photo_style": "Style de photo",
+    "with_photo": "Avec photo",
+    "without_photo": "Sans photo",
+    "back": "Retour",
+    "next": "Suivant",
+    "loading": "Chargement...",
+    "toast": {
+      "resume_not_found": "ID de CV ou jeton introuvable",
+      "fetch_error": "Erreur lors de la récupération des données du CV",
+      "save_success": "CV enregistré avec succès",
+      "save_error": "Erreur lors de l'enregistrement du CV",
+      "update_error": "Erreur lors de la mise à jour du CV !"
+    }
+  },
+  
+    "uploadStep": {
+      "title": "Téléchargez-vous un CV existant ?",
+      "description": "Il suffit de le revoir, de le modifier et de le mettre à jour avec de nouvelles informations",
+      "yes_upload": "Oui, télécharger mon CV",
+      "yes_upload_description": "Nous vous donnerons des conseils d'experts pour compléter vos informations et améliorer votre CV",
+      "no_start_scratch": "Non, commencer de zéro",
+      "no_start_scratch_description": "Nous vous guiderons tout au long du processus afin que vos compétences brillent",
+      "back": "Retour",
+      "resume_id_error": "ID de CV ou jeton introuvable"
+    },
+ 
+      "fileUploadStep": {
+        "title": "Téléchargez votre CV",
+        "description": "Nous acceptons les fichiers PDF pour une meilleure précision d'analyse",
+        "dragDrop": "Glissez-déposez votre CV ici",
+        "selectFile": "Sélectionner un fichier PDF",
+        "maxSize": "Taille maximale du fichier : 10 Mo",
+        "uploading": "Téléchargement de votre CV...",
+        "uploadComplete": "Téléchargement terminé avec succès !",
+        "uploadFailed": "Échec du téléchargement du fichier",
+        "uploadSuccess": "Fichier téléchargé avec succès",
+        "invalidFile": "Veuillez télécharger un fichier PDF",
+        "noFileSelected": "Veuillez sélectionner un fichier à télécharger",
+        "authError": "Jeton d'authentification introuvable",
+        "resumeError": "Données du CV introuvables dans la réponse de l'API",
+        "googleDrive": "Google Drive",
+        "or": "OU",
+        "back": "Retour",
+        "next": "Suivant"
+      },
+      "loginpage": {
+        "welcome": "Bienvenue",
+        "description": "Des personnes du monde entier nous rejoignent pour améliorer leur carrière avec notre IA robuste.",
+        "continue_google": "Continuer avec Google",
+        "or": "OU",
+        "email_label": "Adresse e-mail",
+        "email_placeholder": "Entrez votre adresse e-mail",
+        "password_label": "Mot de passe",
+        "password_placeholder": "Entrez votre mot de passe",
+        "hide": "🕵🏻 Cacher",
+        "view": "👁 Voir",
+        "new_user": "Nouvel utilisateur ? Créer un compte",
+        "forgot_password": "Mot de passe oublié?",
+        "agree_terms": "J'accepte les",
+        "terms_conditions": "Termes et Conditions",
+        "login_btn": "Se connecter",
+        "toast": {
+          "email_required": "L'e-mail et le mot de passe sont requis",
+          "login_success": "Connexion réussie",
+          "login_failed": "Échec de la connexion",
+          "error_occurred": "Une erreur est survenue",
+          "google_failed": "Échec de la connexion Google."
+        }
+      },
+      "forgotpage":{
+        "forgot_password": "Mot de passe oublié",
+        "email_label": "Adresse e-mail",
+        "enter_email": "Entrez votre adresse e-mail",
+        "send_email": "Envoyer un e-mail",
+        "password_reset_message": "Lien de réinitialisation du mot de passe envoyé à votre adresse e-mail",
+        "password_reset_error": "Échec de l'envoi de l'e-mail",
+        "email_required": "L'adresse e-mail est requise",
+        "global_message": "Des personnes du monde entier nous rejoignent pour améliorer leur carrière avec notre IA robuste."
+      },
+      "signuppage":{
+        "create_account": "Créer un compte",
+        "first_name": "Prénom",
+        "last_name": "Nom",
+        "email": "Email",
+        "phone": "Téléphone",
+        "password": "Mot de passe",
+        "first_name_placeholder": "Entrez votre prénom",
+        "last_name_placeholder": "Entrez votre nom",
+        "email_placeholder": "Entrez votre email",
+        "phone_placeholder": "Entrez votre numéro de téléphone",
+        "password_placeholder": "Entrez votre mot de passe",
+        "all_fields_required": "Tous les champs sont obligatoires",
+        "verification_sent": "Lien de vérification envoyé à votre email",
+        "signup_failed": "Échec de l'inscription",
+        "error_occurred": "Une erreur s'est produite",
+        "signup": "S'inscrire",
+        "signing_up": "Inscription en cours..."
+      },
+      "builder_forms":{
+        "personal_info": {
+          "details_info": "Informations détaillées",
+          "upload_image": "Télécharger la photo de profil",
+          "name_placeholder": "Nom complet",
+          "position_placeholder": "Titre du poste",
+          "contact_placeholder": "Numéro de téléphone",
+          "address_placeholder": "Adresse",
+          "suggestions": "Suggestions",
+          "auto_fix": "Correction automatique",
+          "add_section": "✙ Ajouter une section"
+        },
+                  "social_media": {
+    "title": "Réseaux Sociaux",
+    "subtitle": "Veuillez mentionner la plateforme et son lien",
+    "select_placeholder": "Sélectionner",
+    "username_placeholder": "Nom d'utilisateur",
+    "suggestion_title": "Suggestion de Réseaux Sociaux",
+    "remove_button": "Supprimer",
+    "add_section": "✙ Ajouter une section"
+  },
+  "work_experience": {
+      "title": "Expérience Professionnelle",
+      "fresher_question": "Êtes-vous débutant?",
+      "company_name": "Nom de l'Entreprise",
+      "job_title": "Titre du Poste",
+      "start_date": "Date de Début",
+      "location": "Lieu",
+      "end_date": "Date de Fin",
+      "description": "Description",
+      "key_achievements": "Réalisations Clés",
+      "save_button": "Enregistrer",
+      "cancel_button": "Annuler",
+      "add_section": "✙ Ajouter une section"
+    },"language": {
+    "title": "Langues",
+    "description": "Si vous maîtrisez une ou plusieurs langues, mentionnez-les dans cette section.",
+    "firstLanguage": "Première langue",
+    "language": "Langue",
+    "proficiency": "Niveau de compétence",
+    "selectLanguage": "Sélectionner une langue",
+    "selectProficiency": "Sélectionner un niveau",
+    "deleteLanguage": "Supprimer la langue",
+    "noLanguages": "Aucune langue ajoutée. Ajoutez une nouvelle langue pour commencer.",
+    "atLeastOneRequired": "Au moins une langue est requise.",
+    "suggestionTitle": "Suggestion de langue"
+  },
+  "proficiencyLevels": {
+    "nativeSpeaker": "Langue maternelle",
+    "fluent": "Courant",
+    "good": "Bon niveau",
+    "basicKnowledge": "Connaissance de base",
+    "justStarting": "Débutant"
+  }
+                },
+                
+                  "aiResumeEnhancer": {
+                    "title": "Optimiseur de CV par IA",
+                    "subtitle": "Améliorez vos candidatures avec des optimisations basées sur l'IA",
+                    "intro": "Chez CV2GO, nous croyons que chaque chercheur d'emploi mérite un CV exceptionnel qui met efficacement en valeur ses compétences et expériences. Notre Optimiseur de CV par IA est conçu pour améliorer votre CV, en s'assurant qu'il répond aux normes de l'industrie et capte l'attention des recruteurs. En utilisant une technologie d'IA avancée, nous transformons votre CV en un outil puissant pour votre réussite professionnelle",
+                    "featuresTitle": "Caractéristiques principales de notre Optimiseur de CV par IA",
+                    "feature1Title": "1. Optimisation du contenu",
+                    "feature1Desc": "Notre IA analyse le contenu de votre CV pour s'assurer qu'il est concis, pertinent et percutant. Elle vous aide à mettre en évidence les réalisations, compétences et expériences clés qui correspondent au poste auquel vous postulez.",
+                    "feature2Title": "2. Recommandations personnalisées",
+                    "feature2Desc": "Recevez des suggestions personnalisées sur la façon d'améliorer votre CV. L'IA fournit des conseils spécifiques sur le langage, le ton et la structure, vous aidant à créer un récit convaincant qui résonne avec les responsables du recrutement.",
+                    "feature3Title": "3. Améliorations spécifiques à l'industrie",
+                    "feature3Desc": "Notre Optimiseur de CV par IA adapte votre CV aux normes et aux attentes de votre industrie cible. Que vous soyez dans la technologie, la finance, la santé ou tout autre domaine, notre IA s'assure que votre CV parle le langage de l'industrie.",
+                    "feature4Title": "4. Optimisation des mots-clés",
+                    "feature4Desc": "L'IA analyse les descriptions de poste pour identifier les mots-clés et phrases critiques. Elle suggère ensuite d'incorporer ces mots-clés dans votre CV pour augmenter vos chances de passer à travers les Systèmes de Suivi des Candidatures (ATS).",
+                    "feature5Title": "5. Mise en valeur des compétences",
+                    "feature5Desc": "Notre IA met l'accent sur vos compétences les plus pertinentes en fonction de la description du poste. Elle s'assure que votre CV met en avant vos points forts d'une manière qui correspond aux attentes de l'employeur.",
+                    "feature6Title": "6. Quantification des réalisations",
+                    "feature6Desc": "L'IA vous incite à quantifier vos réalisations, comme l'inclusion de chiffres et de métriques spécifiques. Cela ajoute de la crédibilité à votre CV et fournit des preuves tangibles de vos accomplissements.",
+                    "feature7Title": "7. Attrait visuel",
+                    "feature7Desc": "Recevez des recommandations pour améliorer la mise en page visuelle de votre CV. L'IA s'assure que votre CV est non seulement informatif mais aussi esthétiquement agréable, facilitant la lecture pour les recruteurs.",
+                    "feature8Title": "7. Correction d'erreurs",
+                    "feature8Desc": "L'IA vérifie et corrige les erreurs grammaticales, d'orthographe et de ponctuation. Cela garantit que votre CV est soigné et professionnel, sans erreurs distrayantes.",
+                    "howItWorksTitle": "Comment ça marche",
+                    "step1Title": "Étape 1: Téléchargez votre CV",
+                    "step1Desc": "Téléchargez votre CV existant sur la plateforme CV2GO. Notre IA commencera à analyser votre document immédiatement.",
+                    "step2Title": "Étape 2: Analyse par IA",
+                    "step2Desc": "L'IA évalue votre CV, examinant le contenu, la structure, les mots-clés et la présentation générale. Elle identifie les domaines qui nécessitent une amélioration et génère un plan d'amélioration complet.",
+                    "step3Title": "Étape 3: Recevez des recommandations",
+                    "step3Desc": "En quelques minutes, vous recevrez des recommandations détaillées sur la façon d'améliorer votre CV. L'IA fournit des insights actionnables et des suggestions spécifiques d'amélioration.",
+                    "step4Title": "Étape 4: Implémenter les améliorations",
+                    "step4Desc": "Apportez les modifications suggérées à votre CV. Utilisez les commentaires de l'IA pour affiner le contenu, optimiser les mots-clés et améliorer la mise en page visuelle.",
+                    "benefitsTitle": "Avantages de l'utilisation de l'Optimiseur de CV par IA",
+                    "benefit1Title": "Qualité professionnelle",
+                    "benefit1Desc": "Créez un CV de haute qualité et soigné qui répond aux normes de l'industrie et capte l'attention des responsables du recrutement.",
+                    "benefit2Title": "Visibilité accrue",
+                    "benefit2Desc": "Optimisez votre CV pour les ATS et les recherches par mots-clés, augmentant vos chances d'être présélectionné pour des entretiens.",
+                    "benefit3Title": "Insights personnalisés",
+                    "benefit3Desc": "Recevez des recommandations personnalisées qui répondent à vos objectifs de carrière uniques et aux exigences spécifiques de votre emploi cible.",
+                    "benefit4Title": "Efficacité et commodité",
+                    "benefit4Desc": "Économisez du temps et des efforts grâce à des améliorations automatisées qui garantissent que votre CV est complet et percutant.",
+                    "startEnhancingTitle": "Commencez à améliorer votre CV aujourd'hui",
+                    "startEnhancingDesc": "Transformez votre CV avec l'Optimiseur de CV par IA de CV2GO. Inscrivez-vous maintenant pour créer un CV qui se démarque et ouvre les portes à de nouvelles opportunités de carrière.",
+                    "getStartedTitle": "Commencer",
+                    "getStartedDesc": "Prêt à améliorer votre CV? Visitez notre page d'Optimiseur de CV par IA et commencez à peaufiner votre CV dès aujourd'hui!"
+                  },
+                  "aiJobMatchApply": {
+    "title": "IA-Correspondance & Candidature d'Emploi",
+    "subtitle": "Simplifier Votre Recherche d'Emploi avec la Technologie IA",
+    "intro": "Chez CV2GO, nous visons à rendre votre recherche d'emploi efficiente et efficace avec notre outil IA-Correspondance & Candidature. Cette technologie innovante utilise des algorithmes avancés pour faire correspondre vos compétences et expériences avec des opportunités d'emploi pertinentes, simplifiant le processus de candidature et augmentant vos chances de décrocher l'emploi parfait.",
+    "featuresTitle": "Caractéristiques Principales de Notre Outil IA-Correspondance & Candidature",
+    "feature1Title": "1. Correspondance d'Emploi Personnalisée",
+    "feature1Desc": "Notre IA analyse votre CV et votre profil pour identifier les opportunités d'emploi qui correspondent à vos compétences, expérience et objectifs de carrière. Cela garantit que vous postulez à des postes où vous êtes le plus susceptible de réussir.",
+    "feature2Title": "2. Alertes d'Emploi en Temps Réel",
+    "feature2Desc": "Recevez des notifications en temps réel concernant les nouvelles offres d'emploi qui correspondent à votre profil. Restez informé des dernières opportunités sans avoir à rechercher constamment sur les sites d'emploi.",
+    "feature3Title": "3. Candidature en Un Clic",
+    "feature3Desc": "Simplifiez le processus de candidature avec des candidatures en un clic. Notre IA remplit automatiquement votre CV et autres détails requis, vous permettant de postuler à plusieurs emplois rapidement et efficacement.",
+    "feature4Title": "4. Optimisation ATS",
+    "feature4Desc": "Assurez-vous que votre CV passe facilement à travers les Systèmes de Suivi des Candidatures (ATS). Notre IA optimise votre CV avec des mots-clés pertinents et le formate pour répondre aux normes ATS, augmentant vos chances d'être remarqué par les recruteurs.",
+    "feature5Title": "5. Filtres de Recherche d'Emploi Complets",
+    "feature5Desc": "Utilisez des filtres avancés pour affiner les offres d'emploi en fonction de critères tels que l'emplacement, l'industrie, la fourchette de salaire et la taille de l'entreprise. Cela vous aide à trouver plus rapidement les opportunités d'emploi les plus pertinentes.",
+    "feature6Title": "6. Analyse des Lacunes de Compétences",
+    "feature6Desc": "Notre IA identifie les lacunes de compétences entre votre profil actuel et les exigences du poste. Elle fournit des recommandations pour des cours ou des certifications qui peuvent vous aider à vous qualifier pour les postes que vous souhaitez.",
+    "feature7Title": "7. Suivi des Candidatures",
+    "feature7Desc": "Gardez une trace de toutes vos candidatures à un seul endroit. Notre outil fournit un tableau de bord où vous pouvez surveiller l'état de vos candidatures, les entretiens à venir et les tâches de suivi.",
+    "feature8Title": "8. Aperçus des Entreprises",
+    "feature8Desc": "Obtenez des aperçus sur les employeurs potentiels avec des profils d'entreprise détaillés. Renseignez-vous sur la culture d'entreprise, les valeurs, les avantages et les actualités récentes pour prendre des décisions éclairées sur où postuler.",
+    "howItWorksTitle": "Comment Ça Marche",
+    "step1Title": "Étape 1: Créez Votre Profil",
+    "step1Desc": "Inscrivez-vous sur la plateforme CV2GO et créez votre profil. Téléchargez votre CV et fournissez des détails sur vos compétences, expériences et aspirations de carrière.",
+    "step2Title": "Étape 2: Analyse IA",
+    "step2Desc": "L'IA analyse votre profil et votre CV, analysant vos qualifications et préférences. Elle vous met en correspondance avec des opportunités d'emploi appropriées à partir de notre vaste base de données.",
+    "step3Title": "Étape 3: Recevez des Correspondances d'Emploi",
+    "step3Desc": "Obtenez une liste de correspondances d'emploi personnalisées qui s'alignent avec votre profil. L'IA met continuellement à jour cette liste au fur et à mesure que de nouvelles offres d'emploi deviennent disponibles.",
+    "step4Title": "Étape 4: Postulez en Un Clic",
+    "step4Desc": "Utilisez la fonction de candidature en un clic pour postuler à des emplois directement via la plateforme. L'IA remplit automatiquement vos détails de candidature, rendant le processus rapide et sans tracas.",
+    "step5Title": "Étape 5: Suivez Vos Candidatures",
+    "step5Desc": "Surveillez la progression de vos candidatures à travers le tableau de bord. Recevez des mises à jour sur l'état des candidatures, les horaires d'entretien et les actions de suivi.",
+    "step6Title": "Étape 6: Améliorez Votre Profil",
+    "step6Desc": "Suivez les recommandations de l'IA pour combler les lacunes de compétences. Suivez les cours suggérés ou obtenez des certifications pour améliorer vos qualifications et augmenter la précision de votre correspondance d'emploi.",
+    "benefitsTitle": "Avantages de l'Utilisation de l'IA-Correspondance & Candidature",
+    "benefit1Title": "Efficacité Accrue",
+    "benefit1Desc": "Économisez du temps et des efforts en recevant des correspondances d'emploi personnalisées et en postulant en un seul clic. L'IA s'occupe du travail lourd, afin que vous puissiez vous concentrer sur la préparation des entretiens et l'avancement de votre carrière.",
+    "benefit2Title": "Taux de Réussite Plus Élevé",
+    "benefit2Desc": "Optimisez votre recherche d'emploi avec des correspondances ciblées et des candidatures compatibles avec les ATS. Cela augmente vos chances d'être présélectionné pour des entretiens et finalement de décrocher l'emploi.",
+    "benefit3Title": "Expérience Personnalisée",
+    "benefit3Desc": "Profitez d'une expérience de recherche d'emploi sur mesure qui s'aligne avec vos compétences uniques, expériences et objectifs de carrière. L'IA fournit des opportunités pertinentes et des insights exploitables pour une amélioration continue.",
+    "benefit4Title": "Support Complet",
+    "benefit4Desc": "Gérez l'ensemble de votre processus de recherche d'emploi à partir d'une seule plateforme. Suivez les candidatures, recevez des alertes en temps réel et obtenez des insights précieux sur les employeurs potentiels.",
+    "startUsingTitle": "Commencez à Utiliser l'IA-Correspondance & Candidature Aujourd'hui",
+    "startUsingDesc": "Transformez votre recherche d'emploi avec l'outil IA-Correspondance & Candidature de CV2GO. Inscrivez-vous maintenant pour découvrir des opportunités d'emploi qui correspondent parfaitement à votre profil et simplifier votre chemin vers le succès professionnel.",
+    "getStartedTitle": "Commencer",
+    "getStartedDesc": "Prêt à trouver l'emploi de vos rêves? Visitez notre page IA-Correspondance & Candidature et commencez à correspondre avec les meilleures opportunités d'emploi dès aujourd'hui!"
+  },
+  "pricing": {
+    "title": "Plans tarifaires",
+    "subtitle": "Choisissez le plan qui vous convient le mieux",
+    "intro": "Nos forfaits sont conçus pour répondre à tous vos besoins en matière de création de CV.",
+    "bestValueLabel": "Meilleur rapport qualité-prix",
+    "freeLabel": "Gratuit",
+    
+    "freePlan": {
+      "title": "Plan Gratuit",
+      "price": "0",
+      "billingCycle":"Plan Gratuit",
+      "bestValue": "false",
+      "buttonText": "Commencer",
+      "feature1": "Modifications de CV illimitées",
+      "feature2": "Téléchargement en PDF",
+      "feature3": "Tableau de bord interactif",
+      "feature4": "2 modèles de CV uniques",
+      "feature5": "2 options de couleur et 2 polices",
+      "feature6": "Analyse de CV (compatible ATS)",
+      "feature7": "Support en langue française",
+      "feature8": "Recherche d'emploi et ressources de carrière",
+      "feature9": "Générateur de lettres de motivation",
+      "feature10": "Alertes et suivi des offres d'emploi"
+    },
+    
+    "singlePass": {
+      "title": "Pass Unique",
+      "price": "9.99",
+      "billingCycle":"Pass Unique",
+      "bestValue": "false",
+      "buttonText": "Commencer",
+      "feature1": "Tout dans Gratuit +",
+      "feature2": "27 modèles de CV uniques",
+      "feature3": "5 options de couleur et 6 polices",
+      "feature4": "Analyse de CV (compatible ATS)",
+      "feature5": "Générateur de lettres de motivation gratuit",
+      "feature6": "Score et retour d'information AI sur le CV",
+      "feature7": "Tests de compétences et analyse",
+      "feature8": "Contenu amélioré par IA",
+      "feature9": "Amélioration automatique",
+      "feature10": "Optimisation ATS"
+    },
+    
+    "aiProMonth": {
+      "title": "AI Pro Mensuel",
+      "price": "19.99",
+      "billingCycle": "mois",
+      "bestValue": "false",
+      "buttonText": "Commencer",
+      "feature1": "Tout dans Gratuit +",
+      "feature2": "37 modèles de CV uniques",
+      "feature3": "8 options de couleur et 6 polices",
+      "feature4": "Analyse de CV (compatible ATS)",
+      "feature5": "Générateur de lettres de motivation gratuit",
+      "feature6": "Score et retour d'information AI sur le CV",
+      "feature7": "Tests de compétences et analyse",
+      "feature8": "Contenu amélioré par IA",
+      "feature9": "Amélioration automatique",
+      "feature10": "Optimisation ATS"
+    },
+    
+    "aiProYearly": {
+      "title": "AI Pro Annuel",
+      "price": "149.99",
+      "billingCycle": "an",
+      "bestValue": "true",
+      "buttonText": "Commencer",
+      "feature1": "Tout dans Gratuit +",
+      "feature2": "37 modèles de CV uniques",
+      "feature3": "8 options de couleur et 6 polices",
+      "feature4": "Analyse de CV (compatible ATS)",
+      "feature5": "Générateur de lettres de motivation gratuit",
+      "feature6": "Score et retour d'information AI sur le CV",
+      "feature7": "Tests de compétences et analyse",
+      "feature8": "Contenu amélioré par IA",
+      "feature9": "Amélioration automatique",
+      "feature10": "Optimisation ATS",
+      "feature11": "Optimisation ATS la plus abordable"
+    }
+  },
+  "faq":{
+    "title": "Foire Aux Questions",
+    "subtitle": "Trouvez des réponses aux questions courantes sur nos services et abonnements.",
+    "question1": "Comment fonctionne la période d'essai de 7 jours ? Ai-je un accès complet avec l'essai ?",
+    "answer1": "Oui ! L'essai vous donne un accès total à tous les outils de CV, modèles, lettres de motivation et formats de téléchargement.",
+    "question2": "Offrez-vous une garantie de remboursement ?",
+    "answer2": "Oui. Nous offrons une garantie de remboursement de 7 jours, sans poser de questions. Si vous achetez un plan et décidez dans les 7 jours qu'il ne vous convient pas, nous vous rembourserons.",
+    "question3": "Puis-je changer mon abonnement ?",
+    "answer3": "Oui, vous pouvez passer à un plan supérieur, inférieur ou annuler votre abonnement à tout moment depuis l'application. Si vous avez besoin d'aide, contactez-nous via le lien ci-dessous.",
+    "question4": "Quels services proposez-vous ?",
+    "answer4": "Nous proposons la création de CV, le conseil en carrière et l'aide au placement professionnel."
+  },
+   "view_all_plans": "Voir tous les plans",
+   "coverLetter": {
+    "title": "Bienvenue dans le Créateur de Lettres de Motivation",
+    "description": "Cliquez sur le bouton ci-dessous pour créer votre lettre de motivation.",
+    "buttonText": "Créez votre lettre de motivation",
+    "loadingText": "Création en cours...",
+    "errorMessage": "Une erreur s'est produite lors de la génération de votre lettre de motivation. Veuillez réessayer."
+  },
+  "cvSelector": {
+    "title": "Choisissez votre modèle de lettre de motivation",
+    "description": "Sélectionnez un modèle professionnel adapté à vos objectifs de carrière",
+    "colorTheme": "Thème de couleur",
+    "categories": "Catégories",
+    "back": "Retour",
+    "next": "Suivant",
+    "saving": "Enregistrement...",
+    "errorCoverLetterId": "ID de lettre de motivation ou jeton introuvable",
+    "errorFetchingData": "Erreur lors de la récupération des données du CV",
+    "selectTemplateError": "Veuillez sélectionner un modèle de CV avant de continuer",
+    "resumeSaved": "CV enregistré avec succès",
+    "errorSavingResume": "Erreur lors de l'enregistrement du CV",
+    "template1": "CV Professionnel",
+    "template2": "CV Créatif",
+    "template3": "CV Académique",
+    "template4": "CV Exécutif",
+    "template5": "CV Technique"
+  },
+  "cvUploadStep": {
+    "title": "Téléchargez-vous une lettre de motivation existante ?",
+    "subtitle": "Il suffit de la revoir, de la modifier et de la mettre à jour avec de nouvelles informations",
+    "startFromScratch": "Non, commencer de zéro",
+    "startFromScratchDescription": "Nous vous guiderons tout au long du processus afin que vos compétences brillent",
+    "back": "Retour",
+    "error": "ID de lettre de motivation ou jeton introuvable"
+  },
+  "personalInformation": {
+    "title": "Informations Personnelles",
+    "name": "Nom",
+    "namePlaceholder": "Entrez votre nom",
+    "email": "E-mail",
+    "emailPlaceholder": "Entrez votre e-mail",
+    "address": "Adresse",
+    "addressPlaceholder": "Entrez votre adresse",
+    "contact": "Contact",
+    "contactPlaceholder": "Entrez votre numéro de téléphone"
+  },
+  "letterDetails": {
+    "title": "Détails de la lettre",
+    "date": "Date",
+    "datePlaceholder": "Sélectionnez une date",
+    "jobTitle": "Intitulé du poste",
+    "jobTitlePlaceholder": "Entrez l'intitulé du poste",
+    "reference": "Référence",
+    "referencePlaceholder": "Entrez la référence (ex : Ref#123)",
+    "companyName": "Nom de l'entreprise",
+    "companyNamePlaceholder": "Entrez le nom de l'entreprise",
+    "salutation": "Salutation",
+    "salutationPlaceholder": "Entrez la salutation (ex : Mme Smith)"
+  },
+  "introductionBody": {
+    "title": "Introduction et Corps",
+    "introduction": "Introduction",
+    "introductionPlaceholder": "Écrivez votre introduction ici",
+    "bodyParagraphs": "Paragraphes du corps",
+    "paragraph": "Paragraphe",
+    "paragraphPlaceholder": "Écrivez le paragraphe {index}",
+    "addSection": "✙ Ajouter une section",
+    "remove": "Supprimer"
+  },
+  "closingGratitude": {
+    "title": "Clôture et Remerciements",
+    "closing": "Clôture",
+    "closingPlaceholder": "Écrivez votre déclaration de clôture ici",
+    "gratitude": "Remerciements",
+    "gratitudePlaceholder": "Écrivez votre déclaration de gratitude ici",
+    "signature": "Signature",
+    "signaturePlaceholder": "Entrez votre signature (ex. : Cordialement, John Doe)"
+  },
+  "navigation": {
+    "previous": "Précédent",
+    "next": "Suivant"
+  },
+  "cvBuilder": {
+    "save": "Enregistrer la lettre de motivation",
+    "download": "Payer et télécharger"
+  },
+  "backgroundColor": {
+    "label": "Couleur d'arrière-plan",
+    "labelMobile": "Couleur"
+  },
+  "templateSelector": {
+    "selectedTemplate": "Sélectionné : {{templateId}}",
+    "templateButton": "Modèle",
+    "modalTitle": "Sélectionnez un Modèle",
+    "closeButton": "Fermer",
+    "templates": {
+      "template1": "Modèle 1",
+      "template2": "Modèle 2",
+      "template3": "Modèle 3",
+      "template4": "Modèle 4"
+    }
+  },
+  "buttons": {
+    "save": "Enregistrer le CV",
+    "saving": "Enregistrement...",
+    "download": "Payer et Télécharger",
+    "downloading": "Téléchargement...",
+    "backToDashboard": "Retour au tableau de bord",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "finish": "Terminer"
+  },
+  "sidebar": {
+    "account": "Compte",
+    "notification": "Notification",
+    "subscription": "Abonnement"
+  },
+  "account": {
+    "title": "Paramètres du compte",
+    "heading": "Compte",
+    "accountId": "ID du compte",
+    "email": "Adresse e-mail",
+    "loading": "Chargement...",
+    "error": "Échec du chargement des données utilisateur.",
+    "unauthorized": "Non autorisé. Veuillez vous connecter."
+  },
+  "notification": {
+    "title": "Paramètres du compte",
+    "heading": "Notifications",
+    "product_notifications": "Notifications sur les produits",
+    "product_notifications_desc": "Nous vous informerons des nouvelles offres d'emploi et des candidatures nécessitant votre attention afin que vous puissiez être parmi les premiers candidats et maximiser vos chances d'obtenir le poste de vos rêves.",
+    "email_notifications": "Notifications par e-mail",
+    "sms_notifications": "Notifications par SMS",
+    "marketing_notifications": "Notifications marketing",
+    "marketing_optin": "J'accepte de recevoir des communications marketing.",
+    "loading": "Chargement...",
+    "error": "Échec du chargement des paramètres de notification.",
+    "unauthorized": "Non autorisé. Veuillez vous connecter."
+  },
+  
+  "subscription": {
+    "title": "Paramètres du compte",
+    "heading": "Abonnement",
+    "help_support": "Besoin d'aide ou envie de modifier votre abonnement?",
+    "contact_us": "Contactez-nous à:",
+    "phone": "📞 855-695-3235",
+    "email": "📧 customersupport@Genesistech.ca",
+    "availability": "Disponible 7 jours sur 7:",
+    "monday_friday": "Lundi-Vendredi: 8h - 20h (CST)",
+    "saturday": "Samedi: 8h - 17h (CST)",
+    "sunday": "Dimanche: 10h - 18h (CST)",
+    "account_id": "ID du compte:",
+    "subscription_details": "Détails de l'abonnement",
+    "status": "Statut:",
+    "subscribe": "S'abonner",
+    "more_info": "Pour plus d'informations ou des modifications de votre abonnement, contactez-nous à",
+    
+      "upgrade": "Améliorer",
+      "cancel_subscription": "Annuler l'abonnement"
+    
+  }
+ 
 }
+                         
+                  
+                
+              
+              
+            
+             
+        
+        
+      
+      
+    
+    
+  
+  
+ 
+

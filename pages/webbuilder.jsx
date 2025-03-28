@@ -36,6 +36,9 @@ import applepay from "./builderImages/apple-pay.png";
 import { ResumeContext } from "../components/context/ResumeContext";
 import PayAndDownload from "../components/PayDownload";
 import { BASE_URL } from "../components/Constant/constant";
+import { useTranslation } from "react-i18next";
+import { SaveLoader } from "../components/ResumeLoader/SaveLoader";
+import FontSelector from "./FontSelector";
 
 const Print = dynamic(() => import("../components/utility/WinPrint"), {
   ssr: false,
@@ -48,6 +51,7 @@ export default function WebBuilder() {
   // const [selectedFont, setSelectedFont] = useState("Ubuntu");
   // const [headerColor, setHeaderColor] = useState("");
   // const [backgroundColorss, setBgColor] = useState("");
+  const [selectedPdfType, setSelectedPdfType] = useState("1");
   const [selectedTemplate, setSelectedTemplate] = useState("template1");
   const [isFinished, setIsFinished] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -57,13 +61,16 @@ export default function WebBuilder() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const router = useRouter();
   const pdfExportComponent = useRef(null);
-  const [isLoading, handleAction] = useLoader();
   const { PayerID } = router.query;
   const [isSaved, setIsSaved] = useState(false);
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
   const [userId, setUserId] = useState(0);
   const templateRef = useRef(null);
+  const [loading, setLoading] = useState(null);
+  const { i18n, t } = useTranslation();
+  const language = i18n.language;
   const {
+    setResumeStrength,
     resumeData,
     setResumeData,
     setHeaderColor,
@@ -90,7 +97,7 @@ export default function WebBuilder() {
       if (id && token) {
         try {
           const response = await axios.get(
-            `${BASE_URL}/api/user/resume-list/${id}`,
+            `${BASE_URL}/api/user/resume-list/${id}?lang=${language}`,
             {
               headers: {
                 Authorization: token,
@@ -101,7 +108,7 @@ export default function WebBuilder() {
           if (response.data.status === "success") {
             const { data } = response.data;
             const parsedData = JSON.parse(data.ai_resume_parse_data);
-
+            setResumeStrength(data.resume_strenght_details);
             // Update state with fetched data
             setResumeData(parsedData.templateData);
             console.log(parsedData, ">>>>parsedData");
@@ -207,27 +214,62 @@ export default function WebBuilder() {
     const id = path.split("/").pop();
     setResumeId(id);
   }, []);
-
   const sections = [
-    { label: "Personal Details", component: <PersonalInformation /> },
-    { label: "Social Links", component: <SocialMedia /> },
-    { label: "Summary", component: <Summary /> },
-    { label: "Education", component: <Education /> },
-    { label: "Experience", component: <WorkExperience /> },
-    { label: "Projects", component: <Projects /> },
     {
-      label: "Skills",
+      label: t("resumeStrength.sections.personalInformation"),
+      component: <PersonalInformation />,
+    },
+    {
+      label: t("resumeStrength.sections.socialLinks"),
+      component: <SocialMedia />,
+    },
+    {
+      label: t("resumeStrength.sections.personalSummary"),
+      component: <Summary />,
+    },
+    { label: t("resumeStrength.sections.education"), component: <Education /> },
+    {
+      label: t("resumeStrength.sections.workHistory"),
+      component: <WorkExperience />,
+    },
+    { label: t("resumeStrength.sections.projects"), component: <Projects /> },
+    {
+      label: t("resumeStrength.sections.skills"),
       component: Array.isArray(resumeData?.skills) ? (
         resumeData.skills.map((skill, index) => (
-          <Skill title={skill.title} key={index} />
+          <Skill title={skill.title} currentSkillIndex={index} key={index} />
         ))
       ) : (
         <p>No skills available</p>
       ),
     },
-    { label: "Languages", component: <Language /> },
-    { label: "Certifications", component: <Certification /> },
+    { label: t("resumeStrength.sections.languages"), component: <Language /> },
+    {
+      label: t("resumeStrength.sections.certification"),
+      component: <Certification />,
+    },
   ];
+  // const sections = [
+  //   { label: sections.personalInformation, component: <PersonalInformation /> },
+  //   { label: t.sections.socialLinks, component: <SocialMedia /> },
+  //   { label: t.sections.personalSummary, component: <Summary /> },
+  //   { label: t.sections.education, component: <Education /> },
+  //   { label: t.sections.workHistory, component: <WorkExperience /> },
+  //   { label: t.sections.projects, component: <Projects /> },
+
+  //   {
+  //     label:  t.sections.skills,
+  //     component: Array.isArray(resumeData?.skills) ? (
+  //       resumeData.skills.map((skill, index) => (
+  //         <Skill title={skill.title} currentSkillIndex={index} key={index} />
+  //       ))
+  //     ) : (
+  //       <p>No skills available</p>
+  //     ),
+  //   },
+  //   { label: t.sections.languages, component: <Language /> },
+  //   { label: t.sections.certifications, component: <Certification /> },
+  // ];
 
   // const handleProfilePicture = (e) => {
   //   const file = e.target.files[0];
@@ -331,172 +373,152 @@ export default function WebBuilder() {
       return;
     }
 
+    setisDownloading(true); // Start loading before the async operation
+
     try {
-      // Get the HTML content from the template
+      const token = localStorage.getItem("token");
       const htmlContent = templateRef.current.innerHTML;
 
-      // Generate the full HTML for the PDF
       const fullContent = `
-        <style>
-          @import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
-        </style>
-        ${htmlContent}
-      `;
+            <style>
+                @import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+            </style>
+            ${htmlContent}
+        `;
 
-      // API call to generate the PDF
-      const response = await axios.post(
-        `${BASE_URL}/api/user/generate-pdf1`,
-        { html: fullContent },
+      const response = await axios.get(
+        `${BASE_URL}/api/user/download-resume/${resumeId}?pdf_type=${selectedPdfType}`,
+
         {
           headers: {
-            "Content-Type": "application/json",
             Authorization: token,
+            "Content-Type": "application/pdf",
           },
+          responseType: "blob",
         }
       );
+      const url = window.URL.createObjectURL(
+        new Blob([response.data], { type: "application/pdf" })
+      );
+      const link = document.createElement("a");
+      link.href = url;
 
-      // Check if the file path was returned
-      // const filePath = response.data.data?.file_path;
-      // if (!filePath) {
-      //   throw new Error('PDF file path not received');
-      // }
+      link.setAttribute("download", `resume.pdf`);
+      document.body.appendChild(link);
+      link.click();
 
-      // Construct the URL
-      // const downloadUrl = `${BASE_URL}${filePath}`;
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
 
-      // Open the URL in a new tab
-      // createPayment();
-      // window.open(downloadUrl, '_blank');
-
-      // toast.success('PDF generated and opened in a new tab!');
+      // downloadPDF();
+      // initiateCheckout(); // Call this only if the request is successful
     } catch (error) {
       console.error("PDF generation error:", error);
       toast.error(
         error.response?.data?.message || "Failed to generate and open PDF"
       );
+    } finally {
+      setisDownloading(false); // Ensure loading is stopped after success or failure
     }
   };
-  const createPayment = async () => {
-    const amount = 49; // Fixed price
 
-    try {
-      // Make the payment API call
-      const payload = {
-        amount,
-        ResumeId: resumeId, // Make sure resumeId is defined in your component
-        Token: token || "", // Make sure token is defined in your component
-      };
-
-      const response = await axios.post(
-        `${BASE_URL}/api/user/paypal/create-payment`,
-        payload,
-        {
-          headers: {
-            Authorization: token,
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
-      const data = response.data;
-      console.log(data, "data");
-      if (data && data.data) {
-        // Store the order ID for later verification if needed
-        const orderId = data.order_id;
-        localStorage.setItem("orderid", orderId);
-
-        // Redirect the user to PayPal URL to complete payment
-        if (data.data) {
-          window.location.href = data.data; // Redirect to PayPal
-        } else {
-          console.error("Payment URL not found");
-        }
-      }
-    } catch (error) {
-      console.error("Payment Error:", error);
-      // Handle error (show error message to user)
-    }
-  };
   // const downloadAsPDF = async () => {
+  //   handleFinish();
   //   if (!templateRef.current) {
   //     toast.error("Template reference not found");
   //     return;
   //   }
-
+  //   setLoading("download");
   //   try {
-  //     // Get HTML and used classes
+  //     // Get the HTML content from the template
   //     const htmlContent = templateRef.current.innerHTML;
-  //     const usedClasses = [...new Set(
-  //       Array.from(templateRef.current.querySelectorAll('*')).flatMap(el => [...el.classList])
-  //     )];
 
-  //     // Extract relevant CSS
-  //     const cssContent = Array.from(document.styleSheets)
-  //       .flatMap(sheet => {
-  //         try {
-  //           return [...sheet.cssRules]
-  //             .filter(rule =>
-  //               rule.selectorText && usedClasses.some(cls => rule.selectorText.includes(`.${cls}`))
-  //             )
-  //             .map(rule => rule.cssText);
-  //         } catch {
-  //           return [];
-  //         }
-  //       })
-  //       .join('\n');
-
-  //     // Generate HTML content for PDF
+  //     // Generate the full HTML for the PDF
   //     const fullContent = `
-  //       <style>${cssContent}</style>
+  //       <style>
+  //         @import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+  //       </style>
   //       ${htmlContent}
   //     `;
-  //     console.log(fullContent,"fullContent");
 
   //     // API call to generate the PDF
   //     const response = await axios.post(
-  //       '${BASE_URL}/api/user/generate-pdf1',
-  //       { html: ` <script src="https://cdn.tailwindcss.com"></script> ${htmlContent}` },
+  //       `${BASE_URL}/api/user/generate-pdf-py`,
+  //       // { html: fullContent },
+  //       { html: fullContent, pdf_type: selectedPdfType },
   //       {
   //         headers: {
-  //           'Content-Type': 'application/json',
+  //           "Content-Type": "application/json",
   //           Authorization: token,
   //         },
   //       }
   //     );
 
-  //     if (!response.data.data?.file_path) {
-  //       throw new Error('PDF file path not received');
-  //     }
+  //     // Check if the file path was returned
+  //     // const filePath = response.data.data?.file_path;
+  //     // if (!filePath) {
+  //     //   throw new Error('PDF file path not received');
+  //     // }
 
-  //     // Construct the download URL
-  //     const downloadUrl = `${BASE_URL}${response.data.data.file_path}`;
+  //     // Construct the URL
+  //     // const downloadUrl = `${BASE_URL}${filePath}`;
 
-  //     // Fetch the PDF file to handle CORS issues
-  //     const fileResponse = await axios.get(downloadUrl, {
-  //       responseType: 'blob', // Ensure the response is treated as a binary file
-  //     });
+  //     // Open the URL in a new tab
+  //     // createPayment();
+  //     // window.open(downloadUrl, '_blank');
 
-  //     // Create a Blob URL
-  //     const blob = new Blob([fileResponse.data], { type: 'application/pdf' });
-  //     const blobUrl = window.URL.createObjectURL(blob);
-
-  //     // Download the file
-  //     const link = document.createElement('a');
-  //     link.href = blobUrl;
-  //     link.download = 'GeneratedResume.pdf'; // Name of the file to be downloaded
-  //     document.body.appendChild(link);
-  //     link.click();
-  //     document.body.removeChild(link);
-
-  //     // Clean up the Blob URL
-  //     window.URL.revokeObjectURL(blobUrl);
-
-  //     toast.success('PDF generated and downloaded successfully!');
+  //     // toast.success('PDF generated and opened in a new tab!');
+  //     // initiateCheckout();
+  //     downloadPDF();
+  //     // toast.success("PDF generation request sent successfully!");
   //   } catch (error) {
-  //     console.error('PDF generation error:', error);
-  //     toast.error(error.response?.data?.message || 'Failed to generate PDF');
+  //     console.error("PDF generation error:", error);
+  //     toast.error(
+  //       error.response?.data?.message || "Failed to generate and open PDF"
+  //     );
+  //   } finally {
+  //     setLoading(null);
   //   }
   // };
+  const initiateCheckout = async () => {
+    try {
+      // Ensure resumeId is a valid integer
+      const parsedResumeId = parseInt(resumeId, 10);
+      if (isNaN(parsedResumeId)) {
+        throw new Error("Invalid resume ID; unable to convert to an integer.");
+      }
+
+      // Step 2: Checkout API Call
+      const checkoutResponse = await axios.post(
+        `${BASE_URL}/api/user/payment/checkout`,
+        {
+          plan_id: 1,
+          resume_id: parsedResumeId, // Use integer here
+        },
+        {
+          headers: {
+            Authorization: token,
+          },
+        }
+      );
+
+      // Check for successful response
+      const redirectUrl = checkoutResponse.data.data; // Adjust the key if necessary
+      if (redirectUrl) {
+        toast.success("Checkout successful! Redirecting...");
+        window.location.href = redirectUrl; // Redirects user to payment page
+      } else {
+        throw new Error("No redirect URL found in checkout response.");
+      }
+    } catch (error) {
+      console.error("Error during checkout:", error);
+      toast.error(
+        error.response?.data?.message ||
+          "Failed to initiate the payment process."
+      );
+    }
+  };
+
   useEffect(() => {
     if (PayerID) {
       verifyPayment();
@@ -510,7 +532,7 @@ export default function WebBuilder() {
 
       if (orderId && token && PayerID) {
         const response = await axios.get(
-          `${BASE_URL}/api/user/paypal/verify-order?orderid=${orderId}`,
+          `${BASE_URL}/api/user/paypal/verify-order?orderid=${orderId}?lang=${language}`,
           {
             headers: {
               Authorization: token,
@@ -522,9 +544,12 @@ export default function WebBuilder() {
         if (response.data.status === "success") {
           setPaymentVerified(true);
           toast.success("Payment verified successfully!");
-
+          downloadPDF();
           localStorage.removeItem("orderid");
-          await downloadPDF(orderId, resumeId, token);
+
+          if (pdfExportComponent.current) {
+            pdfExportComponent.current.save();
+          }
         } else {
           toast.error("Payment verification failed. Please try again.");
           router.push("/payment-failed");
@@ -538,12 +563,11 @@ export default function WebBuilder() {
       router.push("/payment-failed");
     }
   };
-
-  const downloadPDF = async (orderId, resumeId, token) => {
+  const downloadPDF = async () => {
     handleFinish();
     try {
       const response = await axios.get(
-        `${BASE_URL}/api/user/download-file/${orderId}/${resumeId}`,
+        `${BASE_URL}/api/user/download-file/11/${resumeId}?lang=${language}`,
         {
           headers: {
             Authorization: token,
@@ -559,7 +583,7 @@ export default function WebBuilder() {
       link.href = url;
 
       // Set the file name
-      link.setAttribute("download", `resume_${orderId}.pdf`);
+      link.setAttribute("download", `resume.pdf`);
       document.body.appendChild(link);
       link.click();
 
@@ -650,41 +674,46 @@ export default function WebBuilder() {
     </style>
     ${htmlContent}
   `;
-    await handleAction(async () => {
-      try {
-        const id = router.query.id || localStorage.getItem("resumeId");
-        if (!id) {
-          console.error("Resume ID not found.");
-          return;
-        }
 
-        const url = `${BASE_URL}/api/user/resume-update/${id}`;
-        const response = await axios.put(
-          url,
-          { ...templateData, resume_html: resumeHtml },
-          {
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: token,
-            },
-          }
-        );
-
-        if (response.data.code === 200 || response.data.status === "success") {
-          if (showToast) {
-            toast.success(
-              response.data.message || "Resume saved successfully."
-            );
-          }
-          // localStorage.setItem("isSaved", "true");
-        } else {
-          toast.error(response.data.error || "Error while saving the Resume");
-        }
-      } catch (error) {
-        toast.error(error?.message || "Error !!");
-        console.error("Error updating resume:", error);
+    try {
+      const id = router.query.id || localStorage.getItem("resumeId");
+      if (!id) {
+        console.error("Resume ID not found.");
+        return;
       }
-    });
+
+      const url = `${BASE_URL}/api/user/resume-update/${id}`;
+      const response = await axios.put(
+        url,
+        { ...templateData, resume_html: resumeHtml },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: token,
+          },
+        }
+      );
+
+      if (response.data.code === 200 || response.data.status === "success") {
+        if (showToast) {
+          toast.success(response.data.message || "Resume saved successfully.");
+        }
+        // localStorage.setItem("isSaved", "true");
+      } else {
+        toast.error(response.data.error || "Error while saving the Resume");
+      }
+    } catch (error) {
+      toast.error(error?.message || "Error !!");
+      console.error("Error updating resume:", error);
+    }
+  };
+  const handleClick = async () => {
+    setLoading("save");
+    try {
+      await handleFinish(); // Ensure handleFinish is an async function
+    } finally {
+      setLoading(null);
+    }
   };
 
   const handleBackToEditor = () => {
@@ -709,7 +738,7 @@ export default function WebBuilder() {
         const token = localStorage.getItem("token");
 
         const userProfileResponse = await axios.get(
-          `${BASE_URL}/api/user/user-profile`,
+          `${BASE_URL}/api/user/user-profile?lang=${language}`,
           {
             headers: {
               Authorization: token,
@@ -754,32 +783,35 @@ export default function WebBuilder() {
                     type="button"
                     onClick={handlePrevious}
                     disabled={currentSection === 0}
-                    className="w-40 h-10 rounded-lg bg-orange-500 text-white font-medium transition hover:bg-blue-900 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-40 h-10 rounded-lg bg-cyan-600 text-white font-medium transition hover:bg-cyan-800 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Previous
+                    {t("buttons.previous")}
                   </button>
+
                   <button
                     type="button"
                     onClick={handleNext}
-                    className="w-40 h-10 rounded-lg bg-yellow-500 text-black font-medium transition hover:bg-yellow-400"
+                    className="w-40 h-10 rounded-lg bg-black text-white font-medium transition "
                   >
-                    {currentSection === sections.length - 1 ? "Finish" : "Next"}
+                    {currentSection === sections.length - 1
+                      ? t("buttons.finish")
+                      : t("buttons.next")}
                   </button>
                 </div>
 
                 <div className="hidden lg:flex items-center gap-4">
-                  <select
+                  {/* <select
                     value={selectedFont}
                     onChange={handleFontChange}
-                    className="w-40 h-10 rounded-lg border border-orange-500 px-4 font-bold text-black bg-white focus:ring-2 focus:ring-orange-600"
+                    className="w-40 h-10 rounded-lg border border-cyan-500 px-4 font-bold text-black bg-white focus:ring-2 focus:ring-cyan-600"
                   >
                     <option value="Ubuntu">Ubuntu</option>
                     <option value="Calibri">Calibri</option>
                     <option value="Georgia">Georgia</option>
                     <option value="Roboto">Roboto</option>
                     <option value="Poppins">Poppins</option>
-                  </select>
-
+                  </select> */}
+                  <FontSelector />
                   <div className="flex items-center gap-4">
                     {/* <ColorPicker
                       selectedColor={headerColor}
@@ -792,6 +824,8 @@ export default function WebBuilder() {
                     <TemplateSelector
                       selectedTemplate={selectedTemplate}
                       setSelectedTemplate={setSelectedTemplate}
+                      selectedPdfType={selectedPdfType}
+                      setSelectedPdfType={setSelectedPdfType}
                     />
                   </div>
                 </div>
@@ -817,8 +851,8 @@ export default function WebBuilder() {
                             key={index}
                             className={`px-4 py-2 cursor-pointer transition rounded-lg border-2 ${
                               currentSection === index
-                                ? "border-orange-500 font-semibold bg-orange-500 text-white"
-                                : "border-orange-500 bg-white text-black hover:bg-blue-50"
+                                ? "border-cyan-500 font-semibold bg-cyan-600 text-white"
+                                : "border-cyan-500 bg-white text-black hover:bg-blue-50"
                             }`}
                             onClick={() => handleSectionClick(index)}
                           >
@@ -887,17 +921,20 @@ export default function WebBuilder() {
           <div className=" flex flex-col">
             <div className="hidden md:flex w-screen px-8 py-4 justify-between items-center bg-white shadow">
               <div className="flex gap-4 ">
-                <select
+                {/* <select
                   value={selectedFont}
                   onChange={handleFontChange}
-                  className="w-40 h-10 rounded-lg border-2 border-orange-500 px-8 p-1 font-bold  bg-white text-black mt-2"
+                  className="w-40 h-10 rounded-lg border-2 border-cyan-500 px-8 p-1 font-bold  bg-white text-black mt-2"
                 >
                   <option value="Ubuntu">Ubuntu</option>
                   <option value="Calibri">Calibri</option>
                   <option value="Georgia">Georgia</option>
                   <option value="Roboto">Roboto</option>
                   <option value="Poppins">Poppins</option>
-                </select>
+                </select> */}
+                <div className="mt-3">
+                  <FontSelector />
+                </div>
                 {/* <ColorPicker
                   selectedColor={headerColor}
                   onChange={setHeaderColor}
@@ -909,26 +946,45 @@ export default function WebBuilder() {
                 <TemplateSelector
                   selectedTemplate={selectedTemplate}
                   setSelectedTemplate={setSelectedTemplate}
+                  selectedPdfType={selectedPdfType}
+                  setSelectedPdfType={setSelectedPdfType}
                 />
               </div>
               <div className="flex gap-4">
                 <button
-                  onClick={handleFinish}
-                  className="bg-orange-500 text-white px-6 py-2 rounded-lg"
+                  onClick={handleClick}
+                  className="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-800"
                 >
-                  Save Resume
+                  {loading === "save" ? (
+                    <SaveLoader loadingText={t("buttons.saving")} />
+                  ) : (
+                    t("buttons.save")
+                  )}
                 </button>
-                {/* <button
+
+                <button
                   onClick={downloadAsPDF}
-                  className="bg-yellow-500 text-black px-6 py-2 rounded-lg"
+                  className="bg-black text-white px-6 py-2 rounded-lg"
                 >
-                  Pay & Download
-                </button> */}
-                <PayAndDownload
+                  {loading === "download" ? (
+                    <SaveLoader loadingText={t("buttons.downloading")} />
+                  ) : (
+                    t("buttons.download")
+                  )}
+                </button>
+
+                <button
+                  onClick={handleBackToEditor}
+                  className="bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors"
+                >
+                  {t("buttons.backToDashboard")}
+                </button>
+
+                {/* <PayAndDownload
                   resumeId={resumeId}
                   token={token}
                   PayerID={PayerID}
-                />
+                /> */}
                 {/* {showModal && (
                   <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
                     <div className=" w-full max-w-4xl bg-white rounded-lg shadow-lg ">
@@ -968,7 +1024,7 @@ export default function WebBuilder() {
                         <div className="md:w-1/2 w-full p-4 ">
                           <div className="text-center mb-6">
                             <h2 className="text-2xl font-bold text-gray-900">
-                              £49
+                              $49
                             </h2>
                             <p className="text-sm text-gray-500">
                               Total Amount
@@ -982,7 +1038,7 @@ export default function WebBuilder() {
                               </label>
                               <input
                                 type="text"
-                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
+                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500"
                                 value={`${formData.first_name} ${formData.last_name}`.trim()}
                                 name="full name"
                                 required
@@ -995,7 +1051,7 @@ export default function WebBuilder() {
                               </label>
                               <input
                                 type="email"
-                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
+                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500"
                                 value={formData.email}
                                 required
                                 name="email"
@@ -1007,7 +1063,7 @@ export default function WebBuilder() {
                                 ☎️ Phone
                               </label>
                               <input
-                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
+                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500"
                                 required
                                 disabled
                                 type="number"
@@ -1051,12 +1107,6 @@ export default function WebBuilder() {
                     </div>
                   </div>
                 )} */}
-                <button
-                  onClick={handleBackToEditor}
-                  className="bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors"
-                >
-                  Back to Dashboard
-                </button>
               </div>
             </div>
 

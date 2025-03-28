@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import MobileCoverLetterBuilder from "./mobile-cv-builder";
 import { BASE_URL } from "../components/Constant/constant";
+import { useTranslation } from "react-i18next";
 function CoverLetterBuilder() {
   const {
     coverLetterData,
@@ -21,6 +22,8 @@ function CoverLetterBuilder() {
     setHeaderColor,
   } = useContext(CoverLetterContext);
   const router = useRouter();
+  const { i18n, t } = useTranslation();
+  const language = i18n.language;
   const templateRef = useRef(null);
   const [token, setToken] = useState(null);
   const [coverletterId, setCoverLetterId] = useState(null);
@@ -56,7 +59,7 @@ function CoverLetterBuilder() {
       if (id && token) {
         try {
           const response = await axios.get(
-            `${BASE_URL}/api/user/coverletter/${id}`,
+            `${BASE_URL}/api/user/coverletter/${id}?lang=${language}`,
             {
               headers: {
                 Authorization: token,
@@ -156,7 +159,7 @@ function CoverLetterBuilder() {
       }
 
       const response = await axios.put(
-        `${BASE_URL}/api/user/coverletter/${coverletterId}`,
+        `${BASE_URL}/api/user/coverletter/${coverletterId}?lang=${language}`,
 
         { ...coverletterInfo, cover_letter_html: coverletterHtml },
         {
@@ -197,7 +200,7 @@ function CoverLetterBuilder() {
       `;
 
       // const response = await axios.post(
-      //   "${BASE_URL}/api/jobseeker/generate-pdf1",
+      //   `${BASE_URL}/api/user/generate-pdf1`,
       //   { html: fullContent },
       //   {
       //     headers: {
@@ -218,7 +221,7 @@ function CoverLetterBuilder() {
   const downloadPDF = async () => {
     try {
       const response = await axios.get(
-        `${BASE_URL}/api/user/download-coverletter/${coverletterId}`,
+        `${BASE_URL}/api/user/download-coverletter/${coverletterId}?lang=${language}`,
 
         {
           headers: {
@@ -280,7 +283,7 @@ function CoverLetterBuilder() {
                   <select
                     value={selectedFont}
                     onChange={handleFontChange}
-                    className="w-40 h-10 rounded-lg border border-orange-500 px-4 font-bold text-black bg-white focus:ring-2 focus:ring-orange-500"
+                    className="w-40 h-10 rounded-lg border border-green-500 px-4 font-bold text-black bg-white focus:ring-2 focus:ring-green-500"
                   >
                     <option value="Ubuntu">Ubuntu</option>
                     <option value="Calibri">Calibri</option>
@@ -305,13 +308,13 @@ function CoverLetterBuilder() {
                     onClick={handleFinish}
                     className="bg-blue-950 text-white px-6 py-2 rounded-lg"
                   >
-                    Save Cover Letter
+                    {t("cvBuilder.save")}
                   </button>
                   <button
                     onClick={downloadAsPDF}
                     className="bg-yellow-500 text-black px-6 py-2 rounded-lg"
                   >
-                    Pay & Download
+                    {t("cvBuilder.download")}
                   </button>
                 </div>
               </div>

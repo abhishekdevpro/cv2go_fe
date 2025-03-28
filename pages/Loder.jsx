@@ -54,7 +54,7 @@
 // //         </div>
 // //       </div>
 // //       <div className="flex justify-between my-8 w-full px-40 mb-28">
-// //         <button className="px-16 py-1 border-2 bg-white text-lg border-orange-500 text-blue-700 rounded-3xl hover:bg-gray-300">Back</button>
+// //         <button className="px-16 py-1 border-2 bg-white text-lg border-green-500 text-blue-700 rounded-3xl hover:bg-gray-300">Back</button>
 // //         <button className="px-16 py-2 bg-yellow-400 text-lg rounded-3xl hover:bg-yellow-500" onClick={handleNext}>Next</button>
 // //       </div>
 // //     </div>
@@ -62,6 +62,7 @@
 // // };
 
 // // export default UploadResume;
+
 
 // import React, { useState } from 'react';
 // import { useRouter } from 'next/router'; // Import the useRouter hook
@@ -119,48 +120,44 @@
 //         </div>
 //       </div>
 //       <div className=" my-8 w-full px-40 mb-28">
-
+       
 //         <button className="px-16 py-2 bg-yellow-400 text-lg rounded-3xl hover:bg-yellow-500 float-end" onClick={handleNext}>Next</button>
 //       </div>
 
+      
 //     </div>
 //   );
 // };
 
 // export default UploadResume;
 
-import Link from "next/link";
-import React from "react";
-import { useRouter } from "next/router";
-const UploadResume = () => {
+
+import Link from 'next/link';
+import React from 'react';  
+import { useRouter } from 'next/router';
+const UploadResume = () => {  
+
   const router = useRouter();
   const handleNext = () => {
-    router.push("/builder"); // Redirect to the index page
-  };
-  return (
-    <div className="h-screen bg-gray-100 flex justify-center items-center">
-         
-      <div className="max-w-md mx-auto p-4 bg-white rounded-lg shadow-md">
-           {" "}
-        <h1 className="text-3xl font-bold text-gray-900">
-          Welcome to our AI Resume Builder!
-        </h1>
-           {" "}
-        <p className="text-lg text-gray-600">
-          Discover the Power of AI Resume Builder
-        </p>
-           {" "}
-        <button
-          className="bg-orange-500 hover:bg-orange-700 mt-5 text-white font-bold py-2 px-4 rounded"
-          onClick={handleNext}
-        >
-                Get Started    {" "}
-        </button>
-           
-      </div>
-       {" "}
-    </div>
-  );
-};
+       
+            router.push('/builder'); // Redirect to the index page
+         
+      };
+  return (  
+   <div className="h-screen bg-gray-100 flex justify-center items-center">  
+    <div className="max-w-md mx-auto p-4 bg-white rounded-lg shadow-md">  
+      <h1 className="text-3xl font-bold text-gray-900">Welcome to our AI Resume Builder!</h1>  
+      <p className="text-lg text-gray-600">Discover the Power of AI Resume Builder</p>  
 
+      <button  
+       className="bg-orange-500 hover:bg-orange-700 mt-5 text-white font-bold py-2 px-4 rounded"  
+      onClick={handleNext}
+      >  
+       Get Started  
+      </button> 
+    </div>  
+   </div>  
+  );  
+};  
+  
 export default UploadResume;

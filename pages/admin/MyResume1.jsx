@@ -49,10 +49,14 @@ const MyResume1 = () => {
 
   return (
     <div className="container mx-auto p-4 text-center">
+      <div className="bg-gradient-to-r from-pink-500 to-pink-700 p-6 rounded-lg shadow-lg mb-8">
+        <h2 className="text-start text-3xl text-white font-bold">All Customers</h2>
+      </div>
+
       <div className="overflow-x-auto">
         <table className="min-w-full  bg-dark text-black rounded-md text-center">
           <thead>
-            <tr className="bg-orange-500 text-white">
+            <tr className="bg-pink-500 text-white">
               <th className="py-2 px-4">First Name</th>
               <th className="py-2 px-4">Last Name</th>
               <th className="py-2 px-4">Email</th>
@@ -85,7 +89,7 @@ const MyResume1 = () => {
         <button
           onClick={handlePreviousPage}
           disabled={currentPage === 1}
-          className="px-4 py-2 bg-gray-300 rounded-md mx-2 hover:bg-orange-500 hover:text-white"
+          className="px-4 py-2 bg-gray-300 rounded-md mx-2 hover:bg-pink-500 hover:text-white"
         >
           Previous
         </button>
@@ -95,7 +99,7 @@ const MyResume1 = () => {
         <button
           onClick={handleNextPage}
           disabled={currentPage === totalPages}
-          className="px-4 py-2 bg-gray-300 rounded-md mx-2  hover:bg-orange-500 hover:text-white"
+          className="px-4 py-2 bg-gray-300 rounded-md mx-2  hover:bg-pink-500 hover:text-white"
         >
           Next
         </button>

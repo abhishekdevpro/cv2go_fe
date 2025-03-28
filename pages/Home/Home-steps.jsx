@@ -45,7 +45,7 @@ const Home_step = () => {
           ))}
         </div>
 
-        <button className="mt-8 bg-cyan-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-cyan-700 transition-colors">
+        <button className="mt-8 bg-cyan-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-cyan-800 transition-colors">
           Build my resume
         </button>
       </div>

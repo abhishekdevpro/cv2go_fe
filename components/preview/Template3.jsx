@@ -63,7 +63,7 @@ const Template3 = () => {
   ];
 
   return (
-    <div className="max-w-3xl mx-auto border-2 p-2 ">
+    <div className="">
       <header className="mb-6">
         <TextWrapper
           name={resumeData.name}

@@ -50,7 +50,7 @@
 // //     setLoading(true);
 // //     setShowLoadingAnimation(true);
 // //     try {
-// //       const response = await axios.post("${BASE_URL}/api/user/resume-upload", formData, {
+// //       const response = await axios.post(`${BASE_URL}/api/user/resume-upload`, formData, {
 // //         headers: {
 // //           "Content-Type": "multipart/form-data",
 // //           Authorization: token,
@@ -91,7 +91,7 @@
 // //     setShowLoadingAnimation(true);
 // //     try {
 // //       const response = await axios.post(
-// //         "${BASE_URL}/api/user/resume-create",
+// //         `${BASE_URL}/api/user/resume-create`,
 // //         {},
 // //         { headers: { Authorization: token } }
 // //       );
@@ -149,14 +149,14 @@
 // //                   We’ll give you expert guidance to fill out your info and enhance your resume, from start to finish
 // //                 </p>
 
-// //                 <label className="p-2 text-white bg-gray-500 rounded cursor-pointer hover:bg-cyan-600 transition">
+// //                 <label className="p-2 text-white bg-gray-500 rounded cursor-pointer hover:bg-blue-600 transition">
 // //                   <FaCloudUploadAlt className="inline-block mr-2" />
 // //                   <span>Select Resume (PDF)</span>
 // //                   <input type="file" className="hidden" onChange={handleFileChange} accept=".pdf" />
 // //                 </label>
 
 // //                 <button
-// //                   className={`p-2 mt-4 w-full text-white bg-blue-800 rounded ${loading ? "opacity-50 cursor-not-allowed" : "hover:bg-orange-600 transition"}`}
+// //                   className={`p-2 mt-4 w-full text-white bg-blue-800 rounded ${loading ? "opacity-50 cursor-not-allowed" : "hover:bg-cyan-600 transition"}`}
 // //                   onClick={handleUpload}
 // //                   disabled={loading}
 // //                 >
@@ -267,7 +267,7 @@
 //     setLoading(true);
 //     setShowLoadingAnimation(true);
 //     try {
-//       const response = await axios.post("${BASE_URL}/api/jobseeker/resume-upload", formData, {
+//       const response = await axios.post(`${BASE_URL}/api/user/resume-upload`, formData, {
 //         headers: {
 //           "Content-Type": "multipart/form-data",
 //           Authorization: token,
@@ -308,7 +308,7 @@
 //     setShowLoadingAnimation(true);
 //     try {
 //       const response = await axios.post(
-//         "${BASE_URL}/api/jobseeker/resume-create",
+//         `${BASE_URL}/api/user/resume-create`,
 //         {},
 //         { headers: { Authorization: token } }
 //       );
@@ -478,7 +478,7 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import { ResumeContext } from "../context/ResumeContext";
-
+import { BASE_URL } from "../Constant/constant";
 // Resume Enhancement Modal Component
 const ResumeEnhancementModal = ({ isOpen, onClose, fileLocation, token }) => {
   const [isEnhancing, setIsEnhancing] = useState(false);
@@ -493,7 +493,7 @@ const ResumeEnhancementModal = ({ isOpen, onClose, fileLocation, token }) => {
     setIsEnhancing(true);
     try {
       const response = await axios.post(
-        "${BASE_URL}/api/jobseeker/resume-improved",
+        `${BASE_URL}/api/user/resume-improved`,
         {
           keyword: "resume improved",
           file_location: fileLocation,
@@ -565,7 +565,7 @@ const ResumeEnhancementModal = ({ isOpen, onClose, fileLocation, token }) => {
   //             className={`px-4 py-2 rounded ${
   //               isEnhancing
   //               ? 'bg-gray-400 cursor-not-allowed'
-  //               : 'bg-orange-500 hover:bg-orange-600 text-white'
+  //               : 'bg-cyan-600 hover:bg-cyan-600 text-white'
   //             }`}
   //           >
   //             {isEnhancing ? 'Enhancing...' : 'Yes, Enhance'}
@@ -621,7 +621,7 @@ const ResumeEnhancementModal = ({ isOpen, onClose, fileLocation, token }) => {
         <div className="p-6">
           {/* <div className="grid grid-cols-3 gap-4 mb-6">
           {[
-            { icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z', color: 'text-orange-500', label: 'Professional Formatting' },
+            { icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z', color: 'text-green-500', label: 'Professional Formatting' },
             { icon: 'M10 20l4-16m4 4l4 4-4 4', color: 'text-blue-500', label: 'ATS Optimization' },
             { icon: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z', color: 'text-purple-500', label: 'Smart Editing' }
           ].map((feature, index) => (
@@ -655,7 +655,7 @@ const ResumeEnhancementModal = ({ isOpen, onClose, fileLocation, token }) => {
                 <div key={index} className="flex items-start space-x-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-orange-500 flex-shrink-0 mt-1"
+                    className="h-5 w-5 text-green-500 flex-shrink-0 mt-1"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -681,7 +681,7 @@ const ResumeEnhancementModal = ({ isOpen, onClose, fileLocation, token }) => {
               ${
                 isEnhancing
                   ? "bg-gray-400 cursor-not-allowed"
-                  : "bg-gradient-to-r from-orange-500 to-blue-500 hover:from-orange-600 hover:to-blue-600"
+                  : "bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600"
               }
             `}
             >
@@ -765,7 +765,7 @@ const LoadUnload = () => {
     setShowLoadingAnimation(true);
     try {
       const response = await axios.post(
-        "${BASE_URL}/api/jobseeker/resume-upload",
+        `${BASE_URL}/api/user/resume-upload`,
         formData,
         {
           headers: {
@@ -817,7 +817,7 @@ const LoadUnload = () => {
     setShowLoadingAnimation(true);
     try {
       const response = await axios.post(
-        "${BASE_URL}/api/jobseeker/resume-create",
+        `${BASE_URL}/api/user/resume-create`,
         {},
         { headers: { Authorization: token } }
       );

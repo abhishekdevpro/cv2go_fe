@@ -138,7 +138,7 @@ const WorkExperience = ({
   style = {},
   itemClassNames = {},
 }) => {
-  if (!resumeData?.workExperience || resumeData.workExperience.length === 0) {
+  if (resumeData.is_fresher ||  !resumeData?.workExperience || resumeData.workExperience.length === 0) {
     return null;
   }
   // console.log(resumeData?.workExperience,"weee");
@@ -176,7 +176,10 @@ const WorkExperience = ({
                     }`}
                 >
                   <div className="flex flex-row justify-between space-y-1">
-                    <p className={`${itemClassNames.company || ""}`}>
+                    <p 
+                     contentEditable
+                     suppressContentEditableWarning
+                    className={`font-semibold`}>
                       {item.company}
                     </p>
                     <DateRangeExperience
@@ -187,69 +190,23 @@ const WorkExperience = ({
                   </div>
 
                   <div className="flex flex-row justify-between space-y-1">
-                    <p className={``}>{item.position}</p>
-                    <p className={``}>{item.location}</p>
+                    <p className={`font-medium`}
+                      contentEditable
+                      suppressContentEditableWarning
+                    >{item.position}</p>
+                    <p 
+                     contentEditable
+                     suppressContentEditableWarning
+                    className={``}>{item.location}</p>
                   </div>
-                  {/* <p
-                    className=" hover:outline-dashed hover:outline-2 hover:outline-gray-400"
-                    contentEditable="true"
-                    suppressContentEditableWarning={true}
-                  >
-                    {item.description}
-                  
-                  </p> */}
+                 
                   <p
                     className="hover:outline-dashed hover:outline-2 hover:outline-gray-400"
-                    contentEditable="true"
-                    suppressContentEditableWarning={true}
+                    contentEditable
+                     suppressContentEditableWarning
                     dangerouslySetInnerHTML={{ __html: item.description }}
                   ></p>
 
-                  {/* <Droppable
-                    droppableId={`WORK_EXPERIENCE_KEY_ACHIEVEMENT-${index}`}
-                    type="WORK_EXPERIENCE_KEY_ACHIEVEMENT"
-                  >
-                    {(provided) => (
-                      <ul
-                        className="list-disc pl-6"
-                        {...provided.droppableProps}
-                        ref={provided.innerRef}
-                      >
-                       
-                        {item.KeyAchievements?
-    
-                          item.KeyAchievements
-                            .map((achievement, subIndex) => (
-                              <Draggable
-                                key={`${item.company}-${index}-${subIndex}`}
-                                draggableId={`WORK_EXPERIENCE_KEY_ACHIEVEMENT-${index}-${subIndex}`}
-                                index={subIndex}
-                              >
-                                {(provided, snapshot) => (
-                                  <li
-                                    ref={provided.innerRef}
-                                    {...provided.draggableProps}
-                                    {...provided.dragHandleProps}
-                                    className={`hover:scale-105 transition-transform duration-300 hover:outline-dashed hover:outline-2 hover:outline-gray-400 ${
-                                      snapshot.isDragging &&
-                                      "outline-dashed outline-2 outline-gray-400 bg-white"
-                                    }`}
-                                  >
-                                    <div
-                                      dangerouslySetInnerHTML={{
-                                        __html: achievement,
-                                      }}
-                                      contentEditable
-                                    />
-                                  </li>
-                                )}
-                              </Draggable>
-                            )):""
-                          }
-                        {provided.placeholder}
-                      </ul>
-                    )}
-                  </Droppable> */}
                   {item.KeyAchievements && item.KeyAchievements.length > 0 && (
                     <Droppable
                       droppableId={`WORK_EXPERIENCE_KEY_ACHIEVEMENT-${index}`}

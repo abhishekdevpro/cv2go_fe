@@ -3,8 +3,11 @@ import axios from "axios";
 
 import { useRouter } from "next/router";
 import { BASE_URL } from "../components/Constant/constant";
+import { useTranslation } from "react-i18next";
 const Gauth = () => {
   const [loading, setLoading] = useState(true);
+  const { i18n, t } = useTranslation();
+  const language = i18n.language;
 
   const router = useRouter();
 
@@ -22,7 +25,7 @@ const Gauth = () => {
       const sendAuthCode = async () => {
         try {
           const response = await axios.get(
-            `${BASE_URL}/api/user/auth/callback?code=${code}`
+            `${BASE_URL}/api/user/auth/callback?code=${code}&lang=${language}`
           );
           console.log(response);
           const token = response.data.data.token;
@@ -49,7 +52,7 @@ const Gauth = () => {
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       {loading ? (
         <div className="flex flex-col items-center">
-          <div className="loader border-t-4 border-orange-500 rounded-full w-12 h-12 animate-spin"></div>
+          <div className="loader border-t-4 border-green-500 rounded-full w-12 h-12 animate-spin"></div>
           <p className="mt-4 text-gray-600">Loading, please wait...</p>
         </div>
       ) : (

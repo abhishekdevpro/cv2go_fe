@@ -1,127 +1,70 @@
 import React from "react";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
+import { useTranslation } from "react-i18next";
 
 function AiCVParsing() {
+  const { t } = useTranslation();
   return (
     <div>
       <Navbar />
       <div className="max-w-4xl mx-auto my-5 p-6 sm:p-10 shadow-lg bg-white rounded-lg">
-        <h1 className="text-3xl font-bold my-4 ">Ai CV Parsing</h1>
-        <h2> Transforming Recruitment with Advanced AI CV Parsing</h2>
-        At CV2GO , we leverage cutting-edge AI CV parsing technology to
-        streamline the recruitment process, making it faster and more efficient
-        for both employers and job seekers. Our AI CV parsing tool accurately
-        extracts and analyzes key information from CVs, helping you identify the
-        best candidates quickly and effectively.
-        <h1 className="text-xl font-bold my-5">
-          Key Features of Our AI CV Parsing Tool
-        </h1>
+        <h1 className="text-3xl font-bold my-4 ">{t("Ai_CV_Parsing_h")}</h1>
+        <h2> {t("Ai_CV_Parsing_h1")}</h2>
+        {t("Ai_CV_Parsing_p1")}
+        <h1 className="text-xl font-bold my-5">{t("Ai_CV_Parsing_h2")}</h1>
         <h1 className="text-sm font-semibold my-2">
-          1. Accurate Data Extraction
+          1. {t("Ai_CV_Parsing_h3")}
         </h1>
-        Our AI CV parser uses sophisticated algorithms to extract essential
-        details from CVs, including personal information, contact details, work
-        experience, education, skills, and certifications. The extracted data is
-        organized in a structured format, making it easy to review and compare
-        candidates.
-        <h1 className="text-sm font-semibold my-2">2. Multiformat Support</h1>
-        Our parser can handle CVs in various formats, such as PDF, DOC, DOCX,
-        and TXT. This flexibility ensures that no matter how candidates submit
-        their CVs, our tool can process and analyze them efficiently.
+        {t("Ai_CV_Parsing_p2")}
         <h1 className="text-sm font-semibold my-2">
-          3. Natural Language Processing (NLP)
+          2. {t("Ai_CV_Parsing_h4")}
         </h1>
-        Utilizing advanced NLP techniques, our AI CV parser understands the
-        context and nuances of human language. This enables it to accurately
-        interpret job titles, skills, and responsibilities, even if they are
-        phrased differently across CVs.
+        {t("Ai_CV_Parsing_p3")}
         <h1 className="text-sm font-semibold my-2">
-          4. Automated Candidate Matching
+          3. {t("Ai_CV_Parsing_h5")}
         </h1>
-        Our AI CV parsing tool integrates seamlessly with your Applicant
-        Tracking System (ATS), automatically matching candidate profiles with
-        job descriptions. This automation reduces manual effort and ensures that
-        only the most relevant candidates are shortlisted.
+        {t("Ai_CV_Parsing_p4")}
         <h1 className="text-sm font-semibold my-2">
-          5. Skill and Keyword Extraction
+          4. {t("Ai_CV_Parsing_h6")}
         </h1>
-        The parser identifies and extracts key skills and keywords from CVs,
-        comparing them against the job requirements. This ensures that
-        candidates who meet the necessary criteria are prioritized, improving
-        the quality of your candidate pool.
+        {t("Ai_CV_Parsing_p5")}
         <h1 className="text-sm font-semibold my-2">
-          6. Customizable Parsing Rules
+          5. {t("Ai_CV_Parsing_h7")}
         </h1>
-        Tailor the parsing rules to match your specific hiring needs. You can
-        define the criteria for extracting and prioritizing information,
-        ensuring that the parser aligns with your recruitment strategy.
+        {t("Ai_CV_Parsing_p6")}
         <h1 className="text-sm font-semibold my-2">
-          7. Compliance and Privacy
+          6. {t("Ai_CV_Parsing_h8")}
         </h1>
-        We prioritize data security and privacy. Our AI CV parsing tool complies
-        with all relevant data protection regulations, ensuring that candidate
-        information is handled with the utmost care and confidentiality.
-        <h1 className="text-lg font-bold my-4">How It Works</h1>
-        <h1 className="text-sm font-semibold my-2">Step 1: Upload CVs</h1>
-        Upload individual CVs or bulk CV files into the AI CV parsing tool. Our
-        system supports various file formats and ensures quick and efficient
-        processing.
+        {t("Ai_CV_Parsing_p7")}
         <h1 className="text-sm font-semibold my-2">
-          Step 2: Parse and Extract Data
+          7. {t("Ai_CV_Parsing_h9")}
         </h1>
-        The AI CV parser processes the uploaded CVs, extracting key information
-        and organizing it into a structured format. This includes details like
-        contact information, work history, education, skills, and more.
-        <h1 className="text-sm font-semibold my-2">
-          Step 3: Review and Analyze
-        </h1>
-        Access the parsed data through an intuitive dashboard. Review and
-        analyze candidate profiles, compare qualifications, and filter
-        candidates based on your specific criteria.
-        <h1 className="text-sm font-semibold my-2">
-          Step 4: Automate Candidate Matching
-        </h1>
-        Integrate the parsed data with your ATS to automate the candidate
-        matching process. The AI matches candidates profiles with job
-        descriptions, ensuring that only the most qualified candidates are
-        shortlisted.
-        <h1 className="text-sm font-semibold my-2">
-          Step 5: Make Informed Hiring Decisions
-        </h1>
-        Use the detailed, structured data to make informed hiring decisions. Our
-        AI CV parsing tool provides you with a comprehensive view of each
-        candidate, enabling you to select the best fit for your job openings.
-        <h1 className="text-lg font-bold my-4">
-          Benefits of Using AI CV Parsing
-        </h1>
-        <h1 className="text-sm font-semibold my-2">Efficiency and Speed</h1>
-        Reduce the time spent on manual CV screening and data entry. Our AI CV
-        parser processes CVs quickly and accurately, allowing you to focus on
-        higher-value recruitment tasks.
-        <h1 className="text-sm font-semibold my-2">Improved Accuracy</h1>
-        Eliminate human errors and biases from the CV screening process. Our AI
-        technology ensures consistent and precise data extraction, leading to
-        better hiring decisions.
-        <h1 className="text-sm font-semibold my-2">
-          Enhanced Candidate Experience
-        </h1>
-        Provide a smoother and faster recruitment experience for candidates.
-        With quick and accurate CV processing, candidates receive timely
-        feedback and updates.
-        <h1 className="text-sm font-semibold my-2">Scalability</h1>
-        Handle large volumes of CVs effortlessly. Our AI CV parsing tool can
-        scale to meet the demands of high-volume recruitment campaigns, ensuring
-        that no candidate is overlooked.
-        <h1 className="text-sm font-semibold my-2">
-          Start Using AI CV Parsing Today
-        </h1>
-        Revolutionize your recruitment process with CV2GO ’s AI CV parsing tool.
-        Sign up now to experience the benefits of efficient, accurate, and
-        automated CV processing.
-        <h1 className="text-sm font-semibold my-2">Get Started</h1>
-        Ready to transform your recruitment process? Visit our AI CV Parsing
-        page and start optimizing your candidate selection today!
+        {t("Ai_CV_Parsing_p8")}
+        <h1 className="text-lg font-bold my-4">{t("Ai_CV_Parsing_h10")}</h1>
+        <h1 className="text-sm font-semibold my-2">{t("Ai_CV_Parsing_h11")}</h1>
+        {t("Ai_CV_Parsing_p9")}
+        <h1 className="text-sm font-semibold my-2">{t("Ai_CV_Parsing_h12")}</h1>
+        {t("Ai_CV_Parsing_p10")}
+        <h1 className="text-sm font-semibold my-2">{t("Ai_CV_Parsing_h13")}</h1>
+        {t("Ai_CV_Parsing_p11")}
+        <h1 className="text-sm font-semibold my-2">{t("Ai_CV_Parsing_h14")}</h1>
+        {t("Ai_CV_Parsing_p12")}
+        <h1 className="text-sm font-semibold my-2">{t("Ai_CV_Parsing_h15")}</h1>
+        {t("Ai_CV_Parsing_p13")}
+        <h1 className="text-lg font-bold my-4">{t("Ai_CV_Parsing_h16")}</h1>
+        <h1 className="text-sm font-semibold my-2">{t("Ai_CV_Parsing_h17")}</h1>
+        {t("Ai_CV_Parsing_p14")}
+        <h1 className="text-sm font-semibold my-2">{t("Ai_CV_Parsing_h18")}</h1>
+        {t("Ai_CV_Parsing_p15")}
+        <h1 className="text-sm font-semibold my-2">{t("Ai_CV_Parsing_h19")}</h1>
+        {t("Ai_CV_Parsing_p16")}
+        <h1 className="text-sm font-semibold my-2">{t("Ai_CV_Parsing_h20")}</h1>
+        {t("Ai_CV_Parsing_p17")}
+        <h1 className="text-sm font-semibold my-2">{t("Ai_CV_Parsing_h21")}</h1>
+        {t("Ai_CV_Parsing_p18")}
+        <h1 className="text-sm font-semibold my-2">{t("Ai_CV_Parsing_h22")}</h1>
+        {t("Ai_CV_Parsing_p19")}
       </div>
       <Footer />
     </div>

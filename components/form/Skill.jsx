@@ -1,13 +1,15 @@
-
 import React, { useContext, useEffect, useRef, useState } from "react";
 import axios from "axios";
 import FormButton from "./FormButton";
 import { ResumeContext } from "../context/ResumeContext";
-import { AlertCircle } from "lucide-react";
+import { AlertCircle, Trash } from "lucide-react";
 import { useRouter } from "next/router";
 import { BASE_URL } from "../Constant/constant";
+import { useTranslation } from "react-i18next";
+const Skill = ({ title, currentSkillIndex }) => {
+  const { i18n, t } = useTranslation();
+  const language = i18n.language;
 
-const Skill = ({ title }) => {
   const { resumeData, setResumeData, resumeStrength } =
     useContext(ResumeContext);
   const [loading, setLoading] = useState(false);
@@ -53,7 +55,7 @@ const Skill = ({ title }) => {
       const response = await axios.get(
         `${BASE_URL}/api/user/skills-names?skill_keyword=${encodeURIComponent(
           query
-        )}`,
+        )}&lang=${language}`,
         {
           headers: {
             Authorization: token,
@@ -140,18 +142,22 @@ const Skill = ({ title }) => {
   };
 
   const hasErrors = (skillIndex) => {
-    const skillStrength = resumeStrength?.skills_strenght?.[skillIndex];
+    const skillStrengthErr =
+      resumeStrength?.Skills_strenght?.[currentSkillIndex]
+        ?.skills_strenght_info?.[skillIndex]?.skills;
     return (
-      skillStrength &&
-      Array.isArray(skillStrength.skills) &&
-      skillStrength.skills.length > 0
+      skillStrengthErr &&
+      Array.isArray(skillStrengthErr) &&
+      skillStrengthErr.length > 0
     );
   };
 
   const getErrorMessages = (skillIndex) => {
-    const skillStrength = resumeStrength?.skills_strenght?.[skillIndex];
-    return skillStrength && Array.isArray(skillStrength.skills)
-      ? skillStrength.skills
+    const skillStrengthErr =
+      resumeStrength?.Skills_strenght?.[currentSkillIndex]
+        ?.skills_strenght_info?.[skillIndex]?.skills;
+    return skillStrengthErr && Array.isArray(skillStrengthErr)
+      ? skillStrengthErr
       : [];
   };
 
@@ -173,6 +179,24 @@ const Skill = ({ title }) => {
     });
   };
 
+  // const removeSkill = (title, index) => {
+  //   setResumeData((prevData) => {
+  //     const skillType = prevData.skills.find(
+  //       (skillType) => skillType.title === title
+  //     );
+  //     if (!skillType) return prevData;
+
+  //     const newSkills = [...skillType.skills];
+  //     newSkills.splice(index, 1);
+  //     const updatedSkills = prevData.skills.map((skill) =>
+  //       skill.title === title ? { ...skill, skills: newSkills } : skill
+  //     );
+  //     return {
+  //       ...prevData,
+  //       skills: updatedSkills,
+  //     };
+  //   });
+  // };
   const removeSkill = (title, index) => {
     setResumeData((prevData) => {
       const skillType = prevData.skills.find(
@@ -180,11 +204,18 @@ const Skill = ({ title }) => {
       );
       if (!skillType) return prevData;
 
+      // Prevent removing the last skill if there's only one left
+      if (skillType.skills.length <= 1) {
+        alert("At least one skill is required.");
+        return prevData; // Prevent deletion
+      }
+
       const newSkills = [...skillType.skills];
-      newSkills.splice(index, 1);
+      newSkills.splice(index, 1); // Remove the skill at the specified index
       const updatedSkills = prevData.skills.map((skill) =>
         skill.title === title ? { ...skill, skills: newSkills } : skill
       );
+
       return {
         ...prevData,
         skills: updatedSkills,
@@ -221,7 +252,7 @@ const Skill = ({ title }) => {
       }
 
       const response = await axios.post(
-        `${BASE_URL}/api/user/ai-skills-data`,
+        `${BASE_URL}/api/user/ai-skills-data?lang=${language}`,
         {
           key: "skills",
           keyword: title,
@@ -235,7 +266,7 @@ const Skill = ({ title }) => {
       );
 
       if (response.data.status === "success") {
-        setAiSkills(response.data.data.resume_analysis.skills);
+        setAiSkills(response.data.data.resume_analysis.skills || []);
         setIsModalOpen(true);
       } else {
         setError("Unable to fetch AI data. Please try again.");
@@ -289,203 +320,172 @@ const Skill = ({ title }) => {
   }
 
   return (
-    <div className="flex-col-gap-3 w-full mt-10 px-10">
-      <h2 className="input-title text-black text-3xl">{title}</h2>
-      {skillType.skills.map((skill, index) => (
-        <div key={index} className="relative flex items-center space-x-2">
-          <div className="relative w-full">
-            <input
-              type="text"
-              placeholder={title}
-              name={title}
-              className={`w-full other-input border ${
-                improve && hasErrors(index) ? "border-red-500" : "border-black"
-              }`}
-              value={skill}
-              onChange={(e) => handleSkill(e, index, title)}
-              onKeyDown={(e) => handleKeyDown(e, index, title)}
-              onFocus={() => {
-                if (skill.length >= 2) {
-                  fetchSuggestions(skill, index);
+    <>
+      <div className="flex-col-gap-3 w-full mt-10 px-10">
+        <h2 className="input-title text-black text-xl">{title}</h2>
+        {skillType.skills.map((skill, index) => (
+          <div key={index} className="relative flex items-center space-x-2">
+            <div className="relative w-full">
+              <input
+                type="text"
+                placeholder={title}
+                name={title}
+                className={`w-full other-input border ${
+                  improve && hasErrors(index)
+                    ? "border-red-500"
+                    : "border-black"
+                }`}
+                value={skill}
+                onChange={(e) => handleSkill(e, index, title)}
+                onKeyDown={(e) => handleKeyDown(e, index, title)}
+                onFocus={() => {
+                  if (skill.length >= 2) {
+                    fetchSuggestions(skill, index);
+                  }
+                }}
+              />
+              {showSuggestions &&
+                activeInputIndex === index &&
+                suggestions.length > 0 && (
+                  <div
+                    ref={suggestionsRef}
+                    className="absolute z-50 w-full bg-white mt-1 border border-gray-200 rounded-md shadow-lg max-h-60 overflow-y-auto"
+                  >
+                    {suggestions.map((suggestion, i) => (
+                      <div
+                        key={suggestion.id}
+                        className={`px-4 py-2 cursor-pointer hover:bg-gray-100 ${
+                          i === activeSuggestionIndex ? "bg-gray-100" : ""
+                        }`}
+                        onClick={() =>
+                          handleSelectSuggestion(suggestion, index, title)
+                        }
+                      >
+                        {suggestion.name}
+                      </div>
+                    ))}
+                  </div>
+                )}
+            </div>
+
+            {improve && hasErrors(index) && (
+              <button
+                type="button"
+                className="absolute right-8 top-1/2 -translate-y-1/2 text-red-500 hover:text-red-600 transition-colors"
+                onClick={() =>
+                  setActiveTooltip(
+                    activeTooltip === `skill-${index}` ? null : `skill-${index}`
+                  )
                 }
-              }}
-            />
-            {showSuggestions &&
-              activeInputIndex === index &&
-              suggestions.length > 0 && (
-                <div
-                  ref={suggestionsRef}
-                  className="absolute z-50 w-full bg-white mt-1 border border-gray-200 rounded-md shadow-lg max-h-60 overflow-y-auto"
-                >
-                  {suggestions.map((suggestion, i) => (
-                    <div
-                      key={suggestion.id}
-                      className={`px-4 py-2 cursor-pointer hover:bg-gray-100 ${
-                        i === activeSuggestionIndex ? "bg-gray-100" : ""
-                      }`}
-                      onClick={() =>
-                        handleSelectSuggestion(suggestion, index, title)
-                      }
-                    >
-                      {suggestion.name}
+              >
+                <AlertCircle className="w-5 h-5" />
+              </button>
+            )}
+
+            <button
+              type="button"
+              onClick={() => removeSkill(title, index)}
+              className="bg-red-500 text-white hover:bg-red-700 py-2 px-2"
+              aria-label="Delete skill"
+            >
+              <Trash />
+            </button>
+
+            {activeTooltip === `skill-${index}` && (
+              <div className="absolute z-10 right-10 top-10 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200">
+                <div className="bg-red-50 px-4 py-2 rounded-t-lg border-b border-red-100">
+                  <div className="flex items-center gap-2">
+                    <AlertCircle className="w-5 h-5 text-red-600" />
+                    <span className="font-medium text-red-800">
+                      Skill Error
+                    </span>
+                  </div>
+                </div>
+                <div className="p-4">
+                  {getErrorMessages(index).map((msg, i) => (
+                    <div key={i} className="text-gray-700 text-sm mb-2">
+                      {msg}
                     </div>
                   ))}
                 </div>
-              )}
-          </div>
-
-          {improve && hasErrors(index) && (
-            <button
-              type="button"
-              className="absolute right-8 top-1/2 -translate-y-1/2 text-red-500 hover:text-red-600 transition-colors"
-              onClick={() =>
-                setActiveTooltip(
-                  activeTooltip === `skill-${index}` ? null : `skill-${index}`
-                )
-              }
-            >
-              <AlertCircle className="w-5 h-5" />
-            </button>
-          )}
-
-          <button
-            type="button"
-            onClick={() => removeSkill(title, index)}
-            className="text-red-500 hover:text-red-700"
-            aria-label="Delete skill"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-
-          {activeTooltip === `skill-${index}` && (
-            <div className="absolute z-10 right-16 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200">
-              <div className="bg-red-50 px-4 py-2 rounded-t-lg border-b border-red-100">
-                <div className="flex items-center gap-2">
-                  <AlertCircle className="w-5 h-5 text-red-600" />
-                  <span className="font-medium text-red-800">Skill Error</span>
+                <div className="border-t border-gray-100 p-3 flex justify-end">
+                  <button
+                    onClick={() => setActiveTooltip(null)}
+                    className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                  >
+                    Dismiss
+                  </button>
                 </div>
               </div>
-              <div className="p-4">
-                {getErrorMessages(index).map((msg, i) => (
-                  <div key={i} className="text-gray-700 text-sm mb-2">
-                    {msg}
-                  </div>
-                ))}
-              </div>
-              <div className="border-t border-gray-100 p-3 flex justify-end">
-                <button
-                  onClick={() => setActiveTooltip(null)}
-                  className="text-blue-600 hover:text-blue-800 text-sm font-medium"
-                >
-                  Dismiss
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
-      ))}
+            )}
+          </div>
+        ))}
 
-      {/* <div className="flex space-x-4">
-        <FormButton
-          size={skillType.skills.length}
-          add={() => addSkill(title)}
-        />
-        <button
+        <div className="flex space-x-4">
+          <FormButton
+            size={skillType.skills.length}
+            add={() => addSkill(title)}
+            remove={() => removeSkill(title)}
+          />
+          {/* <button
           type="button"
           onClick={() => removeAllSkills(title)}
           className="text-red-600 hover:text-red-800"
           aria-label="Delete all skills"
         >
           Delete All Skills
-        </button>
-        <button
-          type="button"
-          onClick={handleAIAssist}
-          className="border bg-black text-white px-3 rounded-3xl"
-          disabled={loading}
-        >
-          {loading ? "Loading..." : " + Smart Assist"}
-        </button>
-      </div> */}
-      <div className="flex flex-wrap md:flex-nowrap gap-3 md:space-x-4 w-full">
-        <FormButton
-          size={skillType.skills.length}
-          add={() => addSkill(title)}
-          className="w-full md:w-auto"
-        />
-
-        <button
-          type="button"
-          onClick={() => removeAllSkills(title)}
-          className="text-red-600 hover:text-red-800 w-full md:w-auto text-center"
-          aria-label="Delete all skills"
-        >
-          Delete All Skills
-        </button>
-
-        <button
-          type="button"
-          onClick={handleAIAssist}
-          className="border bg-black text-white p-2 rounded-3xl w-full md:w-auto text-center"
-          disabled={loading}
-        >
-          {loading ? "Loading..." : " + Smart Assist"}
-        </button>
-      </div>
-
-      {isModalOpen && (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white p-6 rounded-xl w-96">
-            <h3 className="text-xl mb-4">Select AI Skills</h3>
-            <ul className="space-y-2">
-              {Array.isArray(aiSkills) && aiSkills.length > 0 ? (
-                aiSkills.map((skill, index) => (
-                  <li key={index} className="flex items-center space-x-2">
-                    <input
-                      type="checkbox"
-                      checked={selectedSkills.includes(skill)}
-                      onChange={() => handleSelectSkill(skill)}
-                    />
-                    <span>{skill}</span>
-                  </li>
-                ))
-              ) : (
-                <li>No AI skills available.</li>
-              )}
-            </ul>
-            <button
-              className="mt-4 px-4 py-2 bg-gray-300 rounded-lg"
-              onClick={addSelectedSkills}
-            >
-              Add Selected Skills
-            </button>
-            <button
-              className="mt-4 ml-2 px-4 py-2 bg-gray-300 rounded-lg"
-              onClick={() => {
-                setIsModalOpen(false);
-                setSelectedSkills([]);
-              }}
-            >
-              Close
-            </button>
-          </div>
+        </button> */}
+          <button
+            type="button"
+            onClick={handleAIAssist}
+            className="border bg-black text-white px-3 rounded-3xl"
+            disabled={loading}
+          >
+            {loading ? "Loading..." : " + Smart Assist"}
+          </button>
         </div>
-      )}
-      {error && <p className="text-red-500 mt-2">{error}</p>}
-    </div>
+
+        {isModalOpen && (
+          <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center z-50">
+            <div className="bg-white p-6 rounded-xl w-96">
+              <h3 className="text-xl mb-4">Select AI Skills</h3>
+              <ul className="space-y-2">
+                {Array.isArray(aiSkills) && aiSkills.length > 0 ? (
+                  aiSkills.map((skill, index) => (
+                    <li key={index} className="flex items-center space-x-2">
+                      <input
+                        type="checkbox"
+                        checked={selectedSkills.includes(skill)}
+                        onChange={() => handleSelectSkill(skill)}
+                      />
+                      <span>{skill}</span>
+                    </li>
+                  ))
+                ) : (
+                  <li>No AI skills available.</li>
+                )}
+              </ul>
+              <button
+                className="mt-4 px-4 py-2 bg-gray-300 rounded-lg"
+                onClick={addSelectedSkills}
+              >
+                Add Selected Skills
+              </button>
+              <button
+                className="mt-4 ml-2 px-4 py-2 bg-gray-300 rounded-lg"
+                onClick={() => {
+                  setIsModalOpen(false);
+                  setSelectedSkills([]);
+                }}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
+        {error && <p className="text-red-500 mt-2">{error}</p>}
+      </div>
+    </>
   );
 };
 

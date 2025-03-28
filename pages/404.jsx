@@ -29,7 +29,7 @@ const Custom404 = () => {
         </button>
         <button
           onClick={() => router.push("/login2")}
-          className="px-6 py-2 bg-orange-600 text-white rounded-md shadow-md hover:bg-orange-700 transition"
+          className="px-6 py-2 bg-cyan-600 text-white rounded-md shadow-md hover:bg-cyan-800 transition"
         >
           Go to Login
         </button>

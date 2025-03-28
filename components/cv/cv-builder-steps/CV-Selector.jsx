@@ -11,6 +11,7 @@ import cvletter4 from "../coverletter/cvimgs/cvletter4.png";
 import cvletter5 from "../coverletter/cvimgs/cvletter5.png";
 import { CoverLetterContext } from "../../context/CoverLetterContext";
 import { BASE_URL } from "../../Constant/constant";
+import { useTranslation } from "react-i18next";
 const CVSelector = ({ onNext, onBack, onChange, value }) => {
   const [selectedHexCode, setSelectedHexCode] = useState("#2563EB");
   const [loading, setLoading] = useState(false);
@@ -18,6 +19,8 @@ const CVSelector = ({ onNext, onBack, onChange, value }) => {
   // const [coverLetterData, setCoverLetterData] = useState(null);
   const { coverLetterData, setCoverLetterData } =
     useContext(CoverLetterContext);
+  const { i18n, t } = useTranslation();
+  const language = i18n.language;
   const token =
     typeof window !== "undefined" ? localStorage.getItem("token") : null;
   const colors = [
@@ -31,7 +34,7 @@ const CVSelector = ({ onNext, onBack, onChange, value }) => {
       name: "Blue",
       class: "bg-cyan-600",
       selectedClass: "ring-blue-400",
-      hexCode: "#2563EB",
+      hexCode: "#00b38d",
     },
     {
       name: "Purple",
@@ -41,8 +44,8 @@ const CVSelector = ({ onNext, onBack, onChange, value }) => {
     },
     {
       name: "Green",
-      class: "bg-orange-600",
-      selectedClass: "ring-orange-400",
+      class: "bg-cyan-600",
+      selectedClass: "ring-green-400",
       hexCode: "#16A34A",
     },
     {
@@ -64,9 +67,9 @@ const CVSelector = ({ onNext, onBack, onChange, value }) => {
       hexCode: "#EC4899",
     },
     {
-      name: "Teal",
-      class: "bg-orange-500",
-      selectedClass: "ring-orange-400",
+      name: "cyan",
+      class: "bg-cyan-500",
+      selectedClass: "ring-cyan-400",
       hexCode: "#14B8A6",
     },
     {
@@ -81,37 +84,79 @@ const CVSelector = ({ onNext, onBack, onChange, value }) => {
       selectedClass: "ring-indigo-400",
       hexCode: "#4F46E5",
     },
+    {
+      name: "Navy Blue",
+      class: "bg-blue-900",
+      selectedClass: "ring-blue-700",
+      hexCode: "#1E3A8A",
+    },
+    {
+      name: "Light Blue",
+      class: "bg-blue-300",
+      selectedClass: "ring-blue-200",
+      hexCode: "#93C5FD",
+    },
+    {
+      name: "Light Red",
+      class: "bg-red-300",
+      selectedClass: "ring-red-200",
+      hexCode: "#FCA5A5",
+    },
+    {
+      name: "Light Green",
+      class: "bg-green-300",
+      selectedClass: "ring-green-200",
+      hexCode: "#86EFAC",
+    },
+    {
+      name: "Light Yellow",
+      class: "bg-yellow-300",
+      selectedClass: "ring-yellow-200",
+      hexCode: "#FDE047",
+    },
+    {
+      name: "Light cyan",
+      class: "bg-cyan-300",
+      selectedClass: "ring-cyan-200",
+      hexCode: "#5EEAD4",
+    },
+    {
+      name: "Light Purple",
+      class: "bg-purple-300",
+      selectedClass: "ring-purple-200",
+      hexCode: "#D8B4FE",
+    },
   ];
 
   const cvTemplates = [
     {
       key: "template1",
       imageUrl: cvletter1,
-      name: "Professional CV",
+      name: t("cvSelector.template1"),
       hasPhoto: true,
     },
     {
       key: "template2",
       imageUrl: cvletter2,
-      name: "Creative CV",
+      name: t("cvSelector.template2"),
       hasPhoto: false,
     },
     {
       key: "template3",
       imageUrl: cvletter3,
-      name: "Academic CV",
+      name: t("cvSelector.template3"),
       hasPhoto: false,
     },
     {
       key: "template4",
       imageUrl: cvletter4,
-      name: "Executive CV",
+      name: t("cvSelector.template4"),
       hasPhoto: false,
     },
     {
       key: "template5",
       imageUrl: cvletter5,
-      name: "Technical CV",
+      name: t("cvSelector.template5"),
       hasPhoto: true,
     },
   ];
@@ -145,12 +190,13 @@ const CVSelector = ({ onNext, onBack, onChange, value }) => {
       try {
         const coverletterId = router.query.id || localStorage.getItem("id");
         if (!coverletterId || !token) {
-          toast.error("Cover Letter ID or token not found");
+          // toast.error("Cover Letter ID or token not found");
+          toast.error(t("cvSelector.errorCoverLetterId"));
           return;
         }
 
         const response = await axios.get(
-          `${BASE_URL}/api/user/coverletter/${coverletterId}`,
+          `${BASE_URL}/api/user/coverletter/${coverletterId}?lang=${language}`,
           {
             headers: {
               Authorization: token,
@@ -233,7 +279,7 @@ const CVSelector = ({ onNext, onBack, onChange, value }) => {
     };
     console.log(coverLetterData, ">>>coverlettersdata");
     if (!value.template) {
-      toast.error("Please select a CV template before proceeding");
+      toast.error(t("cvSelector.selectTemplateError"));
       return;
     }
 
@@ -285,11 +331,9 @@ const CVSelector = ({ onNext, onBack, onChange, value }) => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Choose Your CV Letter Template
+            {t("cvSelector.title")}
           </h2>
-          <p className="text-xl text-gray-600">
-            Select a professional template that matches your career goals
-          </p>
+          <p className="text-xl text-gray-600">{t("cvSelector.description")}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -297,7 +341,7 @@ const CVSelector = ({ onNext, onBack, onChange, value }) => {
           <div className="bg-white rounded-xl shadow-lg p-6 h-fit sticky top-8">
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Color Theme
+                {t("cvSelector.colorTheme")}
               </h3>
               <div className="grid grid-cols-5 gap-4">
                 {colors.map((color) => (
@@ -328,7 +372,7 @@ const CVSelector = ({ onNext, onBack, onChange, value }) => {
             {/* Categories */}
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Categories
+                {t("cvSelector.categories")}
               </h3>
               <div className="space-y-2">
                 {Array.from(new Set(cvTemplates.map((t) => t.category))).map(
@@ -395,7 +439,7 @@ const CVSelector = ({ onNext, onBack, onChange, value }) => {
             className="px-8 py-3 bg-white border-2 border-gray-300 rounded-xl text-gray-700 
               font-medium hover:bg-gray-50 hover:border-gray-400 transition-colors"
           >
-            Back
+            {t("cvSelector.back")}
           </button>
           <button
             onClick={handleSaveSelection}
@@ -404,7 +448,7 @@ const CVSelector = ({ onNext, onBack, onChange, value }) => {
             className="px-8 py-3 text-white rounded-xl font-medium
               hover:opacity-90 transition-colors shadow-lg hover:shadow-xl disabled:opacity-50"
           >
-            {loading ? "Saving..." : "Next"}
+            {loading ? t("cvSelector.saving") : t("cvSelector.next")}
           </button>
         </div>
       </div>

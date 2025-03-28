@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { BASE_URL } from "../../components/Constant/constant";
 import { toast } from "react-toastify";
 import { Plus } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { ResumeContext } from "../../components/context/ResumeContext";
 const Skills = () => {
+  const { t } = useTranslation();
   const [skills, setSkills] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -14,7 +17,7 @@ const Skills = () => {
   const [showPopup, setShowPopup] = useState(true);
   const router = useRouter();
   const { result } = router.query; // Accessing result from query parameters
-
+  const { selectedLang } = useContext(ResumeContext);
   // Function to fetch skills data
   const fetchSkills = async () => {
     const token = localStorage.getItem("token");
@@ -25,11 +28,14 @@ const Skills = () => {
     }
 
     try {
-      const response = await axios.get(`${BASE_URL}/api/user/user-skills`, {
-        headers: {
-          Authorization: token,
-        },
-      });
+      const response = await axios.get(
+        `${BASE_URL}/api/user/user-skills?lang=${selectedLang}`,
+        {
+          headers: {
+            Authorization: token,
+          },
+        }
+      );
 
       if (Array.isArray(response.data.data)) {
         const formattedSkills = response.data.data.map((skill) => ({
@@ -51,7 +57,7 @@ const Skills = () => {
         error.response ? error.response.data : error.message
       );
       if (error.response && error.response.status === 401) {
-        setTokenError("Unauthorized access. Please log in again.");
+        setTokenError(t("skill.toast.unauthorized"));
         window.location.href = "/login2";
       } else {
         setError(error);
@@ -111,17 +117,17 @@ const Skills = () => {
     }, 2000);
   };
   if (error) {
-    toast.error("Please add a resume first before taking the test."); // Show toast notification
+    toast.error(t("skill.toast.resume_required")); // Show toast notification
 
     return (
       <div className="py-16 px-5 text-center text-3xl">
-        <h1>Please create or upload resume to take test, using below link.</h1>
+        <h1>{t("create_or_upload")}</h1>
         <div className="flex justify-center mt-5">
           <button
             onClick={handleCreateResume}
-            className="flex justify-center items-center px-4 py-2 w-full sm:w-auto bg-cyan-600 text-white rounded-lg hover:bg-cyan-600 transition-colors duration-200 font-medium shadow-sm"
+            className="flex justify-center items-center px-4 py-2 w-full sm:w-auto bg-cyan-600 text-white rounded-lg hover:bg-cyan-800 transition-colors duration-200 font-medium shadow-sm"
           >
-            <Plus className="w-5 h-5 mr-2" /> Create New Resume
+            <Plus className="w-5 h-5 mr-2" /> {t("create_new_resume")}
           </button>
         </div>
       </div>
@@ -135,17 +141,14 @@ const Skills = () => {
         <div className="flex items-center justify-center min-h-screen">
           <div className="bg-white p-6 rounded-lg shadow-lg text-center max-w-md">
             <h2 className="text-2xl font-bold mb-3">
-              Welcome to Skills Assessment
+              {t("skill.welcome_message")}
             </h2>
-            <p className="text-lg mb-4">
-              Please take a moment to read the instructions carefully before
-              proceeding.
-            </p>
+            <p className="text-lg mb-4">{t("skill.instructions")}</p>
             <button
               onClick={handleContinue}
               className="bg-gray-400 text-black px-4 py-2 rounded-lg shadow-xl font-semibold"
             >
-              Continue
+              {t("skill.continue")}
             </button>
           </div>
         </div>
@@ -155,7 +158,7 @@ const Skills = () => {
       {!showPopup && (
         <>
           <h1 className="text-3xl text-center md:text-5xl font-bold text-gray-700 p-3">
-            👨‍💻 Take Skill Assessment
+            {t("skill.take_skill_assessment")}
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-5 py-5 text-center">
             {skills.length > 0 ? (
@@ -168,30 +171,31 @@ const Skills = () => {
                     {skill.name || "Add skill from CV"}
                   </h3>
                   <p className="text-center text-white py-1">
-                    ❓ Total Questions: {skill.total_question || "15"}
+                    {t("skill.total_questions")}: {skill.total_question || "15"}
                   </p>
                   <p className="text-center text-white py-1">
-                    📌 Right Answers: {skill.right_answer || "0"}
+                    {t("skill.right_answers")}: {skill.right_answer || "0"}
                   </p>
                   <p className="text-center text-white py-1">
-                    ⚠️ Wrong Answers: {skill.wrong_answer || "0"}
+                    {t("skill.wrong_answers")}: {skill.wrong_answer || "0"}
                   </p>
                   <p className="text-center text-white py-1">
-                    📈 Percentage: {Math.floor(skill.Percentage) || "0"}
+                    {t("skill.percentage")}:{" "}
+                    {Math.floor(skill.Percentage) || "0"}
                   </p>
                   <div className="flex justify-center py-6">
                     <button
                       onClick={() => handleTakeTest(skill.id, skill.name)}
                       className="px-8 py-2 rounded-xl shadow-xl bg-gray-400 text-black font-semibold"
                     >
-                      ✍ Take Test
+                      {t("skill.take_test")}
                     </button>
                   </div>
                 </div>
               ))
             ) : (
               <div className="col-span-full text-gray-700">
-                No skills data available.
+                {t("skill.no_skills")}
               </div>
             )}
           </div>
@@ -206,40 +210,37 @@ const Skills = () => {
               onClick={closeInstructions}
               className="absolute top-0 right-0 m-4 text-red-600 hover:text-red-800 font-semibold"
             >
-              close
+              {t("skill.close")}
             </button>
-            <h2 className="text-2xl font-bold mb-3">📜 Instructions</h2>
+            <h2 className="text-2xl font-bold mb-3">
+              {t("instructions_title")}
+            </h2>
             <p className="text-lg mb-3 text-start">
-              <strong>Following instructions are common for all User.</strong>
+              <strong>{t("skill.common_instructions")}</strong>
               <br />
               <br />
-              1. The duration of the test is 10 minutes*. Your answer gets
-              automatically submitted after 10 minutes*.
+              1.{t("skill.instruction_1")}
               <br />
-              2. This test consists of 15* multiple-choice questions.
+              2. {t("skill.instruction_2")}
               <br />
-              3. You may attempt the questions in any order.
+              3. {t("skill.instruction_3")}
               <br />
-              4. Please select the correct answer and click the Save and next
-              button.
+              4. {t("skill.instruction_4")}
               <br />
-              5. Please click skip if you wish to skip a question. You may come
-              back and answer the question later.
+              5. {t("skill.instruction_5")}
               <br />
-              6. Please click on the Submit Assessment button after answering
-              all the questions.
+              6. {t("skill.instruction_6")}
               <br />
-              7. Do not close the window before submitting the test.
+              7. {t("skill.instruction_7")}
               <br />
-              8. Tests will be automatically submitted after the given time
-              limit.
+              8.{t("skill.instruction_8")}
               <br />
             </p>
             <button
               onClick={proceedToTest}
               className="bg-gray-400 text-black px-4 py-2 rounded-xl shadow-xl font-semibold"
             >
-              Proceed to Test
+              {t("skill.proceed_to_test")}
             </button>
           </div>
         </div>
